@@ -1,0 +1,10 @@
+{
+    "include_paths": [
+        "..",
+        ".",
+        "./spec/jsOverride"
+    ],
+    "spec_files": [
+        "spec"
+    ]
+}

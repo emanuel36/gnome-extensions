@@ -1,0 +1,15 @@
+[submodule "third_party/logDecorator"]
+	path = third_party/logDecorator
+	url = https://gitlab.com/todo.txt-gnome-shell-extension/gnome-shell-logdecorator.git
+[submodule "third_party/jsTodoTxt"]
+	path = third_party/jsTodoTxt
+	url = https://github.com/bartlibert/jsTodoTxt.git
+[submodule "third_party/js_expression_eval"]
+	path = third_party/js_expression_eval
+	url = https://github.com/silentmatt/js-expression-eval.git
+[submodule "third_party/logger"]
+	path = third_party/logger
+	url = https://gitlab.com/todo.txt-gnome-shell-extension/gnome-shell-logger.git
+[submodule "third_party/timeframe"]
+	path = third_party/timeframe
+	url = https://github.com/bartlibert/timeframejs.git

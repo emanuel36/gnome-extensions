@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<object class="AdwPreferencesPage" id="category-id">
+    <property name="name"></property>
+    <property name="title" translatable="yes"></property>
+    <property name="icon-name"></property>
+</object>

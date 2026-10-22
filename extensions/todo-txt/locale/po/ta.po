@@ -1,0 +1,717 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the todo.txt gnome-shell extension package.
+# தமிழ்நேரம் <anishprabu.t@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"Project-Id-Version: todo.txt gnome-shell extension\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-10 19:03+0100\n"
+"PO-Revision-Date: 2025-07-03 22:07+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/"
+"todo-txt-gnome-shell-extension/extension-and-preferences/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13-dev\n"
+
+#: ../libs/todoTxtManager.js:520
+msgid "%(file) exists already"
+msgstr "%(file) ஏற்கனவே உள்ளது"
+
+#: ../libs/openTextEditorEntry.js:22
+msgid ""
+"An error occured while trying to launch the default text editor: %(error)"
+msgstr ""
+"இயல்புநிலை உரை எடிட்டரைத் தொடங்க முயற்சிக்கும்போது பிழை ஏற்பட்டது: %(பிழை)"
+
+#: ../libs/errors.js:24
+msgid "An error occurred while writing to %(file): %(error)"
+msgstr "%(கோப்பு) எழுதும்போது பிழை ஏற்பட்டது: %(பிழை)"
+
+#: ../libs/todoMenuItem.js:258
+msgid "Archive %(task)"
+msgstr "காப்பகம் %(task)"
+
+#: ../libs/todoMenuItem.js:537
+msgid "Are you sure?"
+msgstr "நீங்கள் உறுதியாக இருக்கிறீர்களா?"
+
+#: ../libs/todoTxtManager.js:517
+msgid "Cancel"
+msgstr "ரத்துசெய்"
+
+#: ../libs/openTextEditorEntry.js:20
+msgid "Cannot open file"
+msgstr "கோப்பைத் திறக்க முடியாது"
+
+#: ../libs/todoTxtManager.js:507
+msgid "Create new file"
+msgstr "புதிய கோப்பை உருவாக்கவும்"
+
+#: ../libs/todoTxtManager.js:546
+msgid "Create todo.txt and done.txt file in %(path)"
+msgstr "Todo.txt மற்றும் done.txt கோப்பை %(path) இல் உருவாக்கவும்"
+
+#: ../libs/todoMenuItem.js:243
+msgid "Decrease %(task) priority"
+msgstr "%(task) முன்னுரிமையைக் குறை"
+
+#: ../libs/todoMenuItem.js:268 ../libs/todoMenuItem.js:505
+msgid "Delete %(task)"
+msgstr "%(task) நீக்கு"
+
+#: ../libs/todoMenuItem.js:234
+msgid "Edit %(task)"
+msgstr "திருத்து %(task)"
+
+#: ../libs/todoTxtManager.js:807 ../libs/todoTxtManager.js:864
+msgid "Error writing file"
+msgstr "கோப்பு எழுதுதல் கோப்பு"
+
+#: ../libs/todoMenuItem.js:287
+msgid "Expand %(task)"
+msgstr "%(task) விரிவாக்கு"
+
+#: ../libs/todoMenuItem.js:242
+msgid "Increase %(task) priority"
+msgstr "%(task) முன்னுரிமையை அதிகரி"
+
+#: ../libs/todoMenuItem.js:300
+msgid "Mark %(task) as done"
+msgstr "%(task) செய்தபடி குறி"
+
+#: ../libs/newTaskEntry.js:16
+msgid "New task…"
+msgstr "புதிய பணி…"
+
+#: ../libs/todoTxtManager.js:540
+msgid "No valid %(filename) file specified"
+msgstr "சரியான %(filename) கோப்பு குறிப்பிடப்படவில்லை"
+
+#: ../libs/messageDialog.js:39
+msgid "Ok"
+msgstr "சரி"
+
+#: ../libs/openPreferencesEntry.js:9
+msgid "Open preferences"
+msgstr "திறந்த விருப்பத்தேர்வுகள்"
+
+#: ../libs/todoTxtManager.js:513
+msgid "Open settings"
+msgstr "திறந்த அமைப்புகள்"
+
+#: ../libs/openTextEditorEntry.js:13
+msgid "Open todo.txt file in text editor"
+msgstr "உரை திருத்தியில் Todo.txt கோப்பைத் திறக்கவும்"
+
+#: ../libs/todoTxtManager.js:521
+msgid "Please choose what you want to do"
+msgstr "நீங்கள் என்ன செய்ய விரும்புகிறீர்கள் என்பதைத் தேர்வுசெய்க"
+
+#: ../libs/todoTxtManager.js:541
+msgid "Select location in settings"
+msgstr "அமைப்புகளில் இருப்பிடத்தைத் தேர்ந்தெடுக்கவும்"
+
+#: ../libs/todoMenuItem.js:527
+msgid "Undo delete %(task)"
+msgstr "%(task)ஐ நீக்கு தவிர்"
+
+#: ../libs/todoTxtManager.js:385
+msgid "Ungrouped"
+msgstr "குழுவாக"
+
+#: ../libs/todoTxtManager.js:816 ../libs/todoTxtManager.js:870
+msgid "Unknown error during file write: %(error)"
+msgstr "கோப்பு எழுத்தின்போது அறியப்படாத பிழை: %(error)"
+
+#: ../libs/todoTxtManager.js:502
+msgid "Use existing file"
+msgstr "இருக்கும் கோப்பைப் பயன்படுத்தவும்"
+
+# settings.json
+msgid "Action on clicking task"
+msgstr "பணியைக் சொடுக்கு செய்வதில் நடவடிக்கை"
+
+# settings.json
+msgid "Auto-add creation date to new tasks"
+msgstr "புதிய பணிகளுக்கு ஆட்டோ சேர்க்கை உருவாக்கும் தேதி"
+
+# settings.json
+msgid "Auto-archive done tasks"
+msgstr "ஆட்டோ-ஆர்க்கிவ் செய்யப்பட்ட பணிகள்"
+
+# settings.json
+msgid "Behavior"
+msgstr "நடத்தை"
+
+# settings.json
+msgid "Bold"
+msgstr "தடிமான"
+
+# settings.json
+msgid "Both"
+msgstr "இரண்டும்"
+
+# settings.json
+msgid "Bottom of the file"
+msgstr "கோப்பின் கீழே"
+
+# settings.json
+msgid "Color done tasks"
+msgstr "வண்ணம் செய்த பணிகள்"
+
+# settings.json
+msgid "Color for detected URLs"
+msgstr "கண்டறியப்பட்ட முகவரி களுக்கான நிறம்"
+
+# settings.json
+msgid "Confirm task deletion"
+msgstr "பணி நீக்குதலை உறுதிப்படுத்தவும்"
+
+# settings.json
+msgid "Contexts"
+msgstr "சூழல்கள்"
+
+# settings.json
+msgid "Custom color"
+msgstr "தனிப்பயன் நிறம்"
+
+# settings.json
+msgid "Custom color for URLS"
+msgstr "முகவரி களுக்கான தனிப்பயன் நிறம்"
+
+# settings.json
+msgid "Custom color for done tasks"
+msgstr "முடிந்த பணிகளுக்கு தனிப்பயன் நிறம்"
+
+# settings.json
+msgid "Debug"
+msgstr "பிழைத்திருத்து"
+
+# settings.json
+msgid "Debug level"
+msgstr "பிழைத்திருத்த நிலை"
+
+# settings.json
+msgid "Debugging"
+msgstr "பிழைத்திருத்தம்"
+
+# settings.json
+msgid "Dedicated button"
+msgstr "அர்ப்பணிக்கப்பட்ட பொத்தான்"
+
+# settings.json
+msgid "Detail"
+msgstr "விவரம்"
+
+# settings.json
+msgid "Display"
+msgstr "காட்சி"
+
+# settings.json
+msgid "Done Task Style"
+msgstr "பணி நடை முடிந்தது"
+
+# settings.json
+msgid "Done.txt location"
+msgstr "முடிந்தது. TXT இடம்"
+
+# settings.json
+msgid "Due date extension"
+msgstr "உரிய தேதி நீட்டிப்பு"
+
+# settings.json
+msgid "Comments extension"
+msgstr "கருத்து நீட்டிப்பு"
+
+# settings.json
+msgid "Edit"
+msgstr "தொகு"
+
+# settings.json
+msgid "End"
+msgstr "முடிவு"
+
+# settings.json
+msgid "Error"
+msgstr "பிழை"
+
+# settings.json
+msgid "Extensions"
+msgstr "நீட்டிப்புகள்"
+
+# settings.json
+msgid "Files"
+msgstr "கோப்புகள்"
+
+# settings.json
+msgid "Flow"
+msgstr "பாய்வு"
+
+# settings.json
+msgid "General"
+msgstr "பொது"
+
+# settings.json
+msgid "Get color from theme"
+msgstr "கருப்பொருளிலிருந்து வண்ணத்தைப் பெறுங்கள்"
+
+# settings.json
+msgid "Group tasks by"
+msgstr "குழு பணிகள்"
+
+# settings.json
+msgid "Grouping"
+msgstr "தொகுத்தல்"
+
+# settings.json
+msgid "Hidden tasks extension"
+msgstr "மறைக்கப்பட்ட பணிகள் நீட்டிப்பு"
+
+# settings.json
+msgid "Hide if pattern is zero"
+msgstr "முறை பூச்சியமாக இருந்தால் மறைக்கவும்"
+
+# settings.json
+msgid "Icon"
+msgstr "படவுரு"
+
+# settings.json
+msgid "If enabled, done tasks will use a custom color"
+msgstr "இயக்கப்பட்டால், முடிந்த பணிகள் தனிப்பயன் நிறத்தைப் பயன்படுத்தும்"
+
+# settings.json
+msgid "If the due date extension is enabled, tasks containing 'due:<some date>' will be shown differently"
+msgstr ""
+"உரிய தேதி நீட்டிப்பு இயக்கப்பட்டிருந்தால், 'செலுத்த வேண்டியவை: <சில தேதி>' கொண்ட பணிகள் "
+"வித்தியாசமாகக் காண்பிக்கப்படும்"
+
+# settings.json
+msgid "If the hidden extension is enabled, tasks containing 'h:1' will not be shown"
+msgstr ""
+"மறைக்கப்பட்ட நீட்டிப்பு இயக்கப்பட்டிருந்தால், 'H: 1' கொண்ட பணிகள் காட்டப்படாது"
+
+# settings.json
+msgid "If the comments extension is enabled, tasks starting with a # will be hidden"
+msgstr ""
+"கருத்துகள் நீட்டிப்பு இயக்கப்பட்டிருந்தால், # உடன் தொடங்கும் பணிகள் மறைக்கப்படும்"
+
+# settings.json
+msgid "If the specified pattern is zero, the elements specified here will be hidden"
+msgstr ""
+"குறிப்பிட்ட முறை பூச்சியமாக இருந்தால், இங்கே குறிப்பிடப்பட்டுள்ள கூறுகள் மறைக்கப்படும்"
+
+# settings.json
+msgid "If this is true, an icon will be shown in the top bar"
+msgstr "இது உண்மையாக இருந்தால், மேல் பட்டியில் ஒரு படவுரு காண்பிக்கப்படும்"
+
+# settings.json
+msgid "If this template evaluates to zero, the top bar element will be hidden. Shortcuts still work."
+msgstr ""
+"இந்த வார்ப்புரு பூச்சியத்தை மதிப்பிட்டால், மேல் பார் உறுப்பு மறைக்கப்படும். குறுக்குவழிகள் "
+"இன்னும் வேலை செய்கின்றன."
+
+# settings.json
+msgid "Info"
+msgstr "தகவல்"
+
+# settings.json
+msgid "Interface elements"
+msgstr "இடைமுக கூறுகள்"
+
+# settings.json
+msgid "Italic"
+msgstr "சாய்வு"
+
+# settings.json
+msgid "Keep as is (non-standard)"
+msgstr "(தரமற்றது)"
+
+# settings.json
+msgid "Keep open menu after adding new task"
+msgstr "புதிய பணியைச் சேர்த்த பிறகு திறந்த மெனுவை வைத்திருங்கள்"
+
+# settings.json
+msgid "Keep with pri: prefix"
+msgstr "PRI உடன் வைத்திருங்கள்: முன்னொட்டு"
+
+# settings.json
+msgid "Keeps open the tasks menu after a new task is added. The new task entry will be focused."
+msgstr ""
+"ஒரு புதிய பணி சேர்க்கப்பட்ட பிறகு பணிகள் மெனுவைத் திறந்து வைத்திருக்கிறது. புதிய பணி "
+"நுழைவு கவனம் செலுத்தப்படும்."
+
+# settings.json
+msgid "Keyboard shortcut to open the task list"
+msgstr "விசைப்பலகை குறுக்குவழி பணி பட்டியலைத் திறக்க"
+
+# settings.json
+msgid "Level of debug information"
+msgstr "பிழைத்திருத்த தகவல்களின் நிலை"
+
+# settings.json
+msgid "Location of the text file that contains completed (archived) tasks"
+msgstr ""
+"நிறைவு செய்யப்பட்ட (காப்பகப்படுத்தப்பட்ட) பணிகளைக் கொண்ட உரை கோப்பின் இடம்"
+
+# settings.json
+msgid "Location of the text file that contains the tasks in todo.txt syntax"
+msgstr "Todo.txt தொடரியல் பணிகளைக் கொண்ட உரை கோப்பின் இருப்பிடம்"
+
+# settings.json
+msgid "Location to insert new task"
+msgstr "புதிய பணியைச் செருக இடம்"
+
+# settings.json
+msgid "Location to truncate long tasks"
+msgstr "நீண்ட பணிகளைக் குறைக்க இடம்"
+
+# settings.json
+msgid "Mark as done or archive"
+msgstr "மார்க் அல்லது காப்பகத்தைக் குறிக்கவும்"
+
+# settings.json
+msgid "Maximum task width in pixels"
+msgstr "பிக்சல்களில் அதிகபட்ச பணி அகலம்"
+
+# settings.json
+msgid "Method to expand/contract truncated tasks"
+msgstr "துண்டிக்கப்பட்ட பணிகளை விரிவுபடுத்த/ஒப்பந்தம் செய்வதற்கான முறை"
+
+# settings.json
+msgid "Middle"
+msgstr "நடுத்தர"
+
+# settings.json
+msgid "No grouping"
+msgstr "குழு இல்லை"
+
+# settings.json
+msgid "Nothing"
+msgstr "எதுவும்"
+
+# settings.json
+msgid "Only show tasks with a given or higher priority. Leave empty to show all tasks."
+msgstr ""
+"கொடுக்கப்பட்ட அல்லது அதிக முன்னுரிமையுடன் பணிகளை மட்டுமே காட்டுங்கள். எல்லா பணிகளையும் "
+"காட்ட காலியாக விடவும்."
+
+# settings.json
+msgid "Only show tasks with a priority of or above"
+msgstr "முன்னுரிமையுடன் அல்லது அதற்கு மேல் பணிகளை மட்டுமே காண்பி"
+
+# settings.json
+msgid "Open task list"
+msgstr "திறந்த பணி பட்டியல்"
+
+# settings.json
+msgid "Order elements by their priority"
+msgstr "கூறுகளை அவற்றின் முன்னுரிமையால் ஆர்டர் செய்யுங்கள்"
+
+# settings.json
+msgid "Pattern to match for zero"
+msgstr "பூச்சியத்துடன் பொருந்தக்கூடிய முறை"
+
+# settings.json
+msgid "Priorities"
+msgstr "முன்னுரிமைகள்"
+
+# settings.json
+msgid "Priority markup"
+msgstr "முன்னுரிமை மார்க்அப்"
+
+# settings.json
+msgid "Priority on task completion"
+msgstr "பணி நிறைவு குறித்த முன்னுரிமை"
+
+# settings.json
+msgid "Projects"
+msgstr "திட்டங்கள்"
+
+# settings.json
+msgid "Put ungrouped tasks in separate group"
+msgstr "தனித்தனியான குழுவில் குழுவை வைக்கவும்"
+
+# settings.json
+msgid "Remove"
+msgstr "அகற்று"
+
+# settings.json
+msgid "Same as task"
+msgstr "பணி அதே"
+
+# settings.json
+msgid "Scroll up/down"
+msgstr "மேலே/கீழ் உருட்டவும்"
+
+# settings.json
+msgid "Select location of done.txt file"
+msgstr "Ded.txt கோப்பின் இருப்பிடத்தைத் தேர்ந்தெடுக்கவும்"
+
+# settings.json
+msgid "Select location of todo.txt file"
+msgstr "Todo.txt கோப்பின் இருப்பிடத்தைத் தேர்ந்தெடுக்கவும்"
+
+# settings.json
+msgid "Shortcuts"
+msgstr "குறுக்குவழிகள்"
+
+# settings.json
+msgid "Show 'open in text editor'"
+msgstr "'உரை எடிட்டரில் திறந்திருக்கும்'"
+
+# settings.json
+msgid "Show 'open preferences'"
+msgstr "'திறந்த விருப்பங்களை' காட்டு"
+
+# settings.json
+msgid "Show change task priority buttons"
+msgstr "மாற்று பணி முன்னுரிமை பொத்தான்களைக் காட்டு"
+
+# settings.json
+msgid "Show contexts"
+msgstr "சூழல்களைக் காட்டு"
+
+# settings.json
+msgid "Show delete task button"
+msgstr "பணி பொத்தானைக் நீக்கு"
+
+# settings.json
+msgid "Show done tasks"
+msgstr "செய்த பணிகளைக் காட்டு"
+
+# settings.json
+msgid "Show done/archive task button"
+msgstr "முடிந்தது/காப்பக பணி பொத்தானைக் காட்டு"
+
+# settings.json
+msgid "Show edit task button"
+msgstr "பணியைத் திருத்து பொத்தானைக் காட்டு"
+
+# settings.json
+msgid "Show icon"
+msgstr "ஐகானைக் காட்டு"
+
+# settings.json
+msgid "Show new task entry"
+msgstr "புதிய பணி நுழைவைக் காட்டு"
+
+# settings.json
+msgid "Show number of tasks in group"
+msgstr "குழுவில் பணிகளின் எண்ணிக்கையைக் காட்டு"
+
+# settings.json
+msgid "Show projects"
+msgstr "திட்டங்களைக் காட்டு"
+
+# settings.json
+msgid "Start"
+msgstr "தொடங்கு"
+
+# settings.json
+msgid "Strikethrough"
+msgstr "ச்ட்ரைகெத்ரோ"
+
+# settings.json
+msgid "Style priorities"
+msgstr "நடை முன்னுரிமைகள்"
+
+# settings.json
+msgid "Styles"
+msgstr "பாணிகள்"
+
+# settings.json
+msgid "Tasks can be grouped together based on the selected property"
+msgstr "தேர்ந்தெடுக்கப்பட்ட சொத்தின் அடிப்படையில் பணிகளை ஒன்றிணைக்க முடியும்"
+
+# settings.json
+msgid "Tasks that don't have the grouping priority can be put in a special 'ungrouped' group, or shown outside any groups"
+msgstr ""
+"குழு முன்னுரிமை இல்லாத பணிகளை ஒரு சிறப்பு 'குழுவாக' குழுவில் வைக்கலாம் அல்லது எந்த "
+"குழுக்களுக்கும் வெளியே காட்டலாம்"
+
+# settings.json
+msgid "Tasks will be truncated to this width (specified in pixels) if truncating is enabled."
+msgstr ""
+"துண்டிப்பு இயக்கப்பட்டால் இந்த அகலத்திற்கு (பிக்சல்களில் குறிப்பிடப்பட்டுள்ளது) பணிகள் "
+"துண்டிக்கப்படும்."
+
+# settings.json
+msgid "Template string for display"
+msgstr "காட்சிக்கு வார்ப்புரு சரம்"
+
+# settings.json
+msgid "Template that determines what is displayed in the top bar"
+msgstr "மேல் பட்டியில் காண்பிக்கப்படுவதை தீர்மானிக்கும் வார்ப்புரு"
+
+# settings.json
+msgid "Text"
+msgstr "உரை"
+
+# settings.json
+msgid "The action that will initiate expansion and contraction of tasks"
+msgstr "பணிகளின் விரிவாக்கம் மற்றும் சுருக்கத்தைத் தொடங்கும் செயல்"
+
+# settings.json
+msgid "The location in the task text where the ellipsization will occur"
+msgstr "நீள்வட்டம் ஏற்படும் பணி உரையில் இருப்பிடம்"
+
+# settings.json
+msgid "The number of tasks in a subgroup can be shown in the interface"
+msgstr "ஒரு துணைக்குழுவில் உள்ள பணிகளின் எண்ணிக்கையை இடைமுகத்தில் காட்டலாம்"
+
+# settings.json
+msgid "The way that tasks with different priorities are displayed"
+msgstr "வெவ்வேறு முன்னுரிமைகள் கொண்ட பணிகள் காட்டப்படும் விதம்"
+
+# settings.json
+msgid "This color will be used for URLs if 'Custom color' was selected above"
+msgstr ""
+"மேலே 'தனிப்பயன் நிறம்' தேர்ந்தெடுக்கப்பட்டால் இந்த நிறம் முகவரி களுக்கு பயன்படுத்தப்படும்"
+
+# settings.json
+msgid "This color will be used for done tasks if 'Color done tasks' was enabled above"
+msgstr ""
+"'வண்ணம் முடிந்த பணிகள்' மேலே இயக்கப்பட்டிருந்தால் இந்த வண்ணம் முடிந்த பணிகளுக்கு "
+"பயன்படுத்தப்படும்"
+
+# settings.json
+msgid "Todo.txt location"
+msgstr "Todo.txt இடம்"
+
+# settings.json
+msgid "Top Bar"
+msgstr "மேல் பட்டி"
+
+# settings.json
+msgid "Top of the file"
+msgstr "கோப்பின் மேல்"
+
+# settings.json
+msgid "Truncate long tasks"
+msgstr "நீண்ட பணிகளை துண்டிக்கவும்"
+
+# settings.json
+msgid "Truncating"
+msgstr "துண்டித்தல்"
+
+# settings.json
+msgid "URL Color"
+msgstr "முகவரி நிறம்"
+
+# settings.json
+msgid "Warning"
+msgstr "எச்சரிக்கை"
+
+# settings.json
+msgid "What should be done with the priority of a task when that task is completed"
+msgstr "அந்த பணி முடிந்ததும் ஒரு பணியின் முன்னுரிமையுடன் என்ன செய்ய வேண்டும்"
+
+# settings.json
+msgid "What to do when a task is clicked"
+msgstr "ஒரு பணி சொடுக்கு செய்யும்போது என்ன செய்வது"
+
+# settings.json
+msgid "When URLs are detected in a task, they will be displayed in this color"
+msgstr ""
+"ஒரு பணியில் முகவரி கள் கண்டறியப்படும்போது, அவை இந்த நிறத்தில் காண்பிக்கப்படும்"
+
+# settings.json
+msgid "Where in the text-file the new task will be added. Also moves insert box to the top of the interface."
+msgstr ""
+"உரை கோப்பில் புதிய பணி சேர்க்கப்படும். செருகும் பெட்டியை இடைமுகத்தின் மேற்புறத்தில் "
+"நகர்த்துகிறது."
+
+# settings.json
+msgid "Whether a button is shown to delete a task"
+msgstr "ஒரு பணியை நீக்க ஒரு பொத்தான் காட்டப்பட்டுள்ளதா"
+
+# settings.json
+msgid "Whether a button is shown to edit a task"
+msgstr "ஒரு பணியைத் திருத்த ஒரு பொத்தானைக் காட்டியிருக்கிறதா"
+
+# settings.json
+msgid "Whether a button is shown to mark active tasks as completed or to archive completed tasks, if auto-archive is off."
+msgstr ""
+"செயலில் உள்ள பணிகளை முடித்ததாகக் குறிக்க ஒரு பொத்தானைக் காட்டினாலும் அல்லது நிறைவு "
+"செய்யப்பட்ட பணிகளை காப்பகப்படுத்துவதா, ஆட்டோ-காப்பகம் முடக்கப்பட்டிருந்தால்."
+
+# settings.json
+msgid "Whether a confirmation dialog is shown before deleting a task"
+msgstr ""
+"ஒரு பணியை நீக்குவதற்கு முன்பு உறுதிப்படுத்தல் உரையாடல் காட்டப்பட்டுள்ளதா என்பதை"
+
+# settings.json
+msgid "Whether a creation date is automatically added to newly created tasks"
+msgstr ""
+"புதிதாக உருவாக்கப்பட்ட பணிகளில் ஒரு உருவாக்கும் தேதி தானாக சேர்க்கப்படுகிறதா என்பதை"
+
+# settings.json
+msgid "Whether a menu element is shown to open the extension's preferences"
+msgstr ""
+"நீட்டிப்பின் விருப்பங்களைத் திறக்க பட்டியல் உறுப்பு காட்டப்பட்டுள்ளதா என்பதை"
+
+# settings.json
+msgid "Whether a menu element is shown to open the todo.txt file in the default text editor"
+msgstr ""
+"இயல்புநிலை உரை திருத்தியில் Todo.txt கோப்பைத் திறக்க பட்டியல் உறுப்பு காட்டப்பட்டுள்ளதா "
+"என்பதை"
+
+# settings.json
+msgid "Whether an entry field is shown to create new tasks (new tasks can also be added by modifying the todo.txt file)"
+msgstr ""
+"புதிய பணிகளை உருவாக்க ஒரு நுழைவு புலம் காட்டப்பட்டுள்ளதா (Todo.txt கோப்பை "
+"மாற்றியமைப்பதன் மூலம் புதிய பணிகளையும் சேர்க்கலாம்)"
+
+# settings.json
+msgid "Whether arrows are shown to increase or decrease the task priority"
+msgstr "அம்புகள் பணி முன்னுரிமையை அதிகரிக்கவோ குறைக்கவோ காட்டப்பட்டுள்ளனவா"
+
+# settings.json
+msgid "Whether completed tasks that are not archived will be shown"
+msgstr "காப்பகப்படுத்தப்படாத பணிகள் காண்பிக்கப்படுமா"
+
+# settings.json
+msgid "Whether completed tasks will be automatically archived (i.e. moved to the done.txt file)"
+msgstr ""
+"நிறைவு செய்யப்பட்ட பணிகள் தானாக காப்பகப்படுத்தப்படுமா (அதாவது முடிந்தது. Txt கோப்புக்கு "
+"நகர்த்தப்படும்)"
+
+# settings.json
+msgid "Whether contexts are shown in the interface (does not affect grouping)"
+msgstr "சூழல்கள் இடைமுகத்தில் காட்டப்பட்டுள்ளதா (குழுவை பாதிக்காது)"
+
+# settings.json
+msgid "Whether done tasks are styled in bold"
+msgstr "செய்த பணிகள் தைரியமாக வடிவமைக்கப்பட்டுள்ளனவா"
+
+# settings.json
+msgid "Whether done tasks are styled in italics"
+msgstr "செய்த பணிகள் சாய்வுகளில் வடிவமைக்கப்பட்டுள்ளனவா"
+
+# settings.json
+msgid "Whether done tasks are styled in strikethrough"
+msgstr "செய்த பணிகள் ச்ட்ரைகெத்ரோவில் வடிவமைக்கப்பட்டுள்ளனவா"
+
+# settings.json
+msgid "Whether long tasks are truncated if they exceed a specified width"
+msgstr "ஒரு குறிப்பிட்ட அகலத்தை மீறினால் நீண்ட பணிகள் துண்டிக்கப்படுகின்றனவா"
+
+# settings.json
+msgid "Whether projects are shown in the interface (does not affect grouping)"
+msgstr "திட்டங்கள் இடைமுகத்தில் காட்டப்பட்டுள்ளதா (குழுவை பாதிக்காது)"
+
+# settings.json
+msgid "Whether tasks with a certain priority are shown in a specific style"
+msgstr ""
+"ஒரு குறிப்பிட்ட முன்னுரிமையுடன் பணிகள் ஒரு குறிப்பிட்ட பாணியில் காட்டப்பட்டுள்ளதா என்பது"
+
+# settings.json
+msgid "Whether the tasks with a higher priority should be shown higher up in the list or the order should be left as in the todo.txt file"
+msgstr ""
+"அதிக முன்னுரிமையுடன் கூடிய பணிகள் பட்டியலில் அதிகமாகக் காட்டப்பட வேண்டுமா அல்லது "
+"TODO.TXT கோப்பில் உள்ளதைப் போல ஆர்டரை விட வேண்டும்"

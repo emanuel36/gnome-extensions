@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema path="/org/gnome/shell/extensions/TodoTxt/unit/" id="org.gnome.shell.extensions.TodoTxt.unit">
+    <key name="angua" type="b">
+      <default>false</default>
+      <summary>Werewolf</summary>
+      <description/>
+    </key>
+    <key name="carrot" type="s">
+      <default>"dwarf"</default>
+      <summary>Dwarf</summary>
+      <description/>
+    </key>
+    <key name="nobby" type="s">
+      <default>"~/undefined/creature.txt"</default>
+      <summary>Undefined path</summary>
+      <description/>
+    </key>
+    <key name="cheery" type="i">
+      <default>1</default>
+      <summary>Littlebottom</summary>
+      <description/>
+    </key>
+    <key name="detritus" type="a{s(bsbb)}">
+      <default>
+{
+"rock":(false, "hard", true, false),
+"pebble":(true, "small", false, true)
+}
+</default>
+      <summary>Hard Rock</summary>
+      <description/>
+    </key>
+    <key name="dorfl" type="a{s(bsbb)}">
+      <default>
+{
+"golem":(true, "rgb(12,12,12)", true, false),
+"feet":(false, "rgb(65,14,0)", true, false)
+}
+</default>
+      <summary>Clay</summary>
+      <description/>
+    </key>
+    <key name="mazda" type="as">
+      <default><![CDATA[["<Super>f"]]]></default>
+      <summary>Fingers</summary>
+      <description/>
+    </key>
+  </schema>
+</schemalist>

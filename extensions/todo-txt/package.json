@@ -1,0 +1,20 @@
+{
+  "author": "Bart Libert",
+  "bugs": {
+    "url": "https://gitlab.com/todo.txt-gnome-shell-extension/todo-txt-gnome-shell-extension/issues"
+  },
+  "description": "Some dev tools for todo.txt gnome-shell extension dev",
+  "devDependencies": {
+    "eslint": "^9.12.0",
+    "eslint-plugin-jasmine": "^4.2.2"
+  },
+  "homepage": "https://gitlab.com/todo.txt-gnome-shell-extension/todo-txt-gnome-shell-extension#readme",
+  "license": "GPL-2.0+",
+  "main": "extension.js",
+  "name": "todo.txt-gnome-shell-extension-dev",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/todo.txt-gnome-shell-extension/todo-txt-gnome-shell-extension.git"
+  },
+  "version": "1.0.0"
+}

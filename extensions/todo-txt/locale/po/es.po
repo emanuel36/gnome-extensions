@@ -1,0 +1,679 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the todo.txt gnome-shell extension package.
+# Rodrigo Medina <hprmedina@gmail.com>, 2023.
+# gallegonovato <fran-carro@hotmail.es>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: todo.txt gnome-shell extension\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-05 15:43+0200\n"
+"PO-Revision-Date: 2023-11-12 14:01+0000\n"
+"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/"
+"todo-txt-gnome-shell-extension/extension-and-preferences/es/>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.2-dev\n"
+
+#: ../libs/errors.js:28
+msgid "%(file) cannot be written. Please check its permissions."
+msgstr "No se puede escribir %(file). Por favor, comprueba los permisos."
+
+#: ../libs/todoTxtManager.js:524
+msgid "%(file) exists already"
+msgstr "%(file) ya existe"
+
+#: ../libs/openTextEditorEntry.js:23
+msgid ""
+"An error occured while trying to launch the default text editor: %(error)"
+msgstr ""
+"Se ha producido un error al intentar iniciar el editor de texto "
+"predeterminado: %(error)"
+
+#: ../libs/errors.js:37
+msgid "An error occured while writing to %(file): %(error)"
+msgstr "Se ha producido un error al escribir en %(file): %(error)"
+
+#: ../libs/todoMenuItem.js:258
+msgid "Archive %(task)"
+msgstr "Archivar %(task)"
+
+#: ../libs/todoMenuItem.js:511
+msgid "Are you sure?"
+msgstr "¿Estás seguro?"
+
+#: ../libs/todoTxtManager.js:521
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../libs/openTextEditorEntry.js:21
+msgid "Cannot open file"
+msgstr "No se puede abrir el archivo"
+
+#: ../libs/todoTxtManager.js:511
+msgid "Create new file"
+msgstr "Crear un nuevo archivo"
+
+#: ../libs/todoTxtManager.js:550
+msgid "Create todo.txt and done.txt file in %(path)"
+msgstr "Crear los archivos todo.txt y done.txt en %(path)"
+
+#: ../libs/todoMenuItem.js:243
+msgid "Decrease %(task) priority"
+msgstr "Disminuir la prioridad de %(task)"
+
+#: ../libs/todoMenuItem.js:268 ../libs/todoMenuItem.js:479
+msgid "Delete %(task)"
+msgstr "Borrar %(task)"
+
+#: ../libs/todoMenuItem.js:234
+msgid "Edit %(task)"
+msgstr "Editar %(task)"
+
+#: ../libs/todoTxtManager.js:811 ../libs/todoTxtManager.js:868
+msgid "Error writing file"
+msgstr "Error al escribir el archivo"
+
+#: ../libs/todoMenuItem.js:287
+msgid "Expand %(task)"
+msgstr "Extender %(task)"
+
+#: ../libs/todoMenuItem.js:242
+msgid "Increase %(task) priority"
+msgstr "Aumentar la prioridad de %(task)"
+
+#: ../libs/todoMenuItem.js:300
+msgid "Mark %(task) as done"
+msgstr "Marcar la %(task) como completada"
+
+#: ../libs/newTaskEntry.js:16
+msgid "New task…"
+msgstr "Tarea nueva…"
+
+#: ../libs/todoTxtManager.js:544
+msgid "No valid %(filename) file specified"
+msgstr "El archivo especificado %(filename) no es válido"
+
+#: ../libs/messageDialog.js:39
+msgid "Ok"
+msgstr "De acuerdo"
+
+#: ../libs/openPreferencesEntry.js:12
+msgid "Open preferences"
+msgstr "Abrir las preferencias"
+
+#: ../libs/todoTxtManager.js:517
+msgid "Open settings"
+msgstr "Abrir los ajustes"
+
+#: ../libs/openTextEditorEntry.js:14
+msgid "Open todo.txt file in text editor"
+msgstr "Abra el archivo todo.txt en un editor de texto"
+
+#: ../libs/todoTxtManager.js:525
+msgid "Please choose what you want to do"
+msgstr "Por favor, elige lo que quieres hacer"
+
+#: ../libs/todoTxtManager.js:545
+msgid "Select location in settings"
+msgstr "Selecciona la ubicación en los ajustes"
+
+#: ../libs/todoMenuItem.js:501
+msgid "Undo delete %(task)"
+msgstr "Restaurar %(task)"
+
+#: ../libs/todoTxtManager.js:389
+msgid "Ungrouped"
+msgstr "Desagrupado"
+
+#: ../libs/todoTxtManager.js:820 ../libs/todoTxtManager.js:874
+msgid "Unknown error during file write: %(error)"
+msgstr "Error desconocido durante se escribía en el archivo: %(error)"
+
+#: ../libs/todoTxtManager.js:506
+msgid "Use existing file"
+msgstr "Utilizar el archivo existente"
+
+# settings.json
+msgid "Action on clicking task"
+msgstr "Acción de hacer clic"
+
+# settings.json
+msgid "Auto-add creation date to new tasks"
+msgstr "Añadir automáticamente la fecha de creación a las nuevas tareas"
+
+# settings.json
+msgid "Auto-archive done tasks"
+msgstr "Autoarchivar tareas realizadas"
+
+# settings.json
+msgid "Behavior"
+msgstr "Comportamiento"
+
+# settings.json
+msgid "Both"
+msgstr "Ambos"
+
+# settings.json
+msgid "Bottom of the file"
+msgstr "Parte inferior del fichero"
+
+# settings.json
+msgid "Color for detected URLs"
+msgstr "Color para las direcciones URL detectadas"
+
+# settings.json
+msgid "Confirm task deletion"
+msgstr "Confirmar la eliminación de la tarea"
+
+# settings.json
+msgid "Contexts"
+msgstr "Contextos"
+
+# settings.json
+msgid "Custom color"
+msgstr "Color personalizado"
+
+# settings.json
+msgid "Custom color for URLS"
+msgstr "Color personalizado para las direcciones URL"
+
+# settings.json
+msgid "Debug"
+msgstr "Depurar"
+
+# settings.json
+msgid "Debug level"
+msgstr "Nivel de depuración"
+
+# settings.json
+msgid "Debugging"
+msgstr "Depuración"
+
+# settings.json
+msgid "Dedicated button"
+msgstr "Botón exclusivo"
+
+# settings.json
+msgid "Detail"
+msgstr "Detalle"
+
+# settings.json
+msgid "Display"
+msgstr "Pantalla"
+
+# settings.json
+msgid "Done.txt location"
+msgstr "Ubicación de Done.txt"
+
+# settings.json
+msgid "Due date extension"
+msgstr "Prórroga del plazo"
+
+# settings.json
+msgid "Edit"
+msgstr "Editar"
+
+# settings.json
+msgid "End"
+msgstr "Final"
+
+# settings.json
+msgid "Error"
+msgstr "Error"
+
+# settings.json
+msgid "Extensions"
+msgstr "Extensiones"
+
+# settings.json
+msgid "Files"
+msgstr "Archivos"
+
+# settings.json
+msgid "Flow"
+msgstr "Flujo"
+
+# settings.json
+msgid "General"
+msgstr "General"
+
+# settings.json
+msgid "Get color from theme"
+msgstr "Obtener el color del tema"
+
+# settings.json
+msgid "Group tasks by"
+msgstr "Agrupar las tareas por"
+
+# settings.json
+msgid "Grouping"
+msgstr "Agrupación"
+
+# settings.json
+msgid "Hidden tasks extension"
+msgstr "Extensión de las tareas ocultas"
+
+# settings.json
+msgid "Hide if pattern is zero"
+msgstr "Ocultar si el patrón es cero"
+
+# settings.json
+msgid "Icon"
+msgstr "Icono"
+
+# settings.json
+msgid "If the due date extension is enabled, tasks containing 'due:<some date>' will be shown differently"
+msgstr ""
+"Si la extensión de la fecha de vencimiento está activada, las tareas que "
+"contengan 'due:<some date>' se mostrarán de forma diferente"
+
+# settings.json
+msgid "If the hidden extension is enabled, tasks containing 'h:1' will not be shown"
+msgstr ""
+"Si la extensión oculta está activada, las tareas que contengan 'h:1' no se "
+"mostrarán"
+
+# settings.json
+msgid "If the specified pattern is zero, the elements specified here will be hidden"
+msgstr ""
+"Si el patrón especificado es cero, los elementos especificados aquí se "
+"ocultarán"
+
+# settings.json
+msgid "If this is true, an icon will be shown in the top bar"
+msgstr "Si es así, se mostrará un icono en la barra superior"
+
+# settings.json
+msgid "If this template evaluates to zero, the top bar element will be hidden. Shortcuts still work."
+msgstr ""
+"Si esta plantilla se evalúa a cero, el elemento de la barra superior se "
+"ocultará. Los accesos directos siguen funcionando."
+
+# settings.json
+msgid "Info"
+msgstr "Información"
+
+# settings.json
+msgid "Interface elements"
+msgstr "Elementos de la interfaz"
+
+# settings.json
+msgid "Keep as is (non-standard)"
+msgstr "Mantener como está (no estándar)"
+
+# settings.json
+msgid "Keep open menu after adding new task"
+msgstr "Mantener abierto el menú después de añadir una nueva tarea"
+
+# settings.json
+msgid "Keep with pri: prefix"
+msgstr "Mantener con pri: prefijo"
+
+# settings.json
+msgid "Keeps open the tasks menu after a new task is added. The new task entry will be focused."
+msgstr ""
+"Mantiene abierto el menú de tareas después de añadir una nueva tarea. La "
+"entrada de la nueva tarea estará enfocada."
+
+# settings.json
+msgid "Keyboard shortcut to open the task list"
+msgstr "Atajo de teclado para abrir la lista de tareas"
+
+# settings.json
+msgid "Level of debug information"
+msgstr "Nivel de información de la depuración"
+
+# settings.json
+msgid "Location of the text file that contains completed (archived) tasks"
+msgstr ""
+"Ubicación del archivo de texto que contiene las tareas completadas "
+"(archivadas)"
+
+# settings.json
+msgid "Location of the text file that contains the tasks in todo.txt syntax"
+msgstr ""
+"Ubicación del archivo de texto que contiene las tareas en la sintaxis todo."
+"txt"
+
+# settings.json
+msgid "Location to insert new task"
+msgstr "Ubicación para insertar la nueva tarea"
+
+# settings.json
+msgid "Location to truncate long tasks"
+msgstr "Ubicación para truncar tareas largas"
+
+# settings.json
+msgid "Mark as done or archive"
+msgstr "Marcar como hecha o archivar"
+
+# settings.json
+msgid "Maximum task width in pixels"
+msgstr "Anchura máxima de la tarea en píxeles"
+
+# settings.json
+msgid "Method to expand/contract truncated tasks"
+msgstr "Método para ampliar/contraer las tareas truncadas"
+
+# settings.json
+msgid "Middle"
+msgstr "Medio"
+
+# settings.json
+msgid "No grouping"
+msgstr "Sin agrupar"
+
+# settings.json
+msgid "Nothing"
+msgstr "Nada"
+
+# settings.json
+msgid "Only show tasks with a given or higher priority. Leave empty to show all tasks."
+msgstr ""
+"Mostrar sólo las tareas con una prioridad dada o superior. Dejar vacío para "
+"mostrar todas las tareas."
+
+# settings.json
+msgid "Only show tasks with a priority of or above"
+msgstr "Mostrar sólo las tareas con una prioridad igual o superior a"
+
+# settings.json
+msgid "Open task list"
+msgstr "Abrir la lista de tareas"
+
+# settings.json
+msgid "Order elements by their priority"
+msgstr "Ordenar los elementos por su prioridad"
+
+# settings.json
+msgid "Pattern to match for zero"
+msgstr "Patrón para el cero"
+
+# settings.json
+msgid "Priorities"
+msgstr "Prioridades"
+
+# settings.json
+msgid "Priority markup"
+msgstr "Marca para la prioridad"
+
+# settings.json
+msgid "Priority on task completion"
+msgstr "Prioridad al completar la tarea"
+
+# settings.json
+msgid "Projects"
+msgstr "Proyectos"
+
+# settings.json
+msgid "Put ungrouped tasks in separate group"
+msgstr "Poner las tareas no agrupadas en un grupo separado"
+
+# settings.json
+msgid "Remove"
+msgstr "Eliminar"
+
+# settings.json
+msgid "Same as task"
+msgstr "Igual que la tarea"
+
+# settings.json
+msgid "Scroll up/down"
+msgstr "Desplazarse arriba/abajo"
+
+# settings.json
+msgid "Select location of done.txt file"
+msgstr "Seleccione la ubicación del archivo done.txt"
+
+# settings.json
+msgid "Select location of todo.txt file"
+msgstr "Seleccione la ubicación del archivo todo.txt"
+
+# settings.json
+msgid "Shortcuts"
+msgstr "Accesos directos"
+
+# settings.json
+msgid "Show 'open in text editor'"
+msgstr "Mostrar 'abrir en editor de texto'"
+
+# settings.json
+msgid "Show 'open preferences'"
+msgstr "Mostrar \"preferencias abiertas\""
+
+# settings.json
+msgid "Show change task priority buttons"
+msgstr "Mostrar los botones de cambio en la prioridad de las tareas"
+
+# settings.json
+msgid "Show contexts"
+msgstr "Mostrar los contextos"
+
+# settings.json
+msgid "Show delete task button"
+msgstr "Mostrar el botón de eliminar tarea"
+
+# settings.json
+msgid "Show done tasks"
+msgstr "Mostrar las tareas realizadas"
+
+# settings.json
+msgid "Show done/archive task button"
+msgstr "Mostrar los botón para la tarea realizada/archivada"
+
+# settings.json
+msgid "Show edit task button"
+msgstr "Mostrar el botón editar la tarea"
+
+# settings.json
+msgid "Show icon"
+msgstr "Mostrar el icono"
+
+# settings.json
+msgid "Show new task entry"
+msgstr "Mostrar la nueva entrada de la tarea"
+
+# settings.json
+msgid "Show number of tasks in group"
+msgstr "Mostrar el número de tareas en el grupo"
+
+# settings.json
+msgid "Show projects"
+msgstr "Mostrar los proyectos"
+
+# settings.json
+msgid "Start"
+msgstr "Empezar"
+
+# settings.json
+msgid "Style priorities"
+msgstr "Prioridades del estilo"
+
+# settings.json
+msgid "Styles"
+msgstr "Estilos"
+
+# settings.json
+msgid "Tasks can be grouped together based on the selected property"
+msgstr "Las tareas pueden agruparse en función de la propiedad seleccionada"
+
+# settings.json
+msgid "Tasks that don't have the grouping priority can be put in a special 'ungrouped' group, or shown outside any groups"
+msgstr ""
+"Las tareas que no tienen prioridad de agrupación pueden colocarse en un "
+"grupo especial \"no agrupado\" o mostrarse fuera de cualquier grupo"
+
+# settings.json
+msgid "Tasks will be truncated to this width (specified in pixels) if truncating is enabled."
+msgstr ""
+"Las tareas se truncarán a esta anchura (especificada en píxeles) si el "
+"truncado está activado."
+
+# settings.json
+msgid "Template string for display"
+msgstr "Plantilla para la visualización"
+
+# settings.json
+msgid "Template that determines what is displayed in the top bar"
+msgstr "Plantilla que determina lo que se muestra en la barra superior"
+
+# settings.json
+msgid "Text"
+msgstr "Texto"
+
+# settings.json
+msgid "The action that will initiate expansion and contraction of tasks"
+msgstr "La acción que iniciará la expansión y contracción de las tareas"
+
+# settings.json
+msgid "The location in the task text where the ellipsization will occur"
+msgstr "La ubicación en el texto de la tarea donde se producirá la elipsización"
+
+# settings.json
+msgid "The number of tasks in a subgroup can be shown in the interface"
+msgstr "El número de tareas de un subgrupo puede mostrarse en la interfaz"
+
+# settings.json
+msgid "The way that tasks with different priorities are displayed"
+msgstr "La forma en que se muestran las tareas con diferentes prioridades"
+
+# settings.json
+msgid "This color will be used for URLs if 'Custom color' was selected above"
+msgstr ""
+"Este color se utilizará para las direcciones URL si se ha seleccionado "
+"\"Color personalizado\" más arriba"
+
+# settings.json
+msgid "Todo.txt location"
+msgstr "Ubicación de Todo.txt"
+
+# settings.json
+msgid "Top Bar"
+msgstr "Barra superior"
+
+# settings.json
+msgid "Top of the file"
+msgstr "Comienzo del archivo"
+
+# settings.json
+msgid "Truncate long tasks"
+msgstr "Truncar las tareas largas"
+
+# settings.json
+msgid "Truncating"
+msgstr "Truncando"
+
+# settings.json
+msgid "URL Color"
+msgstr "Color de la dirección URL"
+
+# settings.json
+msgid "Warning"
+msgstr "Advertencia"
+
+# settings.json
+msgid "What should be done with the priority of a task when that task is completed"
+msgstr ""
+"Qué debe hacerse con la prioridad de una tarea cuando ésta se ha completado"
+
+# settings.json
+msgid "What to do when a task is clicked"
+msgstr "Qué hacer cuando se hace clic en una tarea"
+
+# settings.json
+msgid "When URLs are detected in a task, they will be displayed in this color"
+msgstr ""
+"Cuando se detecten direcciones URLs en una tarea, se mostrarán en este color"
+
+# settings.json
+msgid "Where in the text-file the new task will be added. Also moves insert box to the top of the interface."
+msgstr ""
+"En qué parte del archivo del texto se añadirá la nueva tarea. También mueve "
+"el cuadro de inserción a la parte superior de la interfaz."
+
+# settings.json
+msgid "Whether a button is shown to delete a task"
+msgstr "Si se muestra un botón para eliminar una tarea"
+
+# settings.json
+msgid "Whether a button is shown to edit a task"
+msgstr "Si se muestra un botón para editar una tarea"
+
+# settings.json
+msgid "Whether a button is shown to mark active tasks as completed or to archive completed tasks, if auto-archive is off."
+msgstr ""
+"Si se muestra un botón para marcar las tareas activas como completadas o "
+"para archivar las tareas completadas, si el archivado automático está "
+"desactivado."
+
+# settings.json
+msgid "Whether a confirmation dialog is shown before deleting a task"
+msgstr ""
+"Si se muestra un cuadro de diálogo de confirmación antes de eliminar una "
+"tarea"
+
+# settings.json
+msgid "Whether a creation date is automatically added to newly created tasks"
+msgstr ""
+"Si se añade automáticamente una fecha de creación a las tareas recién creadas"
+
+# settings.json
+msgid "Whether a menu element is shown to open the extension's preferences"
+msgstr ""
+"Si se muestra un elemento de menú para abrir las preferencias de la extensión"
+
+# settings.json
+msgid "Whether a menu element is shown to open the todo.txt file in the default text editor"
+msgstr ""
+"Si se muestra un elemento de menú para abrir el archivo todo.txt en el "
+"editor de texto predeterminado"
+
+# settings.json
+msgid "Whether an entry field is shown to create new tasks (new tasks can also be added by modifying the todo.txt file)"
+msgstr ""
+"Si se muestra un campo de entrada para crear nuevas tareas (también se "
+"pueden añadir nuevas tareas modificando el archivo todo.txt)"
+
+# settings.json
+msgid "Whether arrows are shown to increase or decrease the task priority"
+msgstr ""
+"Si se muestran las flechas para aumentar o disminuir la prioridad de la tarea"
+
+# settings.json
+msgid "Whether completed tasks that are not archived will be shown"
+msgstr "Si se mostrarán las tareas completadas que no están archivada"
+
+# settings.json
+msgid "Whether completed tasks will be automatically archived (i.e. moved to the done.txt file)"
+msgstr ""
+"Si las tareas completadas se archivarán automáticamente (es decir, se "
+"moverán al archivo done.txt)"
+
+# settings.json
+msgid "Whether contexts are shown in the interface (does not affect grouping)"
+msgstr "Si los contextos se muestran en la interfaz (no afecta a la agrupación)"
+
+# settings.json
+msgid "Whether long tasks are truncated if they exceed a specified width"
+msgstr "Si las tareas largas se truncan si superan una anchura especificada"
+
+# settings.json
+msgid "Whether projects are shown in the interface (does not affect grouping)"
+msgstr "Si los proyectos se muestran en la interfaz (no afecta a la agrupación)"
+
+# settings.json
+msgid "Whether tasks with a certain priority are shown in a specific style"
+msgstr ""
+"Si las tareas con una determinada prioridad se muestran en un estilo "
+"específico"
+
+# settings.json
+msgid "Whether the tasks with a higher priority should be shown higher up in the list or the order should be left as in the todo.txt file"
+msgstr ""
+"Si las tareas con una prioridad más alta deben mostrarse más arriba en la "
+"lista o el orden debe dejarse como en el archivo todo.txt"

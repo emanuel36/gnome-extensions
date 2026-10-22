@@ -1,0 +1,683 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the todo.txt gnome-shell extension package.
+# Taylan Tatlı <taylantatli90@gmail.com>, 2024.
+# Baris Ozyurt <barisozyurt@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"Project-Id-Version: todo.txt gnome-shell extension\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-10 19:03+0100\n"
+"PO-Revision-Date: 2025-03-16 05:43+0000\n"
+"Last-Translator: Baris Ozyurt <barisozyurt@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/"
+"todo-txt-gnome-shell-extension/extension-and-preferences/tr/>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11-dev\n"
+
+#: ../libs/todoTxtManager.js:520
+msgid "%(file) exists already"
+msgstr "%(file) zaten mevcut"
+
+#: ../libs/openTextEditorEntry.js:22
+msgid ""
+"An error occured while trying to launch the default text editor: %(error)"
+msgstr ""
+"Varsayılan metin düzenleyicisini başlatmaya çalışırken bir hata oluştu: "
+"%(error)"
+
+#: ../libs/errors.js:24
+msgid "An error occurred while writing to %(file): %(error)"
+msgstr "%(file) dosyasına yazılırken bir hata oluştu: %(error)"
+
+#: ../libs/todoMenuItem.js:258
+msgid "Archive %(task)"
+msgstr "%(task) arşivle"
+
+#: ../libs/todoMenuItem.js:537
+msgid "Are you sure?"
+msgstr "Emin misin?"
+
+#: ../libs/todoTxtManager.js:517
+msgid "Cancel"
+msgstr "İptal"
+
+#: ../libs/openTextEditorEntry.js:20
+msgid "Cannot open file"
+msgstr "Dosya açılamıyor"
+
+#: ../libs/todoTxtManager.js:507
+msgid "Create new file"
+msgstr "Yeni dosya oluştur"
+
+#: ../libs/todoTxtManager.js:546
+msgid "Create todo.txt and done.txt file in %(path)"
+msgstr "%(path) dizininde todo.txt ve done.txt dosyalarını oluştur"
+
+#: ../libs/todoMenuItem.js:243
+msgid "Decrease %(task) priority"
+msgstr "%(task) önceliğini düşür"
+
+#: ../libs/todoMenuItem.js:268 ../libs/todoMenuItem.js:505
+msgid "Delete %(task)"
+msgstr "%(task) sil"
+
+#: ../libs/todoMenuItem.js:234
+msgid "Edit %(task)"
+msgstr "%(task) düzenle"
+
+#: ../libs/todoTxtManager.js:807 ../libs/todoTxtManager.js:864
+msgid "Error writing file"
+msgstr "Dosya yazılırken hata oluştu"
+
+#: ../libs/todoMenuItem.js:287
+msgid "Expand %(task)"
+msgstr "%(task) genişlet"
+
+#: ../libs/todoMenuItem.js:242
+msgid "Increase %(task) priority"
+msgstr "%(task) önceliğini yükselt"
+
+#: ../libs/todoMenuItem.js:300
+msgid "Mark %(task) as done"
+msgstr "%(task) tamamlandı olarak işaretle"
+
+#: ../libs/newTaskEntry.js:16
+msgid "New task…"
+msgstr "Yeni görev…"
+
+#: ../libs/todoTxtManager.js:540
+msgid "No valid %(filename) file specified"
+msgstr "Geçerli bir %(filename) dosyası belirtilmedi"
+
+#: ../libs/messageDialog.js:39
+msgid "Ok"
+msgstr "Tamam"
+
+#: ../libs/openPreferencesEntry.js:9
+msgid "Open preferences"
+msgstr "Tercihleri aç"
+
+#: ../libs/todoTxtManager.js:513
+msgid "Open settings"
+msgstr "Ayarları aç"
+
+#: ../libs/openTextEditorEntry.js:13
+msgid "Open todo.txt file in text editor"
+msgstr "todo.txt dosyasını metin editöründe aç"
+
+#: ../libs/todoTxtManager.js:521
+msgid "Please choose what you want to do"
+msgstr "Lütfen ne yapmak istediğinizi seçin"
+
+#: ../libs/todoTxtManager.js:541
+msgid "Select location in settings"
+msgstr "Ayarlarda konumu seçin"
+
+#: ../libs/todoMenuItem.js:527
+msgid "Undo delete %(task)"
+msgstr "%(task) silinmesini geri al"
+
+#: ../libs/todoTxtManager.js:385
+msgid "Ungrouped"
+msgstr "Gruplandırılmamış"
+
+#: ../libs/todoTxtManager.js:816 ../libs/todoTxtManager.js:870
+msgid "Unknown error during file write: %(error)"
+msgstr "Dosya yazma sırasında bilinmeyen hata: %(error)"
+
+#: ../libs/todoTxtManager.js:502
+msgid "Use existing file"
+msgstr "Mevcut dosyayı kullan"
+
+# settings.json
+msgid "Action on clicking task"
+msgstr "Göreve tıklandığında yapılacak işlem"
+
+# settings.json
+msgid "Auto-add creation date to new tasks"
+msgstr "Yeni görevlere otomatik olarak oluşturulma tarihi ekle"
+
+# settings.json
+msgid "Auto-archive done tasks"
+msgstr "Tamamlanan görevleri otomatik arşivle"
+
+# settings.json
+msgid "Behavior"
+msgstr "Davranış"
+
+# settings.json
+msgid "Bold"
+msgstr "Kalın"
+
+# settings.json
+msgid "Both"
+msgstr "İkiside"
+
+# settings.json
+msgid "Bottom of the file"
+msgstr "Dosyanın sonu"
+
+# settings.json
+msgid "Color done tasks"
+msgstr "Tamamlanan görevleri renklendir"
+
+# settings.json
+msgid "Color for detected URLs"
+msgstr "Algılanan URL'leri renklendir"
+
+# settings.json
+msgid "Confirm task deletion"
+msgstr "Görev silmeyi onayla"
+
+# settings.json
+msgid "Contexts"
+msgstr "Bağlam menüsü"
+
+# settings.json
+msgid "Custom color"
+msgstr "Özel renk"
+
+# settings.json
+msgid "Custom color for URLS"
+msgstr "URL'ler için özel renk"
+
+# settings.json
+msgid "Custom color for done tasks"
+msgstr "Tamamlanan görevler için özel renk"
+
+# settings.json
+msgid "Debug"
+msgstr "Hata ayıklama"
+
+# settings.json
+msgid "Debug level"
+msgstr "Hata ayıklama seviyesi"
+
+# settings.json
+msgid "Debugging"
+msgstr "Hata Ayıklama"
+
+# settings.json
+msgid "Dedicated button"
+msgstr "Özel buton"
+
+# settings.json
+msgid "Detail"
+msgstr "Ayrıntı"
+
+# settings.json
+msgid "Display"
+msgstr "Görüntüleme"
+
+# settings.json
+msgid "Done Task Style"
+msgstr "Tamamlanmış Görev Stili"
+
+# settings.json
+msgid "Done.txt location"
+msgstr "Done.txt konumu"
+
+# settings.json
+msgid "Due date extension"
+msgstr "Son tarih uzatma"
+
+# settings.json
+msgid "Comments extension"
+msgstr "Yorum uzantısı"
+
+# settings.json
+msgid "Edit"
+msgstr "Düzenle"
+
+# settings.json
+msgid "End"
+msgstr "Son"
+
+# settings.json
+msgid "Error"
+msgstr "Hata"
+
+# settings.json
+msgid "Extensions"
+msgstr "Uzantılar"
+
+# settings.json
+msgid "Files"
+msgstr "Dosyalar"
+
+# settings.json
+msgid "Flow"
+msgstr "Akış"
+
+# settings.json
+msgid "General"
+msgstr "Genel"
+
+# settings.json
+msgid "Get color from theme"
+msgstr "Rengi temadan al"
+
+# settings.json
+msgid "Group tasks by"
+msgstr ""
+
+# settings.json
+msgid "Grouping"
+msgstr ""
+
+# settings.json
+msgid "Hidden tasks extension"
+msgstr ""
+
+# settings.json
+msgid "Hide if pattern is zero"
+msgstr ""
+
+# settings.json
+msgid "Icon"
+msgstr ""
+
+# settings.json
+msgid "If enabled, done tasks will use a custom color"
+msgstr ""
+
+# settings.json
+msgid "If the due date extension is enabled, tasks containing 'due:<some date>' will be shown differently"
+msgstr ""
+
+# settings.json
+msgid "If the hidden extension is enabled, tasks containing 'h:1' will not be shown"
+msgstr ""
+
+# settings.json
+msgid "If the comments extension is enabled, tasks starting with a # will be hidden"
+msgstr ""
+
+# settings.json
+msgid "If the specified pattern is zero, the elements specified here will be hidden"
+msgstr ""
+
+# settings.json
+msgid "If this is true, an icon will be shown in the top bar"
+msgstr ""
+
+# settings.json
+msgid "If this template evaluates to zero, the top bar element will be hidden. Shortcuts still work."
+msgstr ""
+
+# settings.json
+msgid "Info"
+msgstr ""
+
+# settings.json
+msgid "Interface elements"
+msgstr ""
+
+# settings.json
+msgid "Italic"
+msgstr ""
+
+# settings.json
+msgid "Keep as is (non-standard)"
+msgstr ""
+
+# settings.json
+msgid "Keep open menu after adding new task"
+msgstr ""
+
+# settings.json
+msgid "Keep with pri: prefix"
+msgstr ""
+
+# settings.json
+msgid "Keeps open the tasks menu after a new task is added. The new task entry will be focused."
+msgstr ""
+
+# settings.json
+msgid "Keyboard shortcut to open the task list"
+msgstr ""
+
+# settings.json
+msgid "Level of debug information"
+msgstr ""
+
+# settings.json
+msgid "Location of the text file that contains completed (archived) tasks"
+msgstr ""
+
+# settings.json
+msgid "Location of the text file that contains the tasks in todo.txt syntax"
+msgstr ""
+
+# settings.json
+msgid "Location to insert new task"
+msgstr ""
+
+# settings.json
+msgid "Location to truncate long tasks"
+msgstr ""
+
+# settings.json
+msgid "Mark as done or archive"
+msgstr ""
+
+# settings.json
+msgid "Maximum task width in pixels"
+msgstr ""
+
+# settings.json
+msgid "Method to expand/contract truncated tasks"
+msgstr ""
+
+# settings.json
+msgid "Middle"
+msgstr ""
+
+# settings.json
+msgid "No grouping"
+msgstr ""
+
+# settings.json
+msgid "Nothing"
+msgstr ""
+
+# settings.json
+msgid "Only show tasks with a given or higher priority. Leave empty to show all tasks."
+msgstr ""
+
+# settings.json
+msgid "Only show tasks with a priority of or above"
+msgstr ""
+
+# settings.json
+msgid "Open task list"
+msgstr ""
+
+# settings.json
+msgid "Order elements by their priority"
+msgstr ""
+
+# settings.json
+msgid "Pattern to match for zero"
+msgstr ""
+
+# settings.json
+msgid "Priorities"
+msgstr ""
+
+# settings.json
+msgid "Priority markup"
+msgstr ""
+
+# settings.json
+msgid "Priority on task completion"
+msgstr ""
+
+# settings.json
+msgid "Projects"
+msgstr ""
+
+# settings.json
+msgid "Put ungrouped tasks in separate group"
+msgstr ""
+
+# settings.json
+msgid "Remove"
+msgstr ""
+
+# settings.json
+msgid "Same as task"
+msgstr ""
+
+# settings.json
+msgid "Scroll up/down"
+msgstr ""
+
+# settings.json
+msgid "Select location of done.txt file"
+msgstr ""
+
+# settings.json
+msgid "Select location of todo.txt file"
+msgstr ""
+
+# settings.json
+msgid "Shortcuts"
+msgstr ""
+
+# settings.json
+msgid "Show 'open in text editor'"
+msgstr ""
+
+# settings.json
+msgid "Show 'open preferences'"
+msgstr ""
+
+# settings.json
+msgid "Show change task priority buttons"
+msgstr ""
+
+# settings.json
+msgid "Show contexts"
+msgstr ""
+
+# settings.json
+msgid "Show delete task button"
+msgstr ""
+
+# settings.json
+msgid "Show done tasks"
+msgstr ""
+
+# settings.json
+msgid "Show done/archive task button"
+msgstr ""
+
+# settings.json
+msgid "Show edit task button"
+msgstr ""
+
+# settings.json
+msgid "Show icon"
+msgstr ""
+
+# settings.json
+msgid "Show new task entry"
+msgstr ""
+
+# settings.json
+msgid "Show number of tasks in group"
+msgstr ""
+
+# settings.json
+msgid "Show projects"
+msgstr ""
+
+# settings.json
+msgid "Start"
+msgstr ""
+
+# settings.json
+msgid "Strikethrough"
+msgstr ""
+
+# settings.json
+msgid "Style priorities"
+msgstr ""
+
+# settings.json
+msgid "Styles"
+msgstr ""
+
+# settings.json
+msgid "Tasks can be grouped together based on the selected property"
+msgstr ""
+
+# settings.json
+msgid "Tasks that don't have the grouping priority can be put in a special 'ungrouped' group, or shown outside any groups"
+msgstr ""
+
+# settings.json
+msgid "Tasks will be truncated to this width (specified in pixels) if truncating is enabled."
+msgstr ""
+
+# settings.json
+msgid "Template string for display"
+msgstr ""
+
+# settings.json
+msgid "Template that determines what is displayed in the top bar"
+msgstr ""
+
+# settings.json
+msgid "Text"
+msgstr ""
+
+# settings.json
+msgid "The action that will initiate expansion and contraction of tasks"
+msgstr ""
+
+# settings.json
+msgid "The location in the task text where the ellipsization will occur"
+msgstr ""
+
+# settings.json
+msgid "The number of tasks in a subgroup can be shown in the interface"
+msgstr ""
+
+# settings.json
+msgid "The way that tasks with different priorities are displayed"
+msgstr ""
+
+# settings.json
+msgid "This color will be used for URLs if 'Custom color' was selected above"
+msgstr ""
+
+# settings.json
+msgid "This color will be used for done tasks if 'Color done tasks' was enabled above"
+msgstr ""
+
+# settings.json
+msgid "Todo.txt location"
+msgstr ""
+
+# settings.json
+msgid "Top Bar"
+msgstr ""
+
+# settings.json
+msgid "Top of the file"
+msgstr ""
+
+# settings.json
+msgid "Truncate long tasks"
+msgstr ""
+
+# settings.json
+msgid "Truncating"
+msgstr ""
+
+# settings.json
+msgid "URL Color"
+msgstr ""
+
+# settings.json
+msgid "Warning"
+msgstr ""
+
+# settings.json
+msgid "What should be done with the priority of a task when that task is completed"
+msgstr ""
+
+# settings.json
+msgid "What to do when a task is clicked"
+msgstr ""
+
+# settings.json
+msgid "When URLs are detected in a task, they will be displayed in this color"
+msgstr ""
+
+# settings.json
+msgid "Where in the text-file the new task will be added. Also moves insert box to the top of the interface."
+msgstr ""
+
+# settings.json
+msgid "Whether a button is shown to delete a task"
+msgstr ""
+
+# settings.json
+msgid "Whether a button is shown to edit a task"
+msgstr ""
+
+# settings.json
+msgid "Whether a button is shown to mark active tasks as completed or to archive completed tasks, if auto-archive is off."
+msgstr ""
+
+# settings.json
+msgid "Whether a confirmation dialog is shown before deleting a task"
+msgstr ""
+
+# settings.json
+msgid "Whether a creation date is automatically added to newly created tasks"
+msgstr ""
+
+# settings.json
+msgid "Whether a menu element is shown to open the extension's preferences"
+msgstr ""
+
+# settings.json
+msgid "Whether a menu element is shown to open the todo.txt file in the default text editor"
+msgstr ""
+
+# settings.json
+msgid "Whether an entry field is shown to create new tasks (new tasks can also be added by modifying the todo.txt file)"
+msgstr ""
+
+# settings.json
+msgid "Whether arrows are shown to increase or decrease the task priority"
+msgstr ""
+
+# settings.json
+msgid "Whether completed tasks that are not archived will be shown"
+msgstr ""
+
+# settings.json
+msgid "Whether completed tasks will be automatically archived (i.e. moved to the done.txt file)"
+msgstr ""
+
+# settings.json
+msgid "Whether contexts are shown in the interface (does not affect grouping)"
+msgstr ""
+
+# settings.json
+msgid "Whether done tasks are styled in bold"
+msgstr ""
+
+# settings.json
+msgid "Whether done tasks are styled in italics"
+msgstr ""
+
+# settings.json
+msgid "Whether done tasks are styled in strikethrough"
+msgstr ""
+
+# settings.json
+msgid "Whether long tasks are truncated if they exceed a specified width"
+msgstr ""
+
+# settings.json
+msgid "Whether projects are shown in the interface (does not affect grouping)"
+msgstr ""
+
+# settings.json
+msgid "Whether tasks with a certain priority are shown in a specific style"
+msgstr ""
+
+# settings.json
+msgid "Whether the tasks with a higher priority should be shown higher up in the list or the order should be left as in the todo.txt file"
+msgstr ""

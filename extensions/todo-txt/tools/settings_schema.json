@@ -1,0 +1,152 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "patternProperties": {
+        "^([A-Za-z \\-_])+$": {
+            "$ref": "#/definitions/category"
+        }
+    },
+    "additionalProperties": false,
+    "definitions":
+    {
+        "category": {
+            "type":"object",
+            "properties": {
+                "type": {
+                    "type":"string",
+                    "enum":["category"]
+                },
+                "icon-name": {
+                    "type":"string"
+                }
+            },
+            "patternProperties": {
+                "^(?!(type|icon-name)$)([A-Za-z \\-_])+$": {
+                    "$ref":"#/definitions/subcontainer"
+                }
+            },
+            "additionalProperties": false,
+            "required": ["type", "icon-name"]
+        },
+        "subcontainer":{
+            "type":"object",
+            "properties": {
+                "type": {
+                    "type":"string",
+                    "enum":["subcategory", "subsection"]
+                }
+            },
+            "patternProperties": {
+                "^(?!(type)$)([A-Za-z \\-_])+$": {
+                    "oneOf": [
+                        { "$ref":"#/definitions/setting" },
+                        { "$ref":"#/definitions/integer_setting" },
+                        { "$ref":"#/definitions/help_setting" }
+                    ]
+                }
+            },
+            "additionalProperties": false,
+            "required": ["type"]
+        },
+        "setting" :{
+            "type":"object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": ["boolean", "string", "dictionary", "path", "shortcut"]
+                },
+                "help": {
+                    "type":"string"
+                },
+                "human_name": {
+                    "type":"string"
+                },
+                "default_value": {
+                    "type":"string"
+                },
+                "summary": {
+                    "type":"string"
+                },
+                "level": {
+                    "type": "string",
+                    "enum": ["0", "100", "250"]
+                },
+                "extra_params": {
+                    "type":"object"
+                },
+                "widget": {
+                    "type": "string"
+                },
+                "value_object" :{
+                    "type": "string"
+                },
+                "signature" :{
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false,
+            "required": ["type", "help", "human_name", "default_value", "summary", "level"]
+        },
+        "integer_setting" :{
+            "type":"object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": ["integer"]
+                },
+                "help": {
+                    "type":"string"
+                },
+                "human_name": {
+                    "type":"string"
+                },
+                "default_value": {
+                    "type":"string"
+                },
+                "summary": {
+                    "type":"string"
+                },
+                "extra_params": {
+                    "type":"object",
+                    "options": {
+                        "type":"object"
+                    }
+                },
+                "required":["options"],
+                "widget": {
+                    "type": "string"
+                },
+                "level": {
+                    "type": "string",
+                    "enum": ["0", "100", "250"]
+                }
+            },
+            "additionalProperties": false,
+            "required": ["type", "help", "human_name", "default_value", "summary", "extra_params", "level"]
+        },
+        "help_setting" :{
+            "type":"object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": ["help"]
+                },
+                "url": {
+                    "type":"string"
+                },
+                "widget": {
+                    "type": "string"
+                },
+                "level": {
+                    "type": "string",
+                    "enum": ["0", "100", "250"]
+                },
+                "extra_params": {
+                    "type":"object"
+                }
+            },
+            "additionalProperties": false,
+            "required": ["type", "url", "level"]
+        }
+    }
+}
