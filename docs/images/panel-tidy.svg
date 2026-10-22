@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="600" viewBox="0 0 560 600" font-family="Ubuntu, Cantarell, 'Noto Sans', 'Segoe UI', sans-serif">
+<defs><filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.45"/></filter></defs>
+<rect x="0" y="0" width="560" height="600" rx="12" fill="#1b1b1d"/>
+<rect x="0" y="0" width="560" height="600" rx="12" fill="#1b1b1d"/>
+<rect x="20" y="20" width="520" height="560" rx="12" fill="#242424" stroke="rgba(255,255,255,0.08)"/>
+<path d="M32 20 H528 A12 12 0 0 1 540 32 V66 H20 V32 A12 12 0 0 1 32 20 Z" fill="#303030"/>
+<text x="280.0" y="49" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Panel Tidy</text>
+<circle cx="516" cy="43" r="11" fill="#444444"/><path d="M512 39 l8 8 m0 -8 l-8 8" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
+<text x="60" y="100" font-size="14" font-weight="700" fill="#ffffff" text-anchor="start">Left</text>
+<text x="60" y="120" font-size="12" font-weight="400" fill="#9a9a9a" text-anchor="start">Drag items to reorder them or move them to another side.</text>
+<rect x="60" y="132" width="440" height="100" rx="12" fill="#363636"/>
+<rect x="76" y="151" width="12" height="1.8" fill="#aaaaaa"/><rect x="76" y="156" width="12" height="1.8" fill="#aaaaaa"/><rect x="76" y="161" width="12" height="1.8" fill="#aaaaaa"/>
+<text x="102" y="162" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">System Monitor</text>
+<rect x="432" y="144" width="48" height="26" rx="13" fill="#3584e4"/><circle cx="467" cy="157" r="10" fill="#ffffff"/>
+<rect x="60" y="182" width="440" height="1" rx="0" fill="rgba(255,255,255,0.07)"/>
+<rect x="76" y="201" width="12" height="1.8" fill="#aaaaaa"/><rect x="76" y="206" width="12" height="1.8" fill="#aaaaaa"/><rect x="76" y="211" width="12" height="1.8" fill="#aaaaaa"/>
+<text x="102" y="212" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">Todo</text>
+<rect x="432" y="194" width="48" height="26" rx="13" fill="#3584e4"/><circle cx="467" cy="207" r="10" fill="#ffffff"/>
+<text x="60" y="262" font-size="14" font-weight="700" fill="#ffffff" text-anchor="start">Center</text>
+<rect x="60" y="274" width="440" height="100" rx="12" fill="#363636"/>
+<rect x="76" y="293" width="12" height="1.8" fill="#aaaaaa"/><rect x="76" y="298" width="12" height="1.8" fill="#aaaaaa"/><rect x="76" y="303" width="12" height="1.8" fill="#aaaaaa"/>
+<text x="102" y="304" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">Date and Time</text>
+<rect x="432" y="286" width="48" height="26" rx="13" fill="#3584e4"/><circle cx="467" cy="299" r="10" fill="#ffffff"/>
+<rect x="60" y="324" width="440" height="1" rx="0" fill="rgba(255,255,255,0.07)"/>
+<rect x="76" y="343" width="12" height="1.8" fill="#aaaaaa"/><rect x="76" y="348" width="12" height="1.8" fill="#aaaaaa"/><rect x="76" y="353" width="12" height="1.8" fill="#aaaaaa"/>
+<text x="102" y="354" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">Next Up</text>
+<rect x="432" y="336" width="48" height="26" rx="13" fill="#3584e4"/><circle cx="467" cy="349" r="10" fill="#ffffff"/>
+<text x="60" y="404" font-size="14" font-weight="700" fill="#ffffff" text-anchor="start">Quick Settings</text>
+<text x="60" y="424" font-size="12" font-weight="400" fill="#9a9a9a" text-anchor="start">Toggles shown in the system menu.</text>
+<rect x="60" y="436" width="440" height="100" rx="12" fill="#363636"/>
+<text x="76" y="466" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">Night Light</text>
+<rect x="432" y="448" width="48" height="26" rx="13" fill="#555555"/><circle cx="445" cy="461" r="10" fill="#ffffff"/>
+<rect x="60" y="486" width="440" height="1" rx="0" fill="rgba(255,255,255,0.07)"/>
+<text x="76" y="516" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">Dark Style</text>
+<rect x="432" y="498" width="48" height="26" rx="13" fill="#555555"/><circle cx="445" cy="511" r="10" fill="#ffffff"/>
+</svg>

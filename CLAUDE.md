@@ -1,9 +1,11 @@
 # gnome-extensions
 
-Monorepo of GNOME Shell extensions imported from upstream with `git subtree --squash` and
-maintained as my own code (not forks). Each extension lives in `extensions/<name>/`. The
-README table is the source of truth for where each one came from; update it whenever a
-subtree is pulled again.
+Monorepo of GNOME Shell extensions, some imported from upstream with `git subtree --squash`
+and maintained as my own code (not forks), the rest written here. Each extension lives in
+`extensions/<name>/` and has a section in the README (description, mockup, what it is
+based on). The README's "Upstream imports" table is the source of truth for imported
+code; update it whenever a subtree is pulled again. Mockups are SVGs in `docs/images/`
+with made-up data; update them when an extension's look changes.
 
 Start-of-project context (findings, local patches, decisions so far):
 `docs/superpowers/2026-10-22-contexto-inicial.md`. Designs go in `docs/superpowers/specs/`.
