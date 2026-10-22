@@ -43,7 +43,8 @@ Start-of-project context (findings, local patches, decisions so far):
 
 - Identity is set in this repo's local config (emanuel36, GitHub noreply email). Don't change it.
 - `origin` uses the SSH host alias `github.com-emanuel36` (key `~/.ssh/id_emanuel36`).
-  The GitHub repo does not exist yet. Never push unless asked.
+  The GitHub repo is public: https://github.com/emanuel36/gnome-extensions. Never push
+  unless asked, and scan new history for secrets before pushing.
 - `git subtree add/pull -m` keeps only the last `-m`: pass a single message with embedded
   newlines.
 - Bring in an upstream fix with
