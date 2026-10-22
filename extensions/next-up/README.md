@@ -18,4 +18,3 @@ You can install the extension from [the extensions.gnome.org page](https://exten
 - https://extensions.gnome.org/extension/4448/next-meeting/
 - https://github.com/corecoding/Vitals
 
-- [Party popper icon](https://www.flaticon.com/free-icon/party-popper_6335608) by [Ayub Irawan](https://www.flaticon.com/authors/ayub-irawan)

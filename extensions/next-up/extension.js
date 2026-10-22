@@ -16,7 +16,8 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
  * Modified 2026-10-22 by emanuel36: read events from the date menu's event source and
- * refresh when it changes; remove the indicator from whichever box holds it on disable.
+ * refresh when it changes; remove the indicator from whichever box holds it on disable;
+ * compact text, hidden when nothing is left, no confetti icon.
  */
 
 import GLib from "gi://GLib";
@@ -27,16 +28,12 @@ import { Extension } from "resource:///org/gnome/shell/extensions/extension.js";
 
 import Indicator from "./src/indicator.js";
 import * as DateHelperFunctions from "./src/date.js";
-import Gio from "gi://Gio";
 
 const IndicatorInstance = GObject.registerClass(Indicator);
 
 export default class NextUpExtension extends Extension {
   enable() {
     this._indicator = new IndicatorInstance({
-      confettiGicon: Gio.icon_new_for_string(
-        this.path + "/assets/party-popper.png"
-      ),
       openPrefsCallback: this.openPreferences.bind(this),
     });
 
@@ -58,6 +55,7 @@ export default class NextUpExtension extends Extension {
       3,
       () => {
         this.loadIndicator();
+        this.refreshIndicator();
         this._startLoop();
 
         return false;
@@ -141,15 +139,9 @@ export default class NextUpExtension extends Extension {
     );
     const eventStatus =
       DateHelperFunctions.getNextEventsToDisplay(todaysEvents);
-    const text = DateHelperFunctions.eventStatusToIndicatorText(eventStatus);
-
-    if (eventStatus.currentEvent === null && eventStatus.nextEvent === null) {
-      this._indicator.showConfettiIcon();
-    } else {
-      this._indicator.showAlarmIcon();
-    }
-
-    this._indicator.setText(text);
+    this._indicator.setStatus(
+      DateHelperFunctions.eventStatusToIndicatorText(eventStatus)
+    );
   }
 
   disable() {

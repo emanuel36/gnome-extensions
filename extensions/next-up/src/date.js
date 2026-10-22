@@ -1,11 +1,12 @@
-// Modified 2026-10-22 by emanuel36: read events from the source passed in;
-// pad minutes on the left.
+// Modified 2026-10-22 by emanuel36: read events from the source passed in; new compact
+// indicator text (start time + faded countdown, current meeting with time left, "+N"
+// for meetings starting together).
 
 const MAX_EVENT_SUMMARY_LENGTH = 35;
 
 function trimLongEventName(summary) {
   if (summary.length > MAX_EVENT_SUMMARY_LENGTH) {
-    return summary.substring(0, MAX_EVENT_SUMMARY_LENGTH) + "...";
+    return summary.substring(0, MAX_EVENT_SUMMARY_LENGTH).trimEnd() + "…";
   } else {
     return summary;
   }
@@ -32,116 +33,71 @@ export function getTodaysEvents(eventSource) {
   return todaysEvents;
 }
 
-export function getNextEventsToDisplay(todaysEvents) {
-  const now = new Date();
-  const N = todaysEvents.length;
-
-  let currentEvent = null; // The calendar event the user is currently in
-  let nextEvent = null; // The next calendar event coming up
-  let done = false;
-
-  for (let i = 0; i < N; i++) {
-    if (done) break;
-
-    const event = todaysEvents[i];
-    const eventStart = event.date;
-    const eventEnd = event.end;
-
-    if (now < eventStart) {
-      nextEvent = event;
-      break;
-    } else if (now < eventEnd) {
-      currentEvent = event;
-
-      // Check whether there's an event after this one
-      if (i < N - 1) {
-        let someNextEvent;
-
-        for (let j = i + 1; j < N; j++) {
-          someNextEvent = todaysEvents[j];
-
-          // Check whether the next event overlaps the current event
-          // or whether they start at the same time
-
-          if (!(someNextEvent.date.valueOf() === currentEvent.date.valueOf())) {
-            nextEvent = someNextEvent;
-            done = true;
-            break;
-          }
-        }
-      }
-    }
-  }
-
-  return {
-    currentEvent: currentEvent,
-    nextEvent: nextEvent,
-  };
+function byStart(a, b) {
+  return a.date - b.date;
 }
 
-export function eventStatusToIndicatorText(eventStatus) {
-  function displayNextEvent(event) {
-    const timeText = getTimeOfEventAsText(event.date);
-    const diffText = getTimeToEventAsText(event.date);
+// Meetings in progress win over upcoming ones; "others" counts the meetings that start
+// at the same time as the one shown.
+export function getNextEventsToDisplay(todaysEvents, now = new Date()) {
+  const events = [...todaysEvents].sort(byStart);
 
-    const summary = trimLongEventName(event.summary);
+  const currentEvent = events.find((e) => e.date <= now && now < e.end) ?? null;
+  const nextEvent = events.find((e) => now < e.date) ?? null;
+  const shown = currentEvent ?? nextEvent;
+  const others = shown
+    ? events.filter((e) => e !== shown && e.date.valueOf() === shown.date.valueOf()).length
+    : 0;
 
-    return `In ${diffText}: ${summary} at ${timeText}`;
-  }
-
-  function displayCurrentEventAndNextEvent(currentEvent, nextEvent) {
-    const endsInText = getTimeToEventAsText(currentEvent.end);
-    const timeText = getTimeOfEventAsText(nextEvent.date);
-
-    const summary = trimLongEventName(nextEvent.summary);
-
-    return `Ends in ${endsInText}. Next: ${summary} at ${timeText}`;
-  }
-
-  function displayCurrentEvent(event) {
-    const endsInText = getTimeToEventAsText(event.end);
-
-    return `Ends in ${endsInText}: ${event.summary}`;
-  }
-
-  function displayNoEvents() {
-    return "Done for today!";
-  }
-
-  const { currentEvent, nextEvent } = eventStatus;
-
-  if (currentEvent != null) {
-    if (nextEvent != null) {
-      return displayCurrentEventAndNextEvent(currentEvent, nextEvent);
-    } else {
-      return displayCurrentEvent(currentEvent);
-    }
-  } else {
-    if (nextEvent != null) {
-      return displayNextEvent(nextEvent);
-    } else {
-      return displayNoEvents();
-    }
-  }
+  return { currentEvent, nextEvent, others };
 }
 
-function getTimeOfEventAsText(eventDate) {
-  const hrs = eventDate.getHours();
-  let mins = eventDate.getMinutes().toString();
+/**
+ * Text for the panel.
+ *
+ * Args:
+ *   eventStatus: Result of getNextEventsToDisplay().
+ *   now: Current time.
+ *
+ * Returns:
+ *   `{text, hint}`, where `hint` is shown faded after `text`, e.g.
+ *   `{text: "14:00 Design review", hint: "· 2h45"}`; or null when nothing is left today.
+ */
+export function eventStatusToIndicatorText(eventStatus, now = new Date()) {
+  const { currentEvent, nextEvent, others } = eventStatus;
+  const extra = others > 0 ? `+${others} ` : "";
 
-  mins = mins.padStart(2, "0"); // Show e.g. 11:05 instead of 11:5 (or 11:50)
+  if (currentEvent !== null) {
+    return {
+      text: trimLongEventName(currentEvent.summary),
+      hint: `${extra}· ${formatDuration(currentEvent.end - now)} left`,
+    };
+  }
 
-  const time = `${hrs}:${mins}`;
-  return time;
+  if (nextEvent !== null) {
+    const startsIn = nextEvent.date - now;
+    return {
+      text: `${getTimeOfEventAsText(nextEvent.date)} ${trimLongEventName(nextEvent.summary)}`,
+      hint: `${extra}· ${startsIn < 60000 ? "now" : formatDuration(startsIn)}`,
+    };
+  }
+
+  return null;
 }
 
-function getTimeToEventAsText(eventDate) {
-  const now = new Date();
-  const diff = Math.abs(eventDate - now);
-  const diffInMins = Math.ceil(diff / (1000 * 60));
+export function getTimeOfEventAsText(eventDate) {
+  const hrs = eventDate.getHours().toString().padStart(2, "0");
+  const mins = eventDate.getMinutes().toString().padStart(2, "0");
 
-  const hrDiff = Math.floor(diffInMins / 60);
-  const minDiff = diffInMins % 60;
+  return `${hrs}:${mins}`;
+}
 
-  return hrDiff > 0 ? `${hrDiff} hr ${minDiff} min` : `${minDiff} min`;
+// 5m, 1h, 2h45
+export function formatDuration(ms) {
+  const totalMins = Math.ceil(ms / 60000);
+  if (totalMins < 60) return `${totalMins}m`;
+
+  const hrs = Math.floor(totalMins / 60);
+  const mins = totalMins % 60;
+  return mins === 0 ? `${hrs}h` : `${hrs}h${mins.toString().padStart(2, "0")}`;
 }
