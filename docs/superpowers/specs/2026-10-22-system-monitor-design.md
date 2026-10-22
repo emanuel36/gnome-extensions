@@ -75,7 +75,11 @@ Mockup Part 4 option B, Part 5 option A, Part 6 option B.
   `[wired/wireless icon] Ethernet · 3.0 GB today    ↓ 1.2 MB/s   ↑ 80 KB/s`
   (the "today" part faded). Icons: `network-wired-symbolic`,
   `network-wireless-signal-excellent-symbolic`.
-- If no interface is shown, the network part shows a single faded "Offline" line.
+- Above the rows, buttons `Today · 7 days · 30 days · All time` pick the period of the
+  data used (row suffix `today`, `in 7 days`, `in 30 days`, `in total`). The choice is
+  kept in GSettings (`net-usage-period`).
+- If no interface is shown, the network part shows a single faded "Offline" line and no
+  period buttons.
 
 ## Data
 
@@ -100,10 +104,13 @@ Mockup Part 4 option B, Part 5 option A, Part 6 option B.
   Labels "Ethernet" / "Wi-Fi"; if two of the same kind are shown, add the interface name.
   On this machine: `eth0` (USB dock, up), `enp0s31f6` (onboard, down), `wlp0s20f3`.
 - **Speeds**: byte-counter deltas from `/proc/net/dev`.
-- **Data used today**: per interface, received + sent since local midnight. Persisted in
-  the extension's GSettings (one JSON key) so it survives shell restarts and reboots; the
-  counters from `/proc/net/dev` reset on reboot and when an interface reappears, and that
-  must not lose or double-count what was already counted. Resets at local midnight.
+- **Data used**: per interface, received + sent, kept per local day for the last 30 days
+  plus one total for older days. Periods are rolling: today, today and the 6 days
+  before, today and the 29 days before, and everything since the extension started
+  counting. Persisted in the extension's GSettings (one JSON key) so it survives shell
+  restarts and reboots; the counters from `/proc/net/dev` reset on reboot and when an
+  interface reappears, and that must not lose or double-count what was already counted.
+  The first version kept only today's total; it is carried over as that day's entry.
 
 ## Cost
 

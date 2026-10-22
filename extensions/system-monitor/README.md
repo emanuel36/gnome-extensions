@@ -5,7 +5,8 @@ popup lists:
 
 - the top 5 apps by CPU and by memory (processes grouped by name, all users included);
 - CPU temperature and the highest current core frequency;
-- each connected cable / Wi-Fi interface with its speed and the data used today.
+- each connected cable / Wi-Fi interface with its speed and the data it used today, in
+  the last 7 or 30 days, or in total (picked with the buttons above the list).
 
 Virtual interfaces (docker, veth, bridges, VPN tunnels) are left out. Process data is only
 collected while the popup is open.

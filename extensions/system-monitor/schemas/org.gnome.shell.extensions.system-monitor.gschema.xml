@@ -4,8 +4,18 @@
           path="/org/gnome/shell/extensions/system-monitor/">
     <key name="net-usage" type="s">
       <default>''</default>
-      <summary>Data used today per interface</summary>
-      <description>JSON kept by the extension: {date, ifaces: {name: {used, rx, tx}}}</description>
+      <summary>Data used per interface</summary>
+      <description>JSON kept by the extension: {ifaces: {name: {rx, tx, id, days, older}}}</description>
+    </key>
+    <key name="net-usage-period" type="s">
+      <choices>
+        <choice value="day"/>
+        <choice value="week"/>
+        <choice value="month"/>
+        <choice value="all"/>
+      </choices>
+      <default>'day'</default>
+      <summary>Period of the data used shown in the popup</summary>
     </key>
   </schema>
 </schemalist>
