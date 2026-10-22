@@ -2,10 +2,29 @@
 
 Monorepo of GNOME Shell extensions, some imported from upstream with `git subtree --squash`
 and maintained as my own code (not forks), the rest written here. Each extension lives in
-`extensions/<name>/` and has a section in the README (description, mockup, what it is
-based on). The README's "Upstream imports" table is the source of truth for imported
-code; update it whenever a subtree is pulled again. Mockups are SVGs in `docs/images/`
-with made-up data; update them when an extension's look changes.
+`extensions/<name>/` with its own README, and has a row in the README's numbered table
+(upstream links, `-` when there is none) and a short section with its mockup. The README's
+"Upstream imports" table is the source of truth for imported code; update it whenever a
+subtree is pulled again. Mockups are SVGs in `docs/images/` with made-up data, shown in
+both the root and the extension README; update them when an extension's look changes.
+
+READMEs describe what an extension does for the user: no tests, source paths, internal
+APIs or design-doc links. Developer notes go here.
+
+## Tests
+
+Pure logic is covered by tests run with `gjs`:
+
+```bash
+for t in format stats usage sources; do gjs -m extensions/system-monitor/$t.test.js; done
+gjs -m extensions/next-up/src/date.test.js
+gjs -m extensions/todo/tasks.test.js
+gjs -m extensions/todo/store.test.js
+gjs -m extensions/panel-tidy/order.test.js
+gjs -m extensions/window-layout/layout.test.js
+```
+
+`extensions/system-monitor/sources.test.js` is a smoke test against the running machine.
 
 Start-of-project context (findings, local patches, decisions so far):
 `docs/superpowers/2026-10-22-contexto-inicial.md`. Designs go in `docs/superpowers/specs/`.
@@ -27,6 +46,9 @@ Start-of-project context (findings, local patches, decisions so far):
   The GitHub repo does not exist yet. Never push unless asked.
 - `git subtree add/pull -m` keeps only the last `-m`: pass a single message with embedded
   newlines.
+- Bring in an upstream fix with
+  `git subtree pull --prefix=extensions/<dir> <upstream-url> <branch> --squash`, then update
+  the README's "Upstream imports" table.
 
 ### Commits
 

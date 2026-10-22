@@ -1,18 +1,19 @@
 # Todo
 
-GNOME Shell 46 extension with a plain task list in the top bar. The bar shows how many
-tasks are pending. In the popup, type a task and press Enter to add it on top, click it to
-move it down to Done (click again to bring it back), and use ✕ to delete any task. Drag a
-pending task by its handle to change the order: the order is the priority.
+![Todo](../../docs/images/todo.svg)
 
-Tasks are saved in `~/.local/share/todo@emanuel36/tasks.json`. A file that can't be read
-is moved to `tasks.json.bad` and the list starts empty.
+A plain task list in the top bar, which shows how many tasks are pending. In the popup:
 
-Replaces Todo.txt on this machine. Design: `docs/superpowers/specs/2026-10-22-todo-design.md`.
+- type a task and press Enter to add it on top;
+- click a task to move it to Done, and click it again to bring it back;
+- ✕ deletes a task;
+- drag a pending task by its handle to change the order: the order is the priority.
 
-## Tests
+Tasks are kept in `~/.local/share/todo@emanuel36/tasks.json`. If that file gets damaged,
+it is set aside as `tasks.json.bad` and the list starts empty.
 
-```bash
-gjs -m extensions/todo/tasks.test.js
-gjs -m extensions/todo/store.test.js
-```
+Replaces Todo.txt, with a much simpler list; no code was copied from it.
+
+## License
+
+MIT, see `LICENSE`.

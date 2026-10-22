@@ -1,28 +1,22 @@
 # Next Up
 
-GNOME Shell 46 extension showing the next meeting of the day in the top bar:
-`14:00 Design review · 2h45` (the countdown faded), `Design review · 25m left` during a
-meeting, and `+N` when several start together. All-day events are ignored, and the
-indicator hides when nothing is left today.
+![Next Up](../../docs/images/next-up.svg)
 
-Clicking it opens a list of today's meetings: past ones faded, the one in progress marked
-with a dot. Clicking a meeting opens the default calendar app; Settings (which part of the
-bar to use) is at the end of the list.
+The next meeting of the day in the top bar, such as `14:00 Design review · 2h45` with a
+faded countdown, or `Design review · 25m left` while it is in progress. `+N` shows when
+several meetings start together. All-day events are ignored, and the indicator hides when
+nothing is left today.
 
-Events come from the date menu's event source, the same one the clock's calendar uses, so
-both always agree.
+Clicking it lists today's meetings: past ones faded, the one in progress marked with a
+dot. Clicking a meeting opens the calendar app. Settings, at the end of the list, choose
+which part of the top bar it sits in.
 
-## Tests
-
-```bash
-gjs -m extensions/next-up/src/date.test.js
-```
+It reads the same calendar as the top bar clock, so both always agree.
 
 ## Credits
 
 Imported from [artisticat1/gnome-next-up](https://github.com/artisticat1/gnome-next-up)
-(commit `44707c4cbc1e`) and largely rewritten. Modified files carry a notice with the
-changes and the date.
+and largely rewritten. Modified files carry a notice with the changes and the date.
 
 ## License
 
