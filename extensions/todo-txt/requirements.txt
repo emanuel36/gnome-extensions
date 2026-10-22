@@ -1,4 +1,0 @@
-jsonschema
-lxml
-jsbeautifier
-six

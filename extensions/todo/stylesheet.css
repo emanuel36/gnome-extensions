@@ -1,0 +1,72 @@
+/* Bar */
+.todo-bar-count {
+    margin-left: 4px;
+}
+
+/* Popup */
+.todo-popup {
+    width: 320px;
+    spacing: 8px;
+    padding: 4px;
+}
+
+.todo-row {
+    spacing: 8px;
+    padding: 5px 6px;
+    border-radius: 6px;
+}
+
+.todo-row:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.todo-handle {
+    width: 16px;
+    icon-size: 16px;
+    color: #777777;
+}
+
+.todo-text {
+    color: #ffffff;
+}
+
+.todo-row-done .todo-text {
+    color: #9a9a9a;
+}
+
+.todo-delete StIcon {
+    icon-size: 14px;
+    color: #9a9a9a;
+}
+
+.todo-done-header {
+    spacing: 8px;
+    margin: 8px 6px 4px 6px;
+    color: #9a9a9a;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.todo-rule {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.todo-empty {
+    color: #9a9a9a;
+    padding: 14px 0 8px 0;
+}
+
+/* Drag and drop */
+.todo-row-ghost {
+    background-color: #454545;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.todo-drop {
+    height: 2px;
+    margin: 1px 6px;
+    border-radius: 1px;
+    background-color: #3584e4;
+}
