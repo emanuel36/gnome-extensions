@@ -1,6 +1,6 @@
 // Modified 2026-10-22 by emanuel36: read events from the source passed in; new compact
 // indicator text (start time + faded countdown, current meeting with time left, "+N"
-// for meetings starting together).
+// for meetings starting together); rows for the popup's list of today's events.
 
 const MAX_EVENT_SUMMARY_LENGTH = 35;
 
@@ -83,6 +83,26 @@ export function eventStatusToIndicatorText(eventStatus, now = new Date()) {
   }
 
   return null;
+}
+
+/**
+ * Rows for the popup's list of today's events.
+ *
+ * Args:
+ *   todaysEvents: Events from getTodaysEvents().
+ *   now: Current time.
+ *
+ * Returns:
+ *   `[{time, summary, state}]` sorted by start, e.g.
+ *   `{time: "14:00 – 14:45", summary: "Design review", state: "current"}`, where `state` is
+ *   "past", "current" or "upcoming".
+ */
+export function getEventListRows(todaysEvents, now = new Date()) {
+  return [...todaysEvents].sort(byStart).map((e) => ({
+    time: `${getTimeOfEventAsText(e.date)} – ${getTimeOfEventAsText(e.end)}`,
+    summary: trimLongEventName(e.summary),
+    state: e.end <= now ? "past" : e.date <= now ? "current" : "upcoming",
+  }));
 }
 
 export function getTimeOfEventAsText(eventDate) {

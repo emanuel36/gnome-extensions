@@ -1,3 +1,75 @@
 .next-up-hint {
   margin-left: 4px;
 }
+
+/* Popup, styled like the Todo popup */
+.next-up-popup {
+  width: 320px;
+  spacing: 4px;
+  padding: 4px;
+}
+
+.next-up-header {
+  spacing: 8px;
+  margin: 4px 6px;
+  color: #9a9a9a;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.next-up-rule {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.next-up-row {
+  padding: 5px 6px;
+  border-radius: 6px;
+}
+
+.next-up-row:hover,
+.next-up-row:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.next-up-row StBoxLayout {
+  spacing: 8px;
+}
+
+.next-up-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+}
+
+.next-up-dot-now {
+  background-color: #3584e4;
+}
+
+.next-up-time {
+  color: #ffffff;
+  font-feature-settings: "tnum";
+}
+
+.next-up-text {
+  color: #ffffff;
+}
+
+.next-up-row-past .next-up-time,
+.next-up-row-past .next-up-text {
+  color: #9a9a9a;
+}
+
+.next-up-secondary {
+  color: #9a9a9a;
+}
+
+.next-up-icon {
+  icon-size: 16px;
+  color: #9a9a9a;
+}
+
+.next-up-empty {
+  color: #9a9a9a;
+  padding: 14px 0 8px 0;
+}

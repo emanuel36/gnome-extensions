@@ -18,7 +18,7 @@
  * Modified 2026-10-22 by emanuel36: read events from the date menu's event source and
  * refresh when it changes; remove the indicator from whichever box holds it on disable;
  * compact text, hidden when nothing is left, no confetti icon; register the indicator in
- * the panel's status area.
+ * the panel's status area; pass today's events to the indicator for its popup.
  */
 
 import GLib from "gi://GLib";
@@ -144,6 +144,7 @@ export default class NextUpExtension extends Extension {
     const todaysEvents = DateHelperFunctions.getTodaysEvents(
       this._getEventSource()
     );
+    this._indicator.setEvents(todaysEvents);
     const eventStatus =
       DateHelperFunctions.getNextEventsToDisplay(todaysEvents);
     this._indicator.setStatus(
