@@ -16,10 +16,10 @@ Serve para continuar o trabalho numa sessão nova dentro do repo.
 | UUID | Versão EGO | Estado | Observação |
 |---|---|---|---|
 | `Bluetooth-Battery-Meter@maniacx.github.com` | 49 | ativa | |
-| `Resource_Monitor@Ory0n` | 28 | ativa | CPU/RAM |
+| `Resource_Monitor@Ory0n` | 28 | removida em 22/10 | substituída por system-monitor |
 | `clipboard-history@alexsaveau.dev` | 51 | ativa | |
 | `just-perfection-desktop@just-perfection` | 37 | ativa | |
-| `network-stats@gnome.noroadsleft.xyz` | 36 | ativa | rede |
+| `network-stats@gnome.noroadsleft.xyz` | 36 | removida em 22/10 | substituída por system-monitor |
 | `next-up@artisticat1.github.com` | 8 | removida em 22/10 | substituída pelo repo (ver Decisões) |
 | `speech2text-whispercpp@bcelary.github` | 6 | **INITIALIZED** | instalada mas não ativa; causa não investigada |
 | `todo.txt@bart.libert.gmail.com` | 44 | ativa | |
@@ -90,6 +90,12 @@ não tem build.
   lê a fonte do `dateMenu`. Visual novo: `14:00 Nome · 2h45` (contagem esmaecida),
   `Nome · 25m left` durante reunião, `+N` para reuniões no mesmo horário, escondida
   quando não há mais nada no dia.
+- System Monitor (22/10): `system-monitor@emanuel36`, escrita do zero, substitui Resource
+  Monitor e Network Stats (removidos do repo e da máquina). Barra com CPU, RAM e rede;
+  popup com top 5 apps por CPU/memória, temperatura e frequência da CPU, cabo/Wi-Fi com
+  uso do dia. Top Bar Organizer lança `appIndicator is undefined` ao adicionar itens com
+  um appindicator quebrado; o usuário desativou o Organizer. Design em
+  `specs/2026-10-22-system-monitor-design.md`.
 
 ## Ideias discutidas, ainda não decididas
 
