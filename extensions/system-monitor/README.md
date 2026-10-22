@@ -1,7 +1,7 @@
 # System Monitor
 
-GNOME Shell 46 extension showing CPU %, memory % and network speed in the top bar.
-Its popup lists:
+GNOME Shell 46 extension showing CPU % and memory % in the top bar. Its
+popup lists:
 
 - the top 5 apps by CPU and by memory (processes grouped by name, all users included);
 - CPU temperature and the highest current core frequency;

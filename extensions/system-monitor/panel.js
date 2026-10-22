@@ -1,4 +1,4 @@
-// The panel button (CPU, RAM, network speed) and its popup.
+// The panel button (CPU, RAM) and its popup with network details.
 
 import Clutter from 'gi://Clutter';
 import GLib from 'gi://GLib';
@@ -12,7 +12,7 @@ import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
 import {
     cpuSubline, formatDataSize, formatMemKb, formatMemTotals, formatPercent, formatRate,
-    formatRateCompact, formatShare,
+    formatShare,
 } from './format.js';
 
 const TOP_ROWS = 5;
@@ -43,8 +43,6 @@ class SystemMonitorIndicator extends PanelMenu.Button {
         bar.add_child(this._barIcon('ram-symbolic'));
         this._ramLabel = label({text: '…', style_class: 'system-monitor-bar-value'});
         bar.add_child(this._ramLabel);
-        this._netLabel = label({text: '', style_class: 'system-monitor-bar-value'});
-        bar.add_child(this._netLabel);
         this.add_child(bar);
 
         this._createPopup();
@@ -124,10 +122,9 @@ class SystemMonitorIndicator extends PanelMenu.Button {
         return {box, total, fill, subline, rows};
     }
 
-    setBar({cpu, ram, down, up}) {
+    setBar({cpu, ram}) {
         this._cpuLabel.text = cpu === null ? '…' : formatPercent(cpu);
         this._ramLabel.text = ram === null ? '…' : formatPercent(ram);
-        this._netLabel.text = `↓${formatRateCompact(down)} ↑${formatRateCompact(up)}`;
     }
 
     _setColumn(column, percent, subline, top, formatValue) {

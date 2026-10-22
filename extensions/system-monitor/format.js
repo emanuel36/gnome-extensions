@@ -14,11 +14,6 @@ function scaleDecimal(value) {
     return [text, DECIMAL_UNITS[unit]];
 }
 
-export function formatRateCompact(bytesPerSec) {
-    const [text, unit] = scaleDecimal(bytesPerSec);
-    return `${text}${unit}`;
-}
-
 export function formatRate(bytesPerSec) {
     const [text, unit] = scaleDecimal(bytesPerSec);
     return `${text} ${unit === 'B' ? '' : unit}B/s`;

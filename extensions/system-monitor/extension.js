@@ -105,11 +105,6 @@ export default class SystemMonitorExtension extends Extension {
         const cpu = cpuTimes ? cpuPercent(this._prevCpu, cpuTimes) : null;
         const elapsedSec = this._prevUs ? (nowUs - this._prevUs) / 1e6 : 0;
         const rates = netRates(this._prevNet, counters, elapsedSec, shown.map(i => i.name));
-        let down = 0, up = 0;
-        for (const rate of rates.values()) {
-            down += rate.down;
-            up += rate.up;
-        }
 
         const physical = new Map(ifaces.filter(i => counters.has(i.name)).map(i =>
             [i.name, {...counters.get(i.name), id: `${this._bootId}:${i.ifindex}`}]));
@@ -120,7 +115,7 @@ export default class SystemMonitorExtension extends Extension {
         this._prevUs = nowUs;
         this._last = {cpu, mem, shown, rates};
 
-        this._indicator.setBar({cpu, ram: mem ? memPercent(mem) : null, down, up});
+        this._indicator.setBar({cpu, ram: mem ? memPercent(mem) : null});
         if (this._indicator.menu.isOpen)
             this._updatePopup();
 

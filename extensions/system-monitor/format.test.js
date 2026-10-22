@@ -3,7 +3,7 @@ import System from 'system';
 
 import {
     cpuSubline, formatDataSize, formatMemKb, formatMemTotals, formatPercent, formatRate,
-    formatRateCompact, formatShare,
+    formatShare,
 } from './format.js';
 
 let failures = 0;
@@ -19,12 +19,6 @@ function check(name, actual, expected) {
     }
 }
 
-check('compact zero', formatRateCompact(0), '0B');
-check('compact bytes', formatRateCompact(950), '950B');
-check('compact kilo', formatRateCompact(80000), '80K');
-check('compact one decimal', formatRateCompact(1234567), '1.2M');
-check('compact large', formatRateCompact(12345678), '12M');
-check('compact giga', formatRateCompact(2.5e9), '2.5G');
 check('rate zero', formatRate(0), '0 B/s');
 check('rate kilo', formatRate(80000), '80 KB/s');
 check('rate mega', formatRate(1234567), '1.2 MB/s');
