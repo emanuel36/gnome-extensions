@@ -1,4 +1,5 @@
-// Modified 2026-10-22 by emanuel36: read events from the source passed in.
+// Modified 2026-10-22 by emanuel36: read events from the source passed in;
+// pad minutes on the left.
 
 const MAX_EVENT_SUMMARY_LENGTH = 35;
 
@@ -128,7 +129,7 @@ function getTimeOfEventAsText(eventDate) {
   const hrs = eventDate.getHours();
   let mins = eventDate.getMinutes().toString();
 
-  mins = mins.padEnd(2, "0"); // Show e.g. 11am as 11:00 instead of 11:0
+  mins = mins.padStart(2, "0"); // Show e.g. 11:05 instead of 11:5 (or 11:50)
 
   const time = `${hrs}:${mins}`;
   return time;
