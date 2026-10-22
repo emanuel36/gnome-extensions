@@ -1,0 +1,68 @@
+/* Bar */
+.system-monitor-bar-icon {
+    padding: 0;
+    margin-right: 4px;
+}
+
+.system-monitor-bar-value {
+    margin-right: 10px;
+}
+
+/* Popup */
+.system-monitor-columns {
+    spacing: 22px;
+}
+
+.system-monitor-column {
+    spacing: 2px;
+}
+
+.system-monitor-header {
+    spacing: 6px;
+}
+
+.system-monitor-title {
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+.system-monitor-total {
+    font-weight: bold;
+}
+
+.system-monitor-usage {
+    height: 4px;
+    margin: 4px 0 2px 0;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.system-monitor-usage-fill {
+    height: 4px;
+    border-radius: 2px;
+    background-color: #e0e0e0;
+}
+
+.system-monitor-subline {
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+
+.system-monitor-row-value {
+    color: #cccccc;
+    margin-left: 8px;
+}
+
+.system-monitor-net {
+    spacing: 4px;
+}
+
+.system-monitor-net-row {
+    spacing: 8px;
+}
+
+.system-monitor-rate {
+    color: #cccccc;
+    min-width: 88px;
+    text-align: right;
+}
