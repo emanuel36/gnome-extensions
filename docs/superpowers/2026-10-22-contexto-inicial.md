@@ -20,7 +20,7 @@ Serve para continuar o trabalho numa sessão nova dentro do repo.
 | `clipboard-history@alexsaveau.dev` | 51 | ativa | |
 | `just-perfection-desktop@just-perfection` | 37 | ativa | |
 | `network-stats@gnome.noroadsleft.xyz` | 36 | ativa | rede |
-| `next-up@artisticat1.github.com` | 8 | ativa | **corrigida localmente** |
+| `next-up@artisticat1.github.com` | 8 | removida em 22/10 | substituída pelo repo (ver Decisões) |
 | `speech2text-whispercpp@bcelary.github` | 6 | **INITIALIZED** | instalada mas não ativa; causa não investigada |
 | `todo.txt@bart.libert.gmail.com` | 44 | ativa | |
 | `top-bar-organizer@julian.gse.jsts.xyz` | 16 | ativa | |
@@ -84,6 +84,12 @@ não tem build.
 - Commits como emanuel36 (configurado no repo), remote pelo alias SSH
   `github.com-emanuel36`. Repo no GitHub ainda não criado; sem push até o usuário pedir.
 - O escopo de cada extensão será definido em etapas, com o brainstorming do superpowers.
+- Next Up (22/10): UUID próprio `next-up@emanuel36`, mesmo esquema de link; a cópia do EGO
+  foi desinstalada. Causa do "No meetings" falso: a fonte de eventos própria nunca pedia
+  intervalo ao calendar-server (que guarda um intervalo só, o do menu do relógio); agora
+  lê a fonte do `dateMenu`. Visual novo: `14:00 Nome · 2h45` (contagem esmaecida),
+  `Nome · 25m left` durante reunião, `+N` para reuniões no mesmo horário, escondida
+  quando não há mais nada no dia.
 
 ## Ideias discutidas, ainda não decididas
 
