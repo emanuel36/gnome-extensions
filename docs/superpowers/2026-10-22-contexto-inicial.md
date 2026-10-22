@@ -22,7 +22,7 @@ Serve para continuar o trabalho numa sessão nova dentro do repo.
 | `network-stats@gnome.noroadsleft.xyz` | 36 | removida em 22/10 | substituída por system-monitor |
 | `next-up@artisticat1.github.com` | 8 | removida em 22/10 | substituída pelo repo (ver Decisões) |
 | `speech2text-whispercpp@bcelary.github` | 6 | **INITIALIZED** | instalada mas não ativa; causa não investigada |
-| `todo.txt@bart.libert.gmail.com` | 44 | ativa | |
+| `todo.txt@bart.libert.gmail.com` | 44 | removida em 22/10 | substituída por todo |
 | `top-bar-organizer@julian.gse.jsts.xyz` | 16 | removida em 22/10 | substituída por panel-tidy |
 
 `org.gnome.shell enabled-extensions` também lista ~10 extensões que não estão instaladas
@@ -67,13 +67,12 @@ O intervalo de sincronização dos dois calendários Google passou de 60 min par
 | Extensão | Shell declarado | No GNOME 46 |
 |---|---|---|
 | clipboard-history | 48–51 | **não roda** (a v51 do EGO instalada roda) |
-| todo-txt | 51 | **não roda** (a v44 instalada roda) |
 | next-up | 45–47 | roda, sem as correções acima |
 | speech2text | 46–47 | a instalada não ativa; investigar |
 | demais | incluem 46 | ok |
 
 Algumas precisam de build: network-stats e top-bar-organizer são TypeScript;
-clipboard-history, resource-monitor, speech2text e todo-txt têm `Makefile`;
+clipboard-history, resource-monitor e speech2text têm `Makefile`;
 bluetooth-battery-meter tem `install.sh`; just-perfection tem `scripts/`. Next Up
 não tem build.
 
@@ -102,6 +101,10 @@ não tem build.
   layout de teclado, acessibilidade, Airplane Mode, Night Light, Dark Style e Keyboard.
   O Next Up passou a se registrar com `addToStatusArea` (antes inseria direto na caixa e
   ficava invisível para quem ordena a barra). Design em `specs/2026-10-22-panel-tidy-design.md`.
+- Todo (22/10): `todo@emanuel36`, escrita do zero, substitui Todo.txt (removido do repo e
+  da máquina). Lista simples: adicionar, clicar para concluir (vai para baixo, esmaecida),
+  ✕ para deletar, arrastar pela alça para ordenar; a ordem é a prioridade. Tarefas em
+  `~/.local/share/todo@emanuel36/tasks.json`. Design em `specs/2026-10-22-todo-design.md`.
 
 ## Ideias discutidas, ainda não decididas
 
@@ -114,7 +117,7 @@ não tem build.
   Depois, desinstalar as versões do EGO.
 - Uma extensão não consegue importar CSS de outra: um padrão visual comum precisaria ser
   copiado para cada uma no build, ou viver numa extensão integrada.
-- Adaptar o código novo ao GNOME 46 (clipboard-history, todo-txt) ou reavaliar essas duas.
+- Adaptar o código novo do clipboard-history ao GNOME 46 ou reavaliá-lo.
 
 ## Preferências observadas do usuário
 

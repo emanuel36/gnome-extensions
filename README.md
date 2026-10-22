@@ -12,7 +12,6 @@ not forks: upstream history is not kept, only the commit each import was taken f
 | `extensions/clipboard-history` | [SUPERCILEX/gnome-clipboard-history](https://github.com/SUPERCILEX/gnome-clipboard-history) | `master` | `1d4ef6632c58` | MIT | 48–51 | `Makefile` |
 | `extensions/next-up` | [artisticat1/gnome-next-up](https://github.com/artisticat1/gnome-next-up) | `main` | `44707c4cbc1e` | GPL-3.0 | 45–47 | none |
 | `extensions/speech2text` | [bcelary/gnome-speech2text](https://github.com/bcelary/gnome-speech2text) | `main` | `38ff745fb4b6` | MIT | 46–47 | `Makefile` |
-| `extensions/todo-txt` | [todo-txt-gnome-shell-extension](https://gitlab.com/todo.txt-gnome-shell-extension/todo-txt-gnome-shell-extension) | `master` | `65345cfb5f93` | GPL-3.0 | 51 | `Makefile` |
 
 Extensions written here from scratch:
 
@@ -20,6 +19,7 @@ Extensions written here from scratch:
 |---|---|---|---|
 | `extensions/panel-tidy` | MIT | 46 | none |
 | `extensions/system-monitor` | GPL-3.0 | 46 | none |
+| `extensions/todo` | MIT | 46 | none |
 | `extensions/window-layout` | MIT | 46 | none |
 
 "Imported commit" is the upstream commit the squash was taken from (also recorded as
