@@ -1,6 +1,7 @@
+// Modified 2026-10-22 by emanuel36: events now come from the date menu (see extension.js).
+
 import St from "gi://St";
 import Clutter from "gi://Clutter";
-import * as Calendar from "resource:///org/gnome/shell/ui/calendar.js";
 import * as Main from "resource:///org/gnome/shell/ui/main.js";
 import * as PanelMenu from "resource:///org/gnome/shell/ui/panelMenu.js";
 import * as PopupMenu from "resource:///org/gnome/shell/ui/popupMenu.js";
@@ -15,8 +16,6 @@ export default class Indicator extends PanelMenu.Button {
 
   _init() {
     super._init(0.0, _("Next Up Indicator"));
-
-    this._calendarSource = new Calendar.DBusEventSource();
 
     this._loadGUI();
     this._initialiseMenu();

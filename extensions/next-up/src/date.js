@@ -1,3 +1,5 @@
+// Modified 2026-10-22 by emanuel36: read events from the source passed in.
+
 const MAX_EVENT_SUMMARY_LENGTH = 35;
 
 function trimLongEventName(summary) {
@@ -17,17 +19,14 @@ function notFullDayEvent(event) {
   );
 }
 
-export function getTodaysEvents(calendarSource) {
-  const src = calendarSource;
-  src._loadEvents(true);
-
+export function getTodaysEvents(eventSource) {
   const today = new Date();
   today.setHours(0, 0, 0, 0); // Get event from today at midnight
 
   const tomorrow = new Date(today);
   tomorrow.setDate(today.getDate() + 1);
 
-  const todaysEvents = src.getEvents(today, tomorrow).filter(notFullDayEvent);
+  const todaysEvents = eventSource.getEvents(today, tomorrow).filter(notFullDayEvent);
 
   return todaysEvents;
 }
