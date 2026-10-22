@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.window-layout"
+          path="/org/gnome/shell/extensions/window-layout/">
+    <key name="apply-layout" type="as">
+      <default><![CDATA[['<Super><Shift>w']]]></default>
+      <summary>Arrange windows</summary>
+      <description>Shortcut that arranges all windows into the layout</description>
+    </key>
+  </schema>
+</schemalist>

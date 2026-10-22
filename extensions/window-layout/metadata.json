@@ -1,0 +1,9 @@
+{
+  "name": "Window Layout",
+  "description": "Arranges windows across monitors: Slack, Discord and ZapZap stacked on the side monitor, everything else maximized on the primary one. Runs on monitor changes, shell startup, and Super+Shift+W.",
+  "uuid": "window-layout@emanuel36",
+  "shell-version": ["46"],
+  "session-modes": ["user", "unlock-dialog"],
+  "settings-schema": "org.gnome.shell.extensions.window-layout",
+  "version": 1
+}
