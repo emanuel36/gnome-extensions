@@ -17,7 +17,8 @@
  *
  * Modified 2026-10-22 by emanuel36: read events from the date menu's event source and
  * refresh when it changes; remove the indicator from whichever box holds it on disable;
- * compact text, hidden when nothing is left, no confetti icon.
+ * compact text, hidden when nothing is left, no confetti icon; register the indicator in
+ * the panel's status area.
  */
 
 import GLib from "gi://GLib";
@@ -75,19 +76,25 @@ export default class NextUpExtension extends Extension {
     );
   }
 
+  // Registered in the panel's status area, so tools that order the top bar (Panel Tidy)
+  // see it like any other item
   loadIndicator() {
-    const boxes = [
-      Main.panel._leftBox,
-      Main.panel._centerBox,
-      Main.panel._rightBox,
-    ];
-
     const whichPanel = this._settings.get_int("which-panel");
 
     // If aligned to left, place it after workspaces indicator
     const index = whichPanel === 0 ? 1 : 0;
 
-    boxes[whichPanel].insert_child_at_index(this._indicator.container, index);
+    if (Main.panel.statusArea[this.uuid]) {
+      const boxes = [
+        Main.panel._leftBox,
+        Main.panel._centerBox,
+        Main.panel._rightBox,
+      ];
+      boxes[whichPanel].insert_child_at_index(this._indicator.container, index);
+    } else {
+      const box = ["left", "center", "right"][whichPanel];
+      Main.panel.addToStatusArea(this.uuid, this._indicator, index, box);
+    }
   }
 
   unloadIndicator() {

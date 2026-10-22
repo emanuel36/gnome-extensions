@@ -1,0 +1,8 @@
+{
+  "name": "Panel Tidy",
+  "description": "Orders the top bar items across the left, center and right boxes, and hides the top bar items and Quick Settings toggles you don't use.",
+  "uuid": "panel-tidy@emanuel36",
+  "shell-version": ["46"],
+  "settings-schema": "org.gnome.shell.extensions.panel-tidy",
+  "version": 1
+}

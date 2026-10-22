@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.panel-tidy"
+          path="/org/gnome/shell/extensions/panel-tidy/">
+    <key name="left-box-order" type="as">
+      <default>[]</default>
+      <summary>Roles of the left box items, in order</summary>
+    </key>
+    <key name="center-box-order" type="as">
+      <default>[]</default>
+      <summary>Roles of the center box items, in order</summary>
+    </key>
+    <key name="right-box-order" type="as">
+      <default>[]</default>
+      <summary>Roles of the right box items, in order</summary>
+    </key>
+    <key name="hidden-items" type="as">
+      <default>[]</default>
+      <summary>Roles of the top bar items to hide</summary>
+    </key>
+    <key name="hidden-toggles" type="as">
+      <default>[]</default>
+      <summary>Ids of the Quick Settings toggles to hide</summary>
+    </key>
+    <key name="item-names" type="a{ss}">
+      <default>{}</default>
+      <summary>Readable name of each known top bar item, written by the extension</summary>
+    </key>
+    <key name="present-items" type="as">
+      <default>[]</default>
+      <summary>Roles of the items on the top bar right now, written by the extension</summary>
+    </key>
+    <key name="known-toggles" type="a(ss)">
+      <default>[]</default>
+      <summary>Id and name of each known Quick Settings toggle, written by the extension</summary>
+    </key>
+    <key name="present-toggles" type="as">
+      <default>[]</default>
+      <summary>Ids of the toggles in Quick Settings right now, written by the extension</summary>
+    </key>
+  </schema>
+</schemalist>
