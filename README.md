@@ -1,6 +1,6 @@
 # gnome-extensions
 
-My GNOME Shell extensions. Each one was imported from its upstream project with
+My GNOME Shell extensions. Most were imported from their upstream project with
 `git subtree --squash` and is maintained here as my own code from now on. They are
 not forks: upstream history is not kept, only the commit each import was taken from.
 
@@ -17,6 +17,12 @@ not forks: upstream history is not kept, only the commit each import was taken f
 | `extensions/speech2text` | [bcelary/gnome-speech2text](https://github.com/bcelary/gnome-speech2text) | `main` | `38ff745fb4b6` | MIT | 46–47 | `Makefile` |
 | `extensions/todo-txt` | [todo-txt-gnome-shell-extension](https://gitlab.com/todo.txt-gnome-shell-extension/todo-txt-gnome-shell-extension) | `master` | `65345cfb5f93` | GPL-3.0 | 51 | `Makefile` |
 | `extensions/top-bar-organizer` | [june/top-bar-organizer](https://gitlab.gnome.org/june/top-bar-organizer) | `main` | `1216ebb994fa` | GPL-3.0-or-later | 45–50 | TypeScript (`package.sh`) |
+
+Extensions written here from scratch:
+
+| Directory | License | GNOME Shell | Build |
+|---|---|---|---|
+| `extensions/window-layout` | MIT | 46 | none |
 
 "Imported commit" is the upstream commit the squash was taken from (also recorded as
 `git-subtree-split` in the squash commit). "GNOME Shell" is the range declared in the
