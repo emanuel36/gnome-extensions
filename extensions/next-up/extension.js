@@ -14,6 +14,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ * Modified 2026-10-22 by emanuel36: read events from the date menu's event source and
+ * refresh when it changes; remove the indicator from whichever box holds it on disable.
  */
 
 import GLib from "gi://GLib";
@@ -36,6 +39,8 @@ export default class NextUpExtension extends Extension {
       ),
       openPrefsCallback: this.openPreferences.bind(this),
     });
+
+    this._dateMenu = Main.panel.statusArea.dateMenu;
 
     this._settings = this.getSettings();
     this._settingChangedSignal = this._settings.connect(
@@ -90,12 +95,49 @@ export default class NextUpExtension extends Extension {
   unloadIndicator() {
     this._indicator.container
       .get_parent()
-      .remove_child(this._indicator.container);
+      ?.remove_child(this._indicator.container);
+  }
+
+  // Use the date menu's event source: the calendar server keeps a single requested range,
+  // set by the date menu. A source of our own only got events when the date menu happened
+  // to request a new range, and requesting one ourselves would change it for the date menu.
+  _getEventSource() {
+    // The date menu replaces its source when the session mode changes (e.g. unlock)
+    const source = this._dateMenu._eventSource;
+    if (source !== this._eventSource) {
+      this._disconnectEventSource();
+      this._eventSource = source;
+      this._eventSourceChangedId = source.connect("changed", () =>
+        this.refreshIndicator()
+      );
+    }
+
+    this._ensureTodayRequested(source);
+    return source;
+  }
+
+  // Browsing to another month in the date menu moves the requested range away from today
+  // until the menu opens again; select today, as opening the menu would
+  _ensureTodayRequested(source) {
+    const begin = source._lastRequestBegin;
+    const end = source._lastRequestEnd;
+    if (!begin || !end || this._dateMenu.menu.isOpen) return;
+
+    const now = new Date();
+    if (now < begin || now >= end) this._dateMenu._calendar.setDate(now);
+  }
+
+  _disconnectEventSource() {
+    if (this._eventSourceChangedId) {
+      this._eventSource.disconnect(this._eventSourceChangedId);
+      this._eventSourceChangedId = null;
+    }
+    this._eventSource = null;
   }
 
   refreshIndicator() {
     const todaysEvents = DateHelperFunctions.getTodaysEvents(
-      this._indicator._calendarSource
+      this._getEventSource()
     );
     const eventStatus =
       DateHelperFunctions.getNextEventsToDisplay(todaysEvents);
@@ -111,7 +153,9 @@ export default class NextUpExtension extends Extension {
   }
 
   disable() {
-    Main.panel._centerBox.remove_child(this._indicator.container);
+    this.unloadIndicator();
+    this._disconnectEventSource();
+    this._dateMenu = null;
 
     this._settings.disconnect(this._settingChangedSignal);
     this._settings = null;
