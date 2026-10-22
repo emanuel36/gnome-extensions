@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="140"
+   height="45"
+   viewBox="0 0 37.041666 11.906252"
+   version="1.1"
+   id="svg1787"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   sodipodi:docname="download-stats.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title2446">Just Perfection Download Stats</title>
+  <defs
+     id="defs1781">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient10"
+       id="linearGradient11"
+       x1="36.385891"
+       y1="19.318071"
+       x2="9.0166798"
+       y2="19.318071"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.0184791,-0.10941255)" />
+    <linearGradient
+       id="linearGradient10"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#5fbcd3;stop-opacity:1"
+         offset="0"
+         id="stop10" />
+      <stop
+         style="stop-color:#0066ff;stop-opacity:1"
+         offset="1"
+         id="stop11" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="67.97064"
+     inkscape:cy="19.533825"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1048"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     units="px"
+     inkscape:snap-global="false"
+     inkscape:pagecheckerboard="0"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#ffffff"
+     showborder="true"
+     showguides="true" />
+  <metadata
+     id="metadata1784">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Just Perfection Download Stats</dc:title>
+        <dc:date>2024</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Just Perfection</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Just Perfection</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <cc:license
+           rdf:resource="https://www.gnu.org/licenses/gpl-3.0.html" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-2.2730319,-14.040994)">
+    <rect
+       style="fill:url(#linearGradient11);fill-opacity:1;stroke-width:1.16255"
+       id="rect22316"
+       width="36.897137"
+       height="10.497947"
+       x="2.3452969"
+       y="14.083687"
+       ry="2.2709818" />
+    <path
+       d="M 9.510625,18.785763 V 17.261621 H 8.3540703 v 1.524142 H 6.8030319 v 1.093796 h 1.5510384 v 1.524142 H 9.510625 v -1.524142 h 1.560004 v -1.093796 z"
+       id="text1"
+       style="font-weight:bold;font-size:8.96554px;line-height:1.25;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';fill:#ffffff;stroke-width:0.224139"
+       aria-label="+" />
+    <path
+       d="m 16.184406,22.844598 c 0.475038,0 0.800718,-0.286268 0.800718,-0.72604 0,-0.439773 -0.32568,-0.72604 -0.800718,-0.72604 h -0.659659 v 1.45208 z M 15.8608,21.668413 h 0.307011 c 0.288341,0 0.477112,0.172176 0.477112,0.450145 0,0.277969 -0.188771,0.450144 -0.477112,0.450144 H 15.8608 Z m 2.080623,1.201077 c 0.456368,0 0.794495,-0.317383 0.794495,-0.750932 0,-0.433549 -0.338127,-0.750933 -0.794495,-0.750933 -0.458442,0 -0.794495,0.319457 -0.794495,0.750933 0,0.431475 0.336053,0.750932 0.794495,0.750932 z m 0,-0.286267 c -0.2593,0 -0.454294,-0.18877 -0.454294,-0.464665 0,-0.275896 0.194994,-0.464665 0.454294,-0.464665 0.2593,0 0.454294,0.188769 0.454294,0.464665 0,0.275895 -0.194994,0.464665 -0.454294,0.464665 z m 2.534915,-0.161803 -0.331904,-1.028902 h -0.31116 l -0.342276,1.020604 -0.327756,-1.020604 h -0.348499 l 0.477112,1.45208 h 0.358871 l 0.32983,-0.983265 0.319458,0.983265 h 0.360945 l 0.475037,-1.45208 h -0.321532 z m 1.846216,-0.147282 -0.72189,-0.88162 h -0.27797 v 1.45208 h 0.331904 v -0.88162 l 0.723965,0.88162 h 0.275895 v -1.45208 h -0.331904 z m 1.740423,0.57046 V 22.570777 H 23.334863 V 21.392518 H 22.99881 v 1.45208 z m 0.867101,0.02489 c 0.456368,0 0.794495,-0.317383 0.794495,-0.750932 0,-0.433549 -0.338127,-0.750933 -0.794495,-0.750933 -0.458442,0 -0.794495,0.319457 -0.794495,0.750933 0,0.431475 0.336053,0.750932 0.794495,0.750932 z m 0,-0.286267 c -0.2593,0 -0.454294,-0.18877 -0.454294,-0.464665 0,-0.275896 0.194994,-0.464665 0.454294,-0.464665 0.2593,0 0.454293,0.188769 0.454293,0.464665 0,0.275895 -0.194993,0.464665 -0.454293,0.464665 z m 2.464386,0.261375 -0.649288,-1.45208 h -0.331904 l -0.647212,1.45208 h 0.344351 l 0.128612,-0.31116 h 0.67418 l 0.128613,0.31116 z m -0.817313,-1.122251 0.230257,0.555939 h -0.460516 z m 1.628405,1.122251 c 0.475038,0 0.800718,-0.286268 0.800718,-0.72604 0,-0.439773 -0.32568,-0.72604 -0.800718,-0.72604 h -0.659659 v 1.45208 z M 27.88195,21.668413 h 0.307011 c 0.288341,0 0.477111,0.172176 0.477111,0.450145 0,0.277969 -0.18877,0.450144 -0.477111,0.450144 H 27.88195 Z m 1.854513,1.201077 c 0.41488,0 0.616097,-0.20744 0.616097,-0.450144 0,-0.533121 -0.844281,-0.3485 -0.844281,-0.616097 0,-0.09127 0.07675,-0.165952 0.275896,-0.165952 0.128612,0 0.267597,0.03734 0.402433,0.114092 l 0.10372,-0.255151 c -0.134836,-0.08505 -0.321532,-0.128613 -0.50408,-0.128613 -0.412805,0 -0.611948,0.205365 -0.611948,0.45222 0,0.539343 0.844281,0.352647 0.844281,0.624393 0,0.0892 -0.08091,0.15558 -0.280044,0.15558 -0.174249,0 -0.356797,-0.06223 -0.479186,-0.151431 l -0.114092,0.253077 c 0.128613,0.09957 0.360945,0.168026 0.591204,0.168026 z"
+       id="text2"
+       style="font-weight:bold;font-size:2.2868px;line-height:1.25;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';fill:#ffffff;stroke-width:0.0518601"
+       aria-label="DOWNLOADS" />
+    <path
+       style="font-weight:bold;font-size:6.54964px;line-height:1;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;stroke-width:4.4712;stroke-linecap:round;stroke-linejoin:round"
+       d="m 15.641861,20.531832 h 3.46476 v -0.864553 h -1.971442 l 1.054492,-0.995545 c 0.641865,-0.596017 0.766308,-1.002095 0.766308,-1.447471 0,-0.831804 -0.681162,-1.355775 -1.702906,-1.355775 -0.825255,0 -1.46712,0.334032 -1.8208,0.851453 l 0.772857,0.497773 c 0.222688,-0.307833 0.55672,-0.458475 0.949698,-0.458475 0.484673,0 0.73356,0.209588 0.73356,0.569819 0,0.222687 -0.07205,0.458475 -0.478124,0.844903 l -1.768403,1.670159 z m 4.191771,0 h 0.995545 V 17.83338 l 1.342677,2.213778 h 0.478123 l 1.349226,-2.259625 0.0065,2.744299 h 0.995545 l -0.0131,-4.584748 h -0.871102 l -1.689807,2.849093 -1.716006,-2.849093 h -0.877652 z"
+       id="text3"
+       aria-label="2M" />
+  </g>
+</svg>
