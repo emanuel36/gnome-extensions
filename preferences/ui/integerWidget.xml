@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<child>
+    <object class="AdwComboRow" id="widget-id">
+        <property name="title" translatable="yes"></property>
+        <property name="tooltip-text" translatable="yes"></property>
+        <property name="model">
+            <object class="GtkStringList">
+                <items/>
+            </object>
+        </property>
+    </object>
+</child>

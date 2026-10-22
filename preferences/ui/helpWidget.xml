@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<property name="header-suffix">
+    <object class="GtkButton" id="button-id">
+        <property name="valign">center</property>
+        <property name="icon-name">system-help-symbolic</property>
+    </object>
+</property>

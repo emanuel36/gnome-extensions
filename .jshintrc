@@ -1,0 +1,8 @@
+{
+	"curly": true,
+	"forin": true,
+	"quotmark": "single",
+	"trailing": true,
+	"esnext": true,
+	"maxlen": 120
+}

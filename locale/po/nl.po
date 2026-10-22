@@ -1,0 +1,856 @@
+# todo.txt gnome-shell extension translation file
+# This file is distributed under the same license as the todo.txt gnome-shell extension package.
+# Translators:
+# Bart Libert <bart.libert@gmail.com>, 2015-2022
+# Heimen Stoffels, 2022
+msgid ""
+msgstr ""
+"Project-Id-Version: todo.txt gnome-shell extension\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-07 15:17+0200\n"
+"PO-Revision-Date: 2022-07-12 11:17+0000\n"
+"Last-Translator: Bart Libert <weblate@bart.libert.email>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/"
+"todo-txt-gnome-shell-extension/extension-and-preferences/nl/>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14-dev\n"
+
+#: ../libs/errors.js:28
+msgid "%(file) cannot be written. Please check its permissions."
+msgstr "%(file) kan niet worden weggeschreven. Controleer de bestandsrechten."
+
+#: ../libs/todoTxtManager.js:519
+msgid "%(file) exists already"
+msgstr "%(file) bestaat al"
+
+#: ../libs/openTextEditorEntry.js:23
+msgid ""
+"An error occured while trying to launch the default text editor: %(error)"
+msgstr ""
+"Er is een fout opgetreden tijdens het starten van de standaard tekstbewerker:"
+" %(error)"
+
+#: ../libs/errors.js:37
+msgid "An error occured while writing to %(file): %(error)"
+msgstr ""
+"Er is een fout opgetreden tijdens het wegschrijven naar %(file): %(error)"
+
+#: ../libs/todoMenuItem.js:240
+msgid "Archive %(task)"
+msgstr "%(task) archiveren"
+
+#: ../libs/todoMenuItem.js:493
+msgid "Are you sure?"
+msgstr "Weet u het zeker?"
+
+#: ../libs/todoTxtManager.js:516
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: ../libs/openTextEditorEntry.js:21
+msgid "Cannot open file"
+msgstr "Kan bestand niet openen"
+
+#: ../libs/todoTxtManager.js:506
+msgid "Create new file"
+msgstr "Nieuw bestand maken"
+
+#: ../libs/todoTxtManager.js:545
+msgid "Create todo.txt and done.txt file in %(path)"
+msgstr "todo.txt- en done.txt-bestanden aanmaken in %(path)"
+
+#: ../libs/todoMenuItem.js:225
+msgid "Decrease %(task) priority"
+msgstr "Prioriteit van %(task) verlagen"
+
+#: ../libs/todoMenuItem.js:250 ../libs/todoMenuItem.js:461
+msgid "Delete %(task)"
+msgstr "%(task) verwijderen"
+
+#: ../libs/todoMenuItem.js:216
+msgid "Edit %(task)"
+msgstr "%(task) bewerken"
+
+#: ../libs/todoTxtManager.js:806 ../libs/todoTxtManager.js:863
+msgid "Error writing file"
+msgstr "Fout tijdens wegschrijven van bestand"
+
+#: ../libs/todoMenuItem.js:269
+msgid "Expand %(task)"
+msgstr "Details van %(task) bekijken"
+
+#: ../libs/todoMenuItem.js:224
+msgid "Increase %(task) priority"
+msgstr "Prioriteit van %(task) verhogen"
+
+#: ../libs/todoMenuItem.js:282
+msgid "Mark %(task) as done"
+msgstr "%(task) markeren als afgerond"
+
+#: ../libs/newTaskEntry.js:16
+msgid "New task…"
+msgstr "Nieuwe taak…"
+
+#: ../libs/todoTxtManager.js:539
+msgid "No valid %(filename) file specified"
+msgstr "Geen geldig %(filename)-bestand opgegeven"
+
+#: ../libs/messageDialog.js:39
+msgid "Ok"
+msgstr "Oké"
+
+#: ../libs/openPreferencesEntry.js:12
+msgid "Open preferences"
+msgstr "Voorkeuren openen"
+
+#: ../libs/todoTxtManager.js:512
+msgid "Open settings"
+msgstr "Voorkeuren openen"
+
+#: ../libs/openTextEditorEntry.js:14
+msgid "Open todo.txt file in text editor"
+msgstr "todo.txt-bestand openen in tekstbewerker"
+
+#: ../libs/todoTxtManager.js:520
+msgid "Please choose what you want to do"
+msgstr "Kies een actie"
+
+#: ../libs/todoTxtManager.js:540
+msgid "Select location in settings"
+msgstr "Kies een locatie in de voorkeuren"
+
+#: ../libs/todoMenuItem.js:483
+msgid "Undo delete %(task)"
+msgstr "%(task) herstellen"
+
+#: ../libs/todoTxtManager.js:384
+msgid "Ungrouped"
+msgstr "Ongegroepeerd"
+
+#: ../libs/todoTxtManager.js:815 ../libs/todoTxtManager.js:869
+msgid "Unknown error during file write: %(error)"
+msgstr "Onbekende fout tijdens het wegschrijven: %(error)"
+
+#: ../libs/todoTxtManager.js:501
+msgid "Use existing file"
+msgstr "Bestaand bestand gebruiken"
+
+# settings.json
+msgid "Action on clicking task"
+msgstr "Actie na aanklikken van taak"
+
+# settings.json
+msgid "Auto-add creation date to new tasks"
+msgstr "Aanmaakdatum automatisch toevoegen aan nieuwe taken"
+
+# settings.json
+msgid "Auto-archive done tasks"
+msgstr "Afgewerkte taken automatisch archiveren"
+
+# settings.json
+msgid "Behavior"
+msgstr "Gedrag"
+
+# settings.json
+msgid "Both"
+msgstr "Beide"
+
+# settings.json
+msgid "Bottom of the file"
+msgstr "Onderaan het bestand"
+
+# settings.json
+msgid "Color for detected URLs"
+msgstr "Kleur van gedetecteerde url's"
+
+# settings.json
+msgid "Confirm task deletion"
+msgstr "Om bevestiging vragen bij verwijderen van taken"
+
+# settings.json
+msgid "Contexts"
+msgstr "Contexten"
+
+# settings.json
+msgid "Custom color"
+msgstr "Aangepaste kleur"
+
+# settings.json
+msgid "Custom color for URLS"
+msgstr "Aangepaste url-kleur"
+
+# settings.json
+msgid "Debug"
+msgstr "Foutopsporing"
+
+# settings.json
+msgid "Debug level"
+msgstr "Foutopsporingsniveau"
+
+# settings.json
+msgid "Debugging"
+msgstr "Foutopsporing"
+
+# settings.json
+msgid "Dedicated button"
+msgstr "Specifieke knop"
+
+# settings.json
+msgid "Detail"
+msgstr "Detail"
+
+# settings.json
+msgid "Display"
+msgstr "Weergave"
+
+# settings.json
+msgid "Done.txt location"
+msgstr "Locatie van done.txt"
+
+# settings.json
+msgid "Edit"
+msgstr "Bewerken"
+
+# settings.json
+msgid "End"
+msgstr "Einde"
+
+# settings.json
+msgid "Error"
+msgstr "Fout"
+
+# settings.json
+msgid "Extensions"
+msgstr "Uitbreidingen"
+
+# settings.json
+msgid "Files"
+msgstr "Bestanden"
+
+# settings.json
+msgid "Flow"
+msgstr "Flow"
+
+# settings.json
+msgid "General"
+msgstr "Algemeen"
+
+# settings.json
+msgid "Get color from theme"
+msgstr "Kleur uit thema"
+
+# settings.json
+msgid "Group tasks by"
+msgstr "Taken groeperen op"
+
+# settings.json
+msgid "Grouping"
+msgstr "Groeperen"
+
+# settings.json
+msgid "Hidden tasks extension"
+msgstr "Verborgen taken-uitbreiding"
+
+# settings.json
+msgid "Hide if pattern is zero"
+msgstr "Verbergen als patroon nul is"
+
+# settings.json
+msgid "Icon"
+msgstr "Pictogram"
+
+# settings.json
+msgid ""
+"If the hidden extension is enabled, tasks containing 'h:1' will not be shown"
+msgstr ""
+"Als de verborgen taken-uitbreiding is ingeschakeld, dan zullen taken die "
+"‘h:1’ bevatten niet worden getoond"
+
+# settings.json
+msgid ""
+"If the specified pattern is zero, the elements specified here will be hidden"
+msgstr ""
+"Als het opgegeven patroon nul is, dan zullen de hier gekozen elementen niet "
+"worden getoond"
+
+# settings.json
+msgid "If this is true, an icon will be shown in the top bar"
+msgstr "Of een pictogram op de bovenbalk dient te worden getoond"
+
+# settings.json
+msgid ""
+"If this template evaluates to zero, the top bar element will be hidden. "
+"Shortcuts still work."
+msgstr ""
+"Als dit patroon na uitrekening nul oplevert, dan wordt het item op de "
+"bovenbalk verborgen. Sneltoetsen blijven werken."
+
+# settings.json
+msgid "Info"
+msgstr "Informatie"
+
+# settings.json
+msgid "Interface elements"
+msgstr "Vormgeving"
+
+# settings.json
+msgid "Keep as is (non-standard)"
+msgstr "Niet aanpassen (niet-standaard)"
+
+# settings.json
+msgid "Keep open menu after adding new task"
+msgstr "Menu openhouden na toevoegen van taak"
+
+# settings.json
+msgid "Keep with pri: prefix"
+msgstr "Behouden met pri:-voorvoegsel"
+
+# settings.json
+msgid ""
+"Keeps open the tasks menu after a new task is added. The new task entry will "
+"be focused."
+msgstr ""
+"Na het toevoegen van een nieuwe taak, blijft het menu geopend en wordt het "
+"invoerveld gefocust."
+
+# settings.json
+msgid "Keyboard shortcut to open the task list"
+msgstr "Sneltoets om takenlijst te openen"
+
+# settings.json
+msgid "Level of debug information"
+msgstr "Niveau van foutopsporingsinformatie"
+
+# settings.json
+msgid "Location of the text file that contains completed (archived) tasks"
+msgstr "Locatie van het tekstbestand dat afgeronde (gearchiveerde) taken bevat"
+
+# settings.json
+msgid "Location of the text file that contains the tasks in todo.txt syntax"
+msgstr "Locatie van het tekstbestand dat taken in de todo.txt-syntaxis bevat"
+
+# settings.json
+msgid "Location to insert new task"
+msgstr "Locatie van nieuwe taken"
+
+# settings.json
+msgid "Location to truncate long tasks"
+msgstr "Plaats om lange taken in te korten"
+
+# settings.json
+msgid "Mark as done or archive"
+msgstr "Taak afronden of archiveren"
+
+# settings.json
+msgid "Maximum task width in pixels"
+msgstr "Maximale taakbreedte (in pixels)"
+
+# settings.json
+msgid "Method to expand/contract truncated tasks"
+msgstr "In-/Uitvouwmethode van ingekorte taken"
+
+# settings.json
+msgid "Middle"
+msgstr "Midden"
+
+# settings.json
+msgid "No grouping"
+msgstr "Niet groeperen"
+
+# settings.json
+msgid "Nothing"
+msgstr "Niets"
+
+# settings.json
+msgid ""
+"Only show tasks with a given or higher priority. Leave empty to show all "
+"tasks."
+msgstr ""
+"Toon alleen taken met deze of een hogere prioriteit. Laat leeg om alle taken "
+"te tonen."
+
+# settings.json
+msgid "Only show tasks with a priority of or above"
+msgstr "Alleen taken tonen met prioriteit hoger dan"
+
+# settings.json
+msgid "Open task list"
+msgstr "Takenlijst openen"
+
+msgid "Order elements by their priority"
+msgstr "Taken sorteren op prioriteit"
+
+# settings.json
+msgid "Pattern to match for zero"
+msgstr "Patroon om te evalueren naar nul"
+
+# settings.json
+msgid "Priorities"
+msgstr "Prioriteiten"
+
+# settings.json
+msgid "Priority markup"
+msgstr "Prioriteitsopmaak"
+
+# settings.json
+msgid "Priority on task completion"
+msgstr "Prioriteit na afronden van een taak"
+
+# settings.json
+msgid "Projects"
+msgstr "Projecten"
+
+# settings.json
+msgid "Put ungrouped tasks in separate group"
+msgstr "Ongegroepeerde taken in aparte groep plaatsen"
+
+# settings.json
+msgid "Remove"
+msgstr "Verwijderen"
+
+# settings.json
+msgid "Same as task"
+msgstr "Zelfde als taak"
+
+# settings.json
+msgid "Scroll up/down"
+msgstr "Omhoog-/Omlaagscrollen"
+
+# settings.json
+msgid "Select location of done.txt file"
+msgstr "Kies de locatie van het done.txt-bestand"
+
+# settings.json
+msgid "Select location of todo.txt file"
+msgstr "Kies de locatie van het todo.txt-bestand"
+
+# settings.json
+msgid "Shortcuts"
+msgstr "Snelkoppelingen"
+
+# settings.json
+msgid "Show 'open in text editor'"
+msgstr "‘Openen in tekstbewerker’ tonen"
+
+# settings.json
+msgid "Show 'open preferences'"
+msgstr "‘Voorkeuren openen’ tonen"
+
+# settings.json
+msgid "Show change task priority buttons"
+msgstr "Prioriteitknoppen tonen"
+
+# settings.json
+msgid "Show contexts"
+msgstr "Contexten tonen"
+
+# settings.json
+msgid "Show delete task button"
+msgstr "Verwijderknop tonen"
+
+# settings.json
+msgid "Show done tasks"
+msgstr "Afgeronde taken tonen"
+
+# settings.json
+msgid "Show done/archive task button"
+msgstr "Afronden-/Archiverenknop tonen"
+
+# settings.json
+msgid "Show edit task button"
+msgstr "Bewerkknop tonen"
+
+# settings.json
+msgid "Show icon"
+msgstr "Pictogram tonen"
+
+# settings.json
+msgid "Show new task entry"
+msgstr "Veld voor nieuwe taak tonen"
+
+# settings.json
+msgid "Show number of tasks in group"
+msgstr "Aantal taken per groep tonen"
+
+# settings.json
+msgid "Show projects"
+msgstr "Projecten tonen"
+
+# settings.json
+msgid "Start"
+msgstr "Begin"
+
+# settings.json
+msgid "Style priorities"
+msgstr "Prioriteiten opmaken"
+
+# settings.json
+msgid "Styles"
+msgstr "Opmaakstijlen"
+
+# settings.json
+msgid "Tasks can be grouped together based on the selected property"
+msgstr ""
+"Taken kunnen gegroepeerd worden op basis van de geselecteerde eigenschap"
+
+# settings.json
+msgid ""
+"Tasks that don't have the grouping priority can be put in a special "
+"'ungrouped' group, or shown outside any groups"
+msgstr ""
+"Taken die niet gegroepeerd kunnen worden, worden in een speciale "
+"ongegroepeerde groep geplaatst"
+
+# settings.json
+msgid ""
+"Tasks will be truncated to this width (specified in pixels) if truncating is "
+"enabled."
+msgstr ""
+"Taken zullen ingekort worden tot deze breedte (in pixels) als inkorting is "
+"ingeschakeld."
+
+# settings.json
+msgid "Template string for display"
+msgstr "Weergavesjabloon"
+
+# settings.json
+msgid "Template that determines what is displayed in the top bar"
+msgstr "Het sjabloon dat bepaalt wat er op de bovenbalk wordt getoond"
+
+# settings.json
+msgid "Text"
+msgstr "Tekst"
+
+# settings.json
+msgid "The action that will initiate expansion and contraction of tasks"
+msgstr "Actie die in- en uitvouwen van taken veroorzaakt"
+
+# settings.json
+msgid "The location in the task text where the ellipsization will occur"
+msgstr "Plaats in de taaktekst waar inkorting zal plaatsvinden"
+
+# settings.json
+msgid "The number of tasks in a subgroup can be shown in the interface"
+msgstr "Het aantal taken in een onderliggende groep kan getoond worden"
+
+# settings.json
+msgid "The way that tasks with different priorities are displayed"
+msgstr "De manier waarop taken met verschillende prioriteiten worden getoond"
+
+# settings.json
+msgid "This color will be used for URLs if 'Custom color' was selected above"
+msgstr ""
+"Deze kleur zal gebruikt worden als de optie ‘Aangepaste kleur’ is "
+"ingeschakeld"
+
+# settings.json
+msgid "Todo.txt location"
+msgstr "Locatie van todo.txt"
+
+# settings.json
+msgid "Top Bar"
+msgstr "Bovenbalk"
+
+# settings.json
+msgid "Top of the file"
+msgstr "Bovenaan het bestand"
+
+# settings.json
+msgid "Truncate long tasks"
+msgstr "Lange taken inkorten"
+
+# settings.json
+msgid "Truncating"
+msgstr "Inkorten"
+
+# settings.json
+msgid "URL Color"
+msgstr "Url-kleur"
+
+# settings.json
+msgid "Warning"
+msgstr "Waarschuwing"
+
+# settings.json
+msgid ""
+"What should be done with the priority of a task when that task is completed"
+msgstr ""
+"Wat er met de prioriteit van een taak dient te gebeuren nadat deze is "
+"afgerond"
+
+# settings.json
+msgid "What to do when a task is clicked"
+msgstr "Actie na het aanklikken van een taak"
+
+# settings.json
+msgid "When URLs are detected in a task, they will be displayed in this color"
+msgstr ""
+"Als er url's worden gedetecteerd in een taak, dan zullen ze in deze kleur "
+"worden getoond"
+
+# settings.json
+msgid ""
+"Where in the text-file the new task will be added. Also moves insert box to "
+"the top of the interface."
+msgstr ""
+"Waar in het tekstbestand de nieuwe taak wordt ingevoegd. Is tevens van "
+"invloed op de positie van het invoerveld."
+
+# settings.json
+msgid "Whether a button is shown to delete a task"
+msgstr "Of er een verwijderknop dient te worden getoond"
+
+# settings.json
+msgid "Whether a button is shown to edit a task"
+msgstr "Of er een bewerkknop dient te worden getoond"
+
+# settings.json
+msgid ""
+"Whether a button is shown to mark active tasks as completed or to archive "
+"completed tasks, if auto-archive is off."
+msgstr ""
+"Of er een knop wordt getoond om actieve taken te markeren als afgerond of ze "
+"te archiveren als automatisch archiveren is uitgeschakeld."
+
+# settings.json
+msgid "Whether a confirmation dialog is shown before deleting a task"
+msgstr ""
+"Of er een bevestigingsvenster dient te worden getoond bij het verwijderen "
+"van een taak"
+
+# settings.json
+msgid "Whether a creation date is automatically added to newly created tasks"
+msgstr "Of een aanmaakdatum dient te worden toegevoegd aan nieuwe taken"
+
+# settings.json
+msgid "Whether a menu element is shown to open the extension's preferences"
+msgstr ""
+"Of er een menu-item dient te worden getoond om de uitbreidingsvoorkeuren te "
+"openen"
+
+# settings.json
+msgid ""
+"Whether a menu element is shown to open the todo.txt file in the default "
+"text editor"
+msgstr ""
+"Of er een menu-item dient te worden getoond om het todo.txt-bestand te "
+"openen in de standaard tekstbewerkingstoepassing"
+
+# settings.json
+msgid ""
+"Whether an entry field is shown to create new tasks (new tasks can also be "
+"added by modifying the todo.txt file)"
+msgstr ""
+"Of er een veld om nieuwe taken toe te voegen dient te worden getoond (nieuwe "
+"taken kunnen ook toegevoegd worden door het todo.txt-bestand aan te passen)"
+
+# settings.json
+msgid "Whether arrows are shown to increase or decrease the task priority"
+msgstr ""
+"Of er pijlen dienen te worden getoond om de taakprioriteit aan te passen"
+
+# settings.json
+msgid "Whether completed tasks that are not archived will be shown"
+msgstr "Of afgeronde taken die niet gearchiveerd zijn dienen te worden getoond"
+
+# settings.json
+msgid ""
+"Whether completed tasks will be automatically archived (i.e. moved to the "
+"done.txt file)"
+msgstr ""
+"Of afgeronde taken automatisch gearchiveerd dienen te worden (m.a.w.: "
+"verplaatsen naar het done.txt-bestand)"
+
+# settings.json
+msgid "Whether contexts are shown in the interface (does not affect grouping)"
+msgstr ""
+"Of de contexten dienen te worden getoond (heeft geen effect op groepering)"
+
+# settings.json
+msgid "Whether long tasks are truncated if they exceed a specified width"
+msgstr ""
+"Of lange taken ingekort dienen te worden als ze een bepaalde lengte "
+"overschrijden"
+
+# settings.json
+msgid "Whether projects are shown in the interface (does not affect grouping)"
+msgstr ""
+"Of de projecten dienen te worden getoond (heeft geen effect op groepering)"
+
+# settings.json
+msgid "Whether tasks with a certain priority are shown in a specific style"
+msgstr ""
+"Of taken met een bepaalde prioriteit in een specifieke stijl dienen te "
+"worden getoond"
+
+# settings.json
+msgid ""
+"Whether the tasks with a higher priority should be shown higher up in the "
+"list or the order should be left as in the todo.txt file"
+msgstr ""
+"Of taken met een hogere prioriteit hoger op de lijst dienen te worden "
+"getoond of de volgorde van het todo.txt-bestand wordt aangehouden"
+
+#~ msgid "Select file"
+#~ msgstr "Selecteer bestand"
+
+#~ msgid "Browse"
+#~ msgstr "Bladeren"
+
+#~ msgid "No description"
+#~ msgstr "Geen beschrijving"
+
+#~ msgid "Wrong priority"
+#~ msgstr "Ongeldige prioriteit"
+
+#~ msgid "Duplicate priority: %(priority)"
+#~ msgstr "Prioriteit is al gedefineerd: %(priority)"
+
+#~ msgid "Priority"
+#~ msgstr "Prioriteit"
+
+#~ msgid "Change color"
+#~ msgstr "Wijzig kleur"
+
+#~ msgid "Color"
+#~ msgstr "Kleur"
+
+#~ msgid "Bold"
+#~ msgstr "Vet"
+
+#~ msgid "Italic"
+#~ msgstr "Cursief"
+
+#~ msgid "Add style"
+#~ msgstr "Stijl toevoegen"
+
+#~ msgid "New priority style"
+#~ msgstr "Nieuwe prioriteitsstijl"
+
+#~ msgid "Delete"
+#~ msgstr "Verwijderen"
+
+#~ msgid "Function"
+#~ msgstr "Functie"
+
+#~ msgid "Key"
+#~ msgstr "Sneltoets"
+
+#~ msgid "Help"
+#~ msgstr "Hulp"
+
+# settings.json
+#~ msgid "Expert"
+#~ msgstr "Expert"
+
+# settings.json
+#~ msgid ""
+#~ "Templates can contain the following patterns: \n"
+#~ "\t{undone}: number of tasks that are not completed yet\n"
+#~ "\t{unarchived}: number of tasks that are not archived yet\n"
+#~ "\n"
+#~ "If you surround an expression with pipe characters (|), the pattern will "
+#~ "be mathematically evaluated after the replacements have been done.\n"
+#~ "For example: '{unarchived}-{undone}' will render as '3-2' for 3 "
+#~ "unarchived and 2 undone tasks, but '|{unarchived}-{undone}| will render "
+#~ "as '1'\n"
+#~ "\n"
+#~ "\n"
+#~ "You can also use a prefix to pad a number.\n"
+#~ "The prefix consists of three elements:\n"
+#~ "\tA number indicating the desired width. If the number is wider, no "
+#~ "padding will be done\n"
+#~ "\tA letter indicating the padding direction:\n"
+#~ "\t\tl: Pad left\n"
+#~ "\t\tr: Pad right\n"
+#~ "\t\tL: Pad at both sides, but more at left side if uneven padding\n"
+#~ "\t\tR: Pad at both sides, but more at right side if uneven padding\n"
+#~ "\tThe character to pad with (optional, default is a space)\n"
+#~ "\tA ':' to split the prefix and the wildcard\n"
+#~ "\n"
+#~ "Examples:\n"
+#~ "\t{3lx:undone} will render as xx2 for 2 undone tasks\n"
+#~ "\t{4R0:unarchived} will render as 0300 if there are 3 unarchived tasks"
+#~ msgstr ""
+#~ "Sjablonen kunnen de volgende patronen bevatten: \n"
+#~ "\t{undone}: aantal niet-gedane taken\n"
+#~ "\t{unarchived}: aantal niet-gearchiveerde taken\n"
+#~ "\n"
+#~ "Als je een tekstdeel tussen sluistekens (|) zet, zal het patroon "
+#~ "wiskundig geëvalueerd worden nadat de vervangingen zijn uitgevoerd\n"
+#~ "Bijvoorbeeld: '{unarchived}-{undone}' zal getoond worden als '3-2' voor 3 "
+#~ "niet-gearchiveerde en 2 niet-gedane taken, maar '|{unarchived}-{hidden}|' "
+#~ "zal getoond worden als '1'\n"
+#~ "\n"
+#~ "\n"
+#~ "Je kan ook een voorvoegsel gebruiken om een getal uit te vullen.\n"
+#~ "Het voorvoegsel bestaat uit drie elementen:\n"
+#~ "\tEen getal om de gewenste breedte aan te geven. Als het getal breder is, "
+#~ "wordt er geen uitvulling toegepast\n"
+#~ "\tEen letter om de uitvulrichting te kiezen:\n"
+#~ "\t\tl: Links uitvullen\n"
+#~ "\t\tr: Rechts uitvullen\n"
+#~ "\t\tL: Uitvullen aan beide kanten, maar meer aan de linkerkant indien "
+#~ "ongelijk\n"
+#~ "\t\tR: Uitvullen aan beide kanten, maar meer aan de rechterkant indien "
+#~ "ongelijk\n"
+#~ "\tHet karakter om mee uit te vullen (optioneel, standaard een spatie)\n"
+#~ "\tEen ':' tussen het voorvoegsel en het sjabloon\n"
+#~ "\n"
+#~ "Voorbeelden:\n"
+#~ "\t{3lx:undone} zal getoond worden als xx2 als er 2 niet-gedane taken "
+#~ "zijn\n"
+#~ "\t{4R0:unarchived} zal getoond worden als 0300 als er 3 niet-"
+#~ "gearchiveerde taken zijn"
+
+# settings.json
+#~ msgid "Scroll up/down to contract/expand"
+#~ msgstr "Scrollen naar boven/beneden om uit/in te vouwen"
+
+# settings.json
+#~ msgid "Level of settings that is shown"
+#~ msgstr "Getoond instellingsniveau"
+
+# settings.json
+#~ msgid "Advanced"
+#~ msgstr "Geavanceerd"
+
+# settings.json
+#~ msgid "Settings level"
+#~ msgstr "Instellingsniveau"
+
+# settings.json
+#~ msgid ""
+#~ "\n"
+#~ "\n"
+#~ "Note that padding and | cannot be used for the zero-matching pattern"
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "Merk op dat uitvullen en | niet gebruikt kunnen worden voor het "
+#~ "nulsjabloon"
+
+# settings.json
+#~ msgid "Basic"
+#~ msgstr "Basis"
+
+# settings.json
+#~ msgid "Levels"
+#~ msgstr "Niveaus"
+
+# settings.json
+#~ msgid ""
+#~ "\n"
+#~ "\n"
+#~ "When using the 'hidden' extension, an extra pattern is available:\n"
+#~ "\t{hidden}: number of hidden tasks"
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "Wanneer de verborgen taken uitbreiding aanstaat is een extra patroon "
+#~ "beschikbaar:\n"
+#~ "\t{hidden}: Aantal verborgen taken"
