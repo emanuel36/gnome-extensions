@@ -20,7 +20,7 @@ CPU / memory right now?" and "how much is each connection moving?".
 
 ## Goals
 
-- One panel button with the same bar content as today: CPU %, RAM %, network speed.
+- One panel button with CPU % and RAM % in the bar; network speed only in the popup.
 - A popup with the top 5 apps by CPU and the top 5 by memory, side by side, plus one row
   per connected cable / Wi-Fi interface.
 - CPU temperature in the popup.
@@ -46,14 +46,14 @@ CPU / memory right now?" and "how much is each connection moving?".
 Approved mockup: `.superpowers/brainstorm/132464-1792669041/content/monitor-design.html`
 (local, gitignored), Part 1 option A for CPU/RAM, option B for network.
 
-`[cpu icon] 12%  [ram icon] 41%  ↓1.2M ↑80K`
+`[cpu icon] 12%  [ram icon] 41%`
 
 - CPU and RAM: monochrome symbolic icons, 16 px, right before the value. Use
   `cpu-symbolic.svg` and `ram-symbolic.svg` from Resource Monitor
   (`extensions/resource-monitor/Resource_Monitor@Ory0n/icons/`), copied into the new
   extension.
-- Network: text arrows, no icon. Value = download / upload of all shown interfaces
-  combined, in bytes per second with compact units (`B`, `K`, `M`, `G`, no "/s").
+- Network: not in the bar (dropped after the first version to keep it short); per
+  interface speeds are in the popup.
 - CPU % = all cores, like Resource Monitor today; RAM % = used / total, where used =
   `MemTotal - MemAvailable` from `/proc/meminfo`.
 - Refresh every 2 s (Resource Monitor's current setting).

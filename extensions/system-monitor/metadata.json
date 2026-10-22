@@ -1,6 +1,6 @@
 {
   "name": "System Monitor",
-  "description": "CPU, memory and network usage in the top panel, with the busiest apps and per-connection traffic in its popup.",
+  "description": "CPU and memory usage in the top panel, with the busiest apps and per-connection network traffic in its popup.",
   "uuid": "system-monitor@emanuel36",
   "shell-version": ["46"],
   "settings-schema": "org.gnome.shell.extensions.system-monitor",
