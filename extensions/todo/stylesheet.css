@@ -56,3 +56,17 @@
     color: #9a9a9a;
     padding: 14px 0 8px 0;
 }
+
+/* Drag and drop */
+.todo-row-ghost {
+    background-color: #454545;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.todo-drop {
+    height: 2px;
+    margin: 1px 6px;
+    border-radius: 1px;
+    background-color: #3584e4;
+}
