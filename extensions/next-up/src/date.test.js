@@ -4,6 +4,7 @@ import System from "system";
 import {
   eventStatusToIndicatorText,
   formatDuration,
+  getEventListRows,
   getNextEventsToDisplay,
   getTimeOfEventAsText,
 } from "./date.js";
@@ -65,6 +66,14 @@ check("long name cut", textAt([long], at(14, 20)),
   { text: "15:00 Quarterly planning review with the…", hint: "· 40m" });
 check("long name cut while in it", textAt([long], at(15, 20)),
   { text: "Quarterly planning review with the…", hint: "· 40m left" });
+
+check("list sorted with states", getEventListRows(day, at(14, 20)), [
+  { time: "10:00 – 10:15", summary: "Daily standup", state: "past" },
+  { time: "14:00 – 14:45", summary: "Design review", state: "current" },
+  { time: "16:30 – 17:00", summary: "Team sync", state: "upcoming" },
+]);
+check("list meeting ends exactly now", getEventListRows([review], at(14, 45))[0].state, "past");
+check("list empty", getEventListRows([], at(11, 0)), []);
 
 if (failures > 0) {
   print(`\n${failures} failed`);
