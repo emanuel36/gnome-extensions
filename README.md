@@ -57,18 +57,16 @@ maximized. Runs when monitors change, when the shell starts, and on Super+Shift+
 
 ## Install
 
-Each extension is linked into the shell's extension folder, so the checked-out branch is
-what runs:
+Clone the repo and run:
 
 ```bash
-name=system-monitor
-glib-compile-schemas extensions/$name/schemas
-ln -s "$PWD/extensions/$name" ~/.local/share/gnome-shell/extensions/$name@emanuel36
-gnome-extensions enable $name@emanuel36
+./install.sh                # all extensions
+./install.sh todo next-up   # only these
 ```
 
-GNOME Shell caches extension code: after changing it, restart the shell (X11: Alt+F2, `r`)
-or log out.
+Extensions are linked to the repo, so pulling new changes updates them. After installing
+or updating, restart GNOME Shell (X11: Alt+F2, `r`) or log out. An extension that is
+already installed some other way is left alone.
 
 ## Upstream imports
 
