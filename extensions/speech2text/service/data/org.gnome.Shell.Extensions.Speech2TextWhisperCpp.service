@@ -1,3 +1,0 @@
-[D-BUS Service]
-Name=org.gnome.Shell.Extensions.Speech2TextWhisperCpp
-Exec=/usr/bin/speech2text-whispercpp-service

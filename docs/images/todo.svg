@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="330" viewBox="0 0 420 330" font-family="Ubuntu, Cantarell, 'Noto Sans', 'Segoe UI', sans-serif">
+<defs><filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.45"/></filter></defs>
+<rect x="0" y="0" width="420" height="330" rx="12" fill="#1b1b1d"/>
+<path d="M12 0 H408 A12 12 0 0 1 420 12 V32 H0 V12 A12 12 0 0 1 12 0 Z" fill="#000000"/>
+<g transform="translate(18,8)"><rect x="1" y="1" width="14" height="14" rx="3" fill="#ffffff"/><path d="M4.5 8.2 L7 10.7 L11.8 5.5" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="40" y="21" font-size="14" font-weight="700" fill="#ffffff" text-anchor="start">3</text>
+<rect x="70" y="12" width="30" height="8" rx="4" fill="#ffffff"/>
+<rect x="106" y="12" width="8" height="8" rx="4" fill="#bbbbbb"/>
+<rect x="120" y="12" width="8" height="8" rx="4" fill="#bbbbbb"/>
+<rect x="14" y="40" width="344" height="276" rx="14" fill="#353535" stroke="rgba(255,255,255,0.08)" filter="url(#shadow)"/>
+<rect x="30" y="56" width="312" height="34" rx="17" fill="rgba(255,255,255,0.08)" stroke="#3584e4" stroke-width="2"/>
+<text x="44" y="78" font-size="14" font-weight="400" fill="#9a9a9a" text-anchor="start">New task…</text>
+<rect x="30" y="102" width="312" height="30" rx="6" fill="rgba(255,255,255,0.08)"/>
+<rect x="38" y="112" width="12" height="1.6" fill="#777777"/><rect x="38" y="116" width="12" height="1.6" fill="#777777"/><rect x="38" y="120" width="12" height="1.6" fill="#777777"/>
+<text x="62" y="122" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">Review the panel layout PR</text>
+<g transform="translate(320,110)" stroke="#9a9a9a" stroke-width="1.6" stroke-linecap="round" opacity="1.00"><path d="M3 3 L11 11 M11 3 L3 11"/></g>
+<rect x="38" y="144" width="12" height="1.6" fill="#777777"/><rect x="38" y="148" width="12" height="1.6" fill="#777777"/><rect x="38" y="152" width="12" height="1.6" fill="#777777"/>
+<text x="62" y="154" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">Book flights for the offsite</text>
+<g transform="translate(320,142)" stroke="#9a9a9a" stroke-width="1.6" stroke-linecap="round" opacity="0.35"><path d="M3 3 L11 11 M11 3 L3 11"/></g>
+<rect x="38" y="176" width="12" height="1.6" fill="#777777"/><rect x="38" y="180" width="12" height="1.6" fill="#777777"/><rect x="38" y="184" width="12" height="1.6" fill="#777777"/>
+<text x="62" y="186" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">Reply to the design feedback</text>
+<g transform="translate(320,174)" stroke="#9a9a9a" stroke-width="1.6" stroke-linecap="round" opacity="0.35"><path d="M3 3 L11 11 M11 3 L3 11"/></g>
+<text x="36" y="216" font-size="11" font-weight="600" fill="#9a9a9a" text-anchor="start">Done · 2</text>
+<rect x="92" y="212" width="244" height="1" rx="0" fill="rgba(255,255,255,0.12)"/>
+<text x="62" y="244" font-size="14" font-weight="400" fill="#9a9a9a" text-anchor="start">Renew the parking pass</text>
+<g transform="translate(320,232)" stroke="#9a9a9a" stroke-width="1.6" stroke-linecap="round" opacity="0.35"><path d="M3 3 L11 11 M11 3 L3 11"/></g>
+<text x="62" y="276" font-size="14" font-weight="400" fill="#9a9a9a" text-anchor="start">Send the weekly update</text>
+<g transform="translate(320,264)" stroke="#9a9a9a" stroke-width="1.6" stroke-linecap="round" opacity="0.35"><path d="M3 3 L11 11 M11 3 L3 11"/></g>
+</svg>

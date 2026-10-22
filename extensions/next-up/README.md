@@ -1,20 +1,23 @@
 # Next Up
-A GNOME Shell extension that shows your next calendar event in the status bar.
 
-![screenshot1](screenshots/screenshot1.png)
-![screenshot2](screenshots/screenshot2.png)
-![screenshot3](screenshots/screenshot3.png)
-![screenshot4](screenshots/screenshot4.png)
+![Next Up](../../docs/images/next-up.svg)
 
-Tested on GNOME 42.4.
+The next meeting of the day in the top bar, such as `14:00 Design review · 2h45` with a
+faded countdown, or `Design review · 25m left` while it is in progress. `+N` shows when
+several meetings start together. All-day events are ignored, and the indicator hides when
+nothing is left today.
 
+Clicking it lists today's meetings: past ones faded, the one in progress marked with a
+dot. Clicking a meeting opens the calendar app. Settings, at the end of the list, choose
+which part of the top bar it sits in.
 
-## Installation
-You can install the extension from [the extensions.gnome.org page](https://extensions.gnome.org/extension/5465/next-up/) by clicking the switch icon.
+It reads the same calendar as the top bar clock, so both always agree.
 
+## Credits
 
-## References
-- https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/main/js/ui/calendar.js
-- https://extensions.gnome.org/extension/4448/next-meeting/
-- https://github.com/corecoding/Vitals
+Imported from [artisticat1/gnome-next-up](https://github.com/artisticat1/gnome-next-up)
+and largely rewritten. Modified files carry a notice with the changes and the date.
 
+## License
+
+GPL-3.0, see `LICENSE.md` (some file headers say GPL-2.0-or-later, as upstream).

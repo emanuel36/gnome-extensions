@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="270" viewBox="0 0 560 270" font-family="Ubuntu, Cantarell, 'Noto Sans', 'Segoe UI', sans-serif">
+<defs><filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.45"/></filter></defs>
+<rect x="0" y="0" width="560" height="270" rx="12" fill="#1b1b1d"/>
+<path d="M12 0 H548 A12 12 0 0 1 560 12 V32 H0 V12 A12 12 0 0 1 12 0 Z" fill="#000000"/>
+<rect x="14" y="12" width="30" height="8" rx="4" fill="#ffffff"/>
+<rect x="50" y="12" width="8" height="8" rx="4" fill="#bbbbbb"/>
+<rect x="64" y="12" width="8" height="8" rx="4" fill="#bbbbbb"/>
+<g transform="translate(150,10) scale(0.75)" fill="none" stroke="#ffffff" stroke-width="2"><rect x="1.5" y="3" width="13" height="11.5" rx="2"/><path d="M1.5 7 H14.5 M5 1 V4 M11 1 V4"/></g>
+<text x="168" y="21" font-size="14" font-weight="700" fill="#ffffff" text-anchor="start">Design review</text>
+<text x="265" y="21" font-size="14" font-weight="700" fill="#ffffff" text-anchor="start" opacity="0.59">· 25m left</text>
+<text x="350" y="21" font-size="14" font-weight="700" fill="#ffffff" text-anchor="start">Oct 22  14:20</text>
+<rect x="120" y="40" width="344" height="214" rx="14" fill="#353535" stroke="rgba(255,255,255,0.08)" filter="url(#shadow)"/>
+<text x="142" y="68" font-size="11" font-weight="600" fill="#9a9a9a" text-anchor="start">Today · 4</text>
+<rect x="200" y="64" width="242" height="1" rx="0" fill="rgba(255,255,255,0.12)"/>
+<text x="156" y="101" font-size="14" font-weight="400" fill="#9a9a9a" text-anchor="start">10:00 – 10:15</text>
+<text x="264" y="101" font-size="14" font-weight="400" fill="#9a9a9a" text-anchor="start">Daily standup</text>
+<circle cx="145" cy="126" r="3" fill="#3584e4"/>
+<text x="156" y="131" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">14:00 – 14:45</text>
+<text x="264" y="131" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">Design review</text>
+<rect x="136" y="142" width="312" height="28" rx="6" fill="rgba(255,255,255,0.08)"/>
+<text x="156" y="161" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">16:30 – 17:00</text>
+<text x="264" y="161" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">Team sync</text>
+<text x="156" y="191" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">17:30 – 18:00</text>
+<text x="264" y="191" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">1:1 with Alex</text>
+<rect x="136" y="208" width="312" height="1" rx="0" fill="rgba(255,255,255,0.12)"/>
+<g transform="translate(142,224)" fill="none" stroke="#9a9a9a" stroke-width="1.8"><circle cx="8" cy="8" r="3"/><path d="M8 1 V3.5 M8 12.5 V15 M1 8 H3.5 M12.5 8 H15 M3 3 L4.8 4.8 M11.2 11.2 L13 13 M3 13 L4.8 11.2 M11.2 4.8 L13 3"/></g>
+<text x="166" y="237" font-size="14" font-weight="400" fill="#9a9a9a" text-anchor="start">Settings</text>
+</svg>

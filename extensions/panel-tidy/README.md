@@ -1,31 +1,25 @@
 # Panel Tidy
 
-GNOME Shell 46 extension that orders the top bar items across the left, center and right
-boxes, and hides the top bar items and Quick Settings toggles you don't use. Everything
-is set in its preferences window (drag rows to reorder, switches to show or hide) and
-applies immediately.
+![Panel Tidy](../../docs/images/panel-tidy.svg)
 
-It never overrides shell functions: it only reacts when items appear on the bar or in
-Quick Settings, so other extensions add their items exactly as without it. A new item is
-left where its extension put it and shown; it then appears in the preferences window.
-Disabling the extension shows everything it hid.
+Orders the top bar items across the left, center and right of the bar, and hides the top
+bar items and Quick Settings toggles you don't use. Everything is set in its preferences
+window (drag rows to reorder, switches to show or hide) and applies immediately.
 
-Items are saved by their panel role, except app icons (appindicators), whose roles change
-every time the app starts: they are saved by app id, or by window class for legacy tray
-icons. Extensions that insert their button into the panel boxes directly, without
-`Main.panel.addToStatusArea`, are not seen.
+Other extensions keep working exactly as without it. A new item is shown where its
+extension put it and then appears in the preferences window. App tray icons are
+remembered across app restarts. Disabling Panel Tidy shows everything it hid.
 
-Replaces Top Bar Organizer and Just Perfection on this machine. Design:
-`docs/superpowers/specs/2026-10-22-panel-tidy-design.md`.
+A few extensions place their button on the bar in an unusual way; those are not listed.
 
-## Tests
-
-```bash
-gjs -m extensions/panel-tidy/order.test.js
-```
+Replaces Top Bar Organizer and Just Perfection.
 
 ## Credits
 
-The appindicator key format (`appindicator-kstatusnotifieritem-<app id>`) follows
-[Top Bar Organizer](https://gitlab.gnome.org/june/top-bar-organizer), so its saved order
-could be carried over; no code was copied.
+Saved app icon positions use the same format as
+[Top Bar Organizer](https://gitlab.gnome.org/june/top-bar-organizer), so its order can be
+carried over; no code was copied.
+
+## License
+
+MIT, see `LICENSE`.
