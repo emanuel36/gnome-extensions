@@ -10,16 +10,15 @@ not forks: upstream history is not kept, only the commit each import was taken f
 |---|---|---|---|---|---|---|
 | `extensions/bluetooth-battery-meter` | [maniacx/Bluetooth-Battery-Meter](https://github.com/maniacx/Bluetooth-Battery-Meter) | `GNOME46` | `e5c960b06cef` | GPL-3.0 | 46–51 | `install.sh` |
 | `extensions/clipboard-history` | [SUPERCILEX/gnome-clipboard-history](https://github.com/SUPERCILEX/gnome-clipboard-history) | `master` | `1d4ef6632c58` | MIT | 48–51 | `Makefile` |
-| `extensions/just-perfection` | [jrahmatzadeh/just-perfection](https://gitlab.gnome.org/jrahmatzadeh/just-perfection) | `main` | `6e82a6ebf8e9` | GPL-3.0 | 45–51 | `scripts/` |
 | `extensions/next-up` | [artisticat1/gnome-next-up](https://github.com/artisticat1/gnome-next-up) | `main` | `44707c4cbc1e` | GPL-3.0 | 45–47 | none |
 | `extensions/speech2text` | [bcelary/gnome-speech2text](https://github.com/bcelary/gnome-speech2text) | `main` | `38ff745fb4b6` | MIT | 46–47 | `Makefile` |
 | `extensions/todo-txt` | [todo-txt-gnome-shell-extension](https://gitlab.com/todo.txt-gnome-shell-extension/todo-txt-gnome-shell-extension) | `master` | `65345cfb5f93` | GPL-3.0 | 51 | `Makefile` |
-| `extensions/top-bar-organizer` | [june/top-bar-organizer](https://gitlab.gnome.org/june/top-bar-organizer) | `main` | `1216ebb994fa` | GPL-3.0-or-later | 45–50 | TypeScript (`package.sh`) |
 
 Extensions written here from scratch:
 
 | Directory | License | GNOME Shell | Build |
 |---|---|---|---|
+| `extensions/panel-tidy` | MIT | 46 | none |
 | `extensions/system-monitor` | GPL-3.0 | 46 | none |
 | `extensions/window-layout` | MIT | 46 | none |
 

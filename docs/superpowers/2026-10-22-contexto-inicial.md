@@ -9,7 +9,7 @@ Serve para continuar o trabalho numa sessão nova dentro do repo.
 - Relógio 24h, sistema em inglês (barra mostra "Oct 21"), tema de ícones `Yaru-blue`.
 - Calendário: conta Google via GNOME Online Accounts → Evolution Data Server (CalDAV), dois
   calendários: o pessoal e "Device and Data Platform Team".
-- Barra superior organizada com Top Bar Organizer + Just Perfection.
+- Barra superior organizada com Panel Tidy (antes: Top Bar Organizer + Just Perfection).
 
 ## Extensões instaladas (`~/.local/share/gnome-shell/extensions`)
 
@@ -18,12 +18,12 @@ Serve para continuar o trabalho numa sessão nova dentro do repo.
 | `Bluetooth-Battery-Meter@maniacx.github.com` | 49 | ativa | |
 | `Resource_Monitor@Ory0n` | 28 | removida em 22/10 | substituída por system-monitor |
 | `clipboard-history@alexsaveau.dev` | 51 | ativa | |
-| `just-perfection-desktop@just-perfection` | 37 | ativa | |
+| `just-perfection-desktop@just-perfection` | 37 | removida em 22/10 | substituída por panel-tidy |
 | `network-stats@gnome.noroadsleft.xyz` | 36 | removida em 22/10 | substituída por system-monitor |
 | `next-up@artisticat1.github.com` | 8 | removida em 22/10 | substituída pelo repo (ver Decisões) |
 | `speech2text-whispercpp@bcelary.github` | 6 | **INITIALIZED** | instalada mas não ativa; causa não investigada |
 | `todo.txt@bart.libert.gmail.com` | 44 | ativa | |
-| `top-bar-organizer@julian.gse.jsts.xyz` | 16 | ativa | |
+| `top-bar-organizer@julian.gse.jsts.xyz` | 16 | removida em 22/10 | substituída por panel-tidy |
 
 `org.gnome.shell enabled-extensions` também lista ~10 extensões que não estão instaladas
 (entre elas `claude-status@oakz.org` e `simple-claude-usage@krugerrgabriel.github.io`).
@@ -96,6 +96,12 @@ não tem build.
   uso do dia. Top Bar Organizer lança `appIndicator is undefined` ao adicionar itens com
   um appindicator quebrado; o usuário desativou o Organizer. Design em
   `specs/2026-10-22-system-monitor-design.md`.
+- Panel Tidy (22/10): `panel-tidy@emanuel36`, escrita do zero, substitui Top Bar Organizer
+  e Just Perfection (removidos do repo e da máquina). Ordena os itens da barra e oculta itens e botões do Quick Settings, pela janela
+  de preferências (arrastar + switches), sem sobrescrever funções do shell. Ocultos hoje:
+  layout de teclado, acessibilidade, Airplane Mode, Night Light, Dark Style e Keyboard.
+  O Next Up passou a se registrar com `addToStatusArea` (antes inseria direto na caixa e
+  ficava invisível para quem ordena a barra). Design em `specs/2026-10-22-panel-tidy-design.md`.
 
 ## Ideias discutidas, ainda não decididas
 
