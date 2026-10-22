@@ -26,6 +26,28 @@ Start-of-project context (findings, local patches, decisions so far):
 - `git subtree add/pull -m` keeps only the last `-m`: pass a single message with embedded
   newlines.
 
+### Commits
+
+- Conventional Commits (`feat:`, `fix:`, `docs:`, `chore:`, `refactor:`...), optional scope
+  with the extension name.
+- Subject of at most 50 characters; body lines of at most 72, mostly bullet points.
+- Describe what changes and why at a high level; leave implementation details to the diff.
+
+### Branch workflow
+
+- Do every code change on a temporary branch named `<type>/<topic>` (e.g.
+  `fix/next-up-countdown`, `feat/window-layout`), one branch per piece of work.
+- Exception: rule updates and simple docs (CLAUDE.md, README, notes) are committed
+  directly on `main`, with no branch or merge.
+- When the work is done, clean up the branch history before merging: keep only the commits
+  that are needed. A commit that fixes or adjusts an earlier one in the same branch is
+  squashed into it (`git commit --fixup` + `git rebase -i --autosquash`, or equivalent).
+- Then merge it into `main` with `git merge --no-ff` (never fast-forward), so each piece of
+  work stays grouped under its merge commit, and delete the branch.
+- Unpushed commits on `main` may be rewritten the same way; pushed ones never.
+- Keep the `Squashed '<dir>/' content from commit ...` commits made by `git subtree` intact:
+  `git subtree pull` finds them by their message.
+
 ## Licensing
 
 - Keep each extension's upstream license file and copyright notices.
