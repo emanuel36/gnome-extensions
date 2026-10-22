@@ -1,0 +1,710 @@
+# Just Perfection GNOME Shell Extension Translation
+# Copyright (C) 2020-2026 Javad Rahmatzadeh
+# This file is distributed under GPL v3
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-02 13:06-0800\n"
+"PO-Revision-Date: 2020-12-18 04:05-0800\n"
+"Last-Translator: Just Perfection <justperfection.channel@gmail.com>\n"
+"Language-Team: Afrikaans\n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/data/ui/visibility.ui:6 src/data/ui/visibility.ui:11
+msgid "Visibility"
+msgstr "Sigbaarheid"
+
+#: src/data/ui/visibility.ui:15
+msgid "Panel"
+msgstr "paneel"
+
+#: src/data/ui/visibility.ui:27
+msgid "Panel in Overview"
+msgstr "Paneel in Oorsig"
+
+#: src/data/ui/visibility.ui:40
+msgid "Activities Button"
+msgstr "Aktiwiteite-knoppie"
+
+#: src/data/ui/visibility.ui:41
+msgid "Button in panel to toggle overview visibility"
+msgstr "Knoppie in die paneel om die sigbaarheid van die oorsig in te skakel"
+
+#: src/data/ui/visibility.ui:53
+msgid "Clock Menu"
+msgstr "klok Menu"
+
+#: src/data/ui/visibility.ui:54
+msgid "Also known as date menu shows date and time in panel"
+msgstr "Ook bekend as die datum-menu, toon die datum en tyd in die paneel"
+
+#: src/data/ui/visibility.ui:66
+msgid "Keyboard Layout"
+msgstr "Sleutelborduitleg"
+
+#: src/data/ui/visibility.ui:67
+msgid "Keyboard Layout indicator button in panel"
+msgstr "Aanwyser-knoppie vir sleutelborduitleg in die paneel"
+
+#: src/data/ui/visibility.ui:79
+msgid "Accessibility Menu"
+msgstr "Toeganklikheids-menu"
+
+#: src/data/ui/visibility.ui:80
+msgid "Accessibility Menu indicator button in panel"
+msgstr "Toeganklikheidsmenu-aanwyserknoppie in die paneel"
+
+#: src/data/ui/visibility.ui:92
+msgid "Quick Settings"
+msgstr "Vinnige instellings"
+
+#: src/data/ui/visibility.ui:93
+msgid "Quick settings menu in panel"
+msgstr "Vinnige instellings kieslys in paneel"
+
+#: src/data/ui/visibility.ui:105
+msgid "Dark Mode Toggle Button"
+msgstr "Donkermodus-wisselknoppie"
+
+#: src/data/ui/visibility.ui:106
+msgid "Dark Mode Toggle Button in Quick settings menu"
+msgstr "Donkermodus-wisselknoppie in Vinnige instellings-kieslys"
+
+#: src/data/ui/visibility.ui:118
+msgid "Night Light Toggle Button"
+msgstr "Naglig-wisselknoppie"
+
+#: src/data/ui/visibility.ui:119
+msgid "Night Light Toggle Button in Quick settings menu"
+msgstr "Naglig-wisselknoppie in Vinnige instellings-kieslys"
+
+#: src/data/ui/visibility.ui:131
+msgid "Airplane Mode Toggle Button"
+msgstr "Vliegtuigmodus-wisselknoppie"
+
+#: src/data/ui/visibility.ui:132
+msgid "Airplane Mode Toggle Button in Quick settings menu"
+msgstr "Vliegtuigmodus-wisselknoppie in Vinnige instellings-kieslys"
+
+#: src/data/ui/visibility.ui:144
+msgid "Screen Sharing Indicator"
+msgstr "Skermdeling-aanwyser"
+
+#: src/data/ui/visibility.ui:145
+msgid "Screen sharing indicator in panel"
+msgstr "Skermdeling-aanwyser in paneel"
+
+#: src/data/ui/visibility.ui:157
+msgid "Screen Recording Indicator"
+msgstr "Skermopname-aanwyser"
+
+#: src/data/ui/visibility.ui:158
+msgid "Screen recording indicator in panel"
+msgstr "Skermopname-aanwyser in paneel"
+
+#: src/data/ui/visibility.ui:170
+msgid "World Clock"
+msgstr "Wêreld Klok"
+
+#: src/data/ui/visibility.ui:171
+msgid "World clock in clock menu"
+msgstr "Wêreldklok in klokkieslys"
+
+#: src/data/ui/visibility.ui:183
+msgid "Weather"
+msgstr "Weer"
+
+#: src/data/ui/visibility.ui:184
+msgid "Weather in clock menu"
+msgstr "Weer in klok spyskaart"
+
+#: src/data/ui/visibility.ui:196
+msgid "Calendar"
+msgstr "Kalender"
+
+#: src/data/ui/visibility.ui:197
+msgid "Calendar in clock menu"
+msgstr "Kalender in die klokkieslys"
+
+#: src/data/ui/visibility.ui:209
+msgid "Events"
+msgstr "Gebeurtenisse"
+
+#: src/data/ui/visibility.ui:210
+msgid "Events button in clock menu"
+msgstr "Gebeurtenisse-knoppie in klokkieslys"
+
+#: src/data/ui/visibility.ui:222
+msgid "Search"
+msgstr "Soek"
+
+#: src/data/ui/visibility.ui:223
+msgid "Search entry in overview"
+msgstr "Soek inskrywing in oorsig"
+
+#: src/data/ui/visibility.ui:235
+msgid "Dash"
+msgstr "Dash"
+
+#: src/data/ui/visibility.ui:236
+msgid "Dash holds favorite and opened applications icons"
+msgstr "Dash bevat gunsteling- en oopgemaakte toepassingsikone"
+
+#: src/data/ui/visibility.ui:248
+msgid "Dash Separator"
+msgstr "Dash Separator"
+
+#: src/data/ui/visibility.ui:249
+msgid "Dash separator line that separates pin apps from unpin apps"
+msgstr "Dash-skeierlyn wat pen-toepassings van ontspeld-toepassings skei"
+
+#: src/data/ui/visibility.ui:261
+msgid "Dash App Running Indicator"
+msgstr "Dash App Running Indicator"
+
+#: src/data/ui/visibility.ui:262
+msgid "The dot indicator in dash that shows the app is running"
+msgstr "Die kolletjie-aanwyser in streep wat wys dat die toepassing loop"
+
+#: src/data/ui/visibility.ui:274
+msgid "Show Applications Button"
+msgstr "Wys toepassings-knoppie"
+
+#: src/data/ui/visibility.ui:275
+msgid "Button in dash that toggles applications list visibility"
+msgstr ""
+"Knoppie in streep waarmee die sigbaarheid van die toepassingslys wissel"
+
+#: src/data/ui/visibility.ui:287
+msgid "On Screen Display (OSD)"
+msgstr "OSD"
+
+#: src/data/ui/visibility.ui:288
+msgid "Volume and brightness on screen display when the change happens"
+msgstr ""
+"Volume en helderheid op die skerm vertoon wanneer die verandering plaasvind"
+
+#: src/data/ui/visibility.ui:300
+msgid "Workspace Popup"
+msgstr "Werkruimte pop-up"
+
+#: src/data/ui/visibility.ui:301
+msgid "Popup that appears on the screen when you change the workspace"
+msgstr "Pop-up wat op die skerm verskyn wanneer u die werkruimte verander"
+
+#: src/data/ui/visibility.ui:313
+msgid "Workspace Switcher"
+msgstr "Werkspasie skakelaar"
+
+#: src/data/ui/visibility.ui:314
+msgid ""
+"Also refers to workspace thumbnails that you see in overview for selecting a "
+"workspace"
+msgstr ""
+"Verwys ook na werkruimte-kleinkiekies wat u in die oorsig sien om 'n "
+"werkruimte te kies"
+
+#: src/data/ui/visibility.ui:326
+msgid "Workspaces App Grid"
+msgstr "Werkspasies-approoster"
+
+#: src/data/ui/visibility.ui:327
+msgid "Workspace boxes in app grid"
+msgstr "Werkruimtekassies in approoster"
+
+#: src/data/ui/visibility.ui:339
+msgid "Window Picker Close Button"
+msgstr "Venster kieser Sluit knoppie"
+
+#: src/data/ui/visibility.ui:340
+msgid "The close button on window preview in overview"
+msgstr "Die sluitknoppie op die venstervoorskou in oorsig"
+
+#: src/data/ui/visibility.ui:352
+msgid "Window Picker Caption"
+msgstr "Vensterkieser onderskrif"
+
+#: src/data/ui/visibility.ui:353
+msgid "The text under window preview in overview"
+msgstr "Die teks onder venstervoorskou in oorsig"
+
+#: src/data/ui/visibility.ui:365
+msgid "Background Menu"
+msgstr "Agtergrond menu"
+
+#: src/data/ui/visibility.ui:366
+msgid "When you right click on desktop background"
+msgstr "As u regs kliek op die agtergrond van die lessenaar"
+
+#: src/data/ui/visibility.ui:378
+msgid "Ripple Box"
+msgstr "Ripple Box"
+
+#: src/data/ui/visibility.ui:379
+msgid "Hot corner animation effects"
+msgstr "Warm hoek -animasie -effekte"
+
+#: src/data/ui/visibility.ui:391
+msgid "Take Screenshot button in Window Menu"
+msgstr "Neem skermkiekie-knoppie in die vensterkieslys"
+
+#: src/data/ui/visibility.ui:392
+msgid "Take screenshot button in title bar right click menu"
+msgstr "Neem skermkiekie-knoppie in die titelbalk met die regterkliekkieslys"
+
+#: src/data/ui/icons.ui:6 src/data/ui/icons.ui:11
+msgid "Icons"
+msgstr "ikone"
+
+#: src/data/ui/icons.ui:15
+msgid "Panel Notification Icon"
+msgstr "Paneelkennisgewing-ikoon"
+
+#: src/data/ui/icons.ui:27
+msgid "Power Icon"
+msgstr "Krag-ikoon"
+
+#: src/data/ui/icons.ui:39
+msgid "Window Picker Icon"
+msgstr "Vensterkeuse-ikoon"
+
+#: src/data/ui/icons.ui:40
+msgid "The icon under window preview in overview"
+msgstr "Die ikoon onder die voorskou van die venster in die oorsig"
+
+#: src/data/ui/behavior.ui:6 src/data/ui/behavior.ui:11
+msgid "Behavior"
+msgstr "Gedrag"
+
+#: src/data/ui/behavior.ui:15
+msgid "Workspace Wraparound"
+msgstr "Werkruimte omringend"
+
+#: src/data/ui/behavior.ui:16
+msgid ""
+"Next workspace will be the first workspace when you are in the last "
+"workspace. and previous workspace will be the last workspace when you are in "
+"the first workspace."
+msgstr ""
+"Die volgende werkruimte is die eerste werkruimte wanneer u in die laaste "
+"werkruimte is. en vorige werkruimte sal die laaste werkruimte wees as u in "
+"die eerste werkruimte is."
+
+#: src/data/ui/behavior.ui:28
+msgid "Workspace Peek"
+msgstr "Werkspasie Loer"
+
+#: src/data/ui/behavior.ui:29
+msgid "Whether the next and previous workspace should be visible in overview."
+msgstr "Of die volgende en vorige werkspasie in oorsig sigbaar moet wees."
+
+#: src/data/ui/behavior.ui:41
+msgid "Workspace Switcher Click to The Main View"
+msgstr "Werkruimtewisselaar Klik na die hoofaansig"
+
+#: src/data/ui/behavior.ui:42
+msgid "Workspace switcher click always goes to the main view of the workspace."
+msgstr ""
+"Werkspasiewisselaar-klik gaan altyd na die hoofaansig van die werkspasie."
+
+#: src/data/ui/behavior.ui:54
+msgid "Window Demands Attention Focus"
+msgstr "Venster eis aandag gefokus"
+
+#: src/data/ui/behavior.ui:55
+msgid "Removes window is ready notification and focus on the window"
+msgstr "Verwyder venster is gereed kennisgewing en fokus op die venster"
+
+#: src/data/ui/behavior.ui:67
+msgid "Window Maximized by Default"
+msgstr "Venster gemaksimeer by verstek"
+
+#: src/data/ui/behavior.ui:68
+msgid "Maximize all windows on creation"
+msgstr "Maksimeer alle vensters tydens skepping"
+
+#: src/data/ui/behavior.ui:80
+msgid "Type to Search"
+msgstr "Tik om te soek"
+
+#: src/data/ui/behavior.ui:81
+msgid ""
+"You can start search without search entry or even focusing on it in overview"
+msgstr ""
+"U kan begin soek sonder om in te soek of selfs in oorsig daarop te fokus"
+
+#: src/data/ui/behavior.ui:93
+msgid "Always Show Workspace Switcher"
+msgstr "Wys altyd werkruimte-skakelaar"
+
+#: src/data/ui/behavior.ui:94
+msgid ""
+"Shows workspace switcher even when only one workspace used with dynamic "
+"workspaces"
+msgstr ""
+"Wys werkruimte-skakelaar, selfs wanneer slegs een werkruimte saam met "
+"dinamiese werkruimtes gebruik word"
+
+#: src/data/ui/behavior.ui:106
+msgid "Overlay Key"
+msgstr "Oorlegsleutel"
+
+#: src/data/ui/behavior.ui:107
+msgid "Disable overlay key (super key)"
+msgstr "Deaktiveer oorlegsleutel (supersleutel)"
+
+#: src/data/ui/behavior.ui:119
+msgid "Double Super to App Grid"
+msgstr "Dubbel Super na App Grid"
+
+#: src/data/ui/behavior.ui:120
+msgid "Shows app grid when you double hit super key fast"
+msgstr "Wys app-rooster wanneer jy supersleutel vinnig dubbel druk"
+
+#: src/data/ui/behavior.ui:133
+msgid "Popup Delay"
+msgstr "Opspringvertraging"
+
+#: src/data/ui/behavior.ui:134
+msgid ""
+"The delay for all switcher popups like alt-tab, ctrl-alt-tab, keyboard "
+"layout, ..."
+msgstr ""
+"Verwyder die vertraging vir alle skakelaar-opspringers soos alt-tab, ctrl-"
+"alt-tab, sleutelborduitleg, ..."
+
+#: src/data/ui/behavior.ui:146
+msgid "Startup Status"
+msgstr "Opstartstatus"
+
+#: src/data/ui/behavior.ui:147
+msgid "When GNOME Shell is starting up for the first time"
+msgstr "Wanneer GNOME Shell die eerste keer begin"
+
+#: src/data/ui/behavior.ui:159
+msgid "Desktop"
+msgstr "Desktop"
+
+#: src/data/ui/behavior.ui:160
+msgid "Overview"
+msgstr "Oorsig"
+
+#: src/data/ui/customize.ui:6 src/data/ui/customize.ui:11
+msgid "Customize"
+msgstr "Pas aan"
+
+#: src/data/ui/customize.ui:15
+msgid "Accent Color for Icons"
+msgstr "Aksentkleur vir ikone"
+
+#: src/data/ui/customize.ui:16
+msgid "Use accent color for all symbolic icons"
+msgstr "Gebruik aksentkleur vir alle simboliese ikone"
+
+#: src/data/ui/customize.ui:28
+msgid "Invert Calendar Column Items"
+msgstr "Keer kalenderkolom-items om"
+
+#: src/data/ui/customize.ui:29
+msgid "Invert the positions of the calendar column items in clock menu"
+msgstr "Keer die posisies van die kalenderkolom-items in die klokkieslys om"
+
+#: src/data/ui/customize.ui:41
+msgid "Overview Spacing Size"
+msgstr "Oorsig Spasiëring Grootte"
+
+#: src/data/ui/customize.ui:42
+msgid "The spacing size for controls manager in overview"
+msgstr "Die spasiëringgrootte vir kontrolesbestuurder in oorsig"
+
+#: src/data/ui/customize.ui:49
+msgid "Workspace Background Corner Size"
+msgstr "Werkruimte agtergrond hoekgrootte"
+
+#: src/data/ui/customize.ui:50
+msgid "Workspace background corner size in overview"
+msgstr "Hoekgrootte van die werkruimte in agtergrond"
+
+#: src/data/ui/customize.ui:57
+msgid "Panel Size"
+msgstr "Paneelgrootte"
+
+#: src/data/ui/customize.ui:64
+msgid "Panel Icon Size"
+msgstr "Paneelikoongrootte"
+
+#: src/data/ui/customize.ui:71
+msgid "Panel Button Padding Size"
+msgstr "Paneelknoppie padding grootte"
+
+#: src/data/ui/customize.ui:78
+msgid "Panel Indicator Padding Size"
+msgstr "Paneelaanwyser Padding Size"
+
+#: src/data/ui/customize.ui:85
+msgid "Panel Position"
+msgstr "Paneelposisie"
+
+#: src/data/ui/customize.ui:92
+msgid "Clock Menu Position"
+msgstr "Klok menu posisie"
+
+#: src/data/ui/customize.ui:99
+msgid "Clock Menu Position Offset"
+msgstr "Klok menu posisie verreken"
+
+#: src/data/ui/customize.ui:106
+msgid "Workspace Switcher Size"
+msgstr "Grootte van die skakelaar van die werkruimte"
+
+#: src/data/ui/customize.ui:113
+msgid "Animation"
+msgstr "Animasie"
+
+#: src/data/ui/customize.ui:120
+msgid "Dash Icon Size"
+msgstr "grootte van die streepikoon"
+
+#: src/data/ui/customize.ui:127
+msgid "Notification Banner Position"
+msgstr "Kennisgewingbannerposisie"
+
+#: src/data/ui/customize.ui:128
+msgid "Notification popup position when notifications show up on the screen"
+msgstr "Kennisgewing pop-up posisie wanneer kennisgewings op die skerm verskyn"
+
+#: src/data/ui/customize.ui:135
+msgid "OSD Position"
+msgstr "OSD posisie"
+
+#: src/data/ui/customize.ui:136
+msgid "OSD position when on screen display shows up on the screen"
+msgstr "OSD-posisie wanneer op die skerm vertoon word op die skerm"
+
+#: src/data/ui/customize.ui:143
+msgid "Alt Tab Window Preview Size"
+msgstr "Alt Tab Venster Voorskou Grootte"
+
+#: src/data/ui/customize.ui:150
+msgid "Alt Tab Window Preview Icon Size"
+msgstr "Alt Tab Venster Voorskou-ikoongrootte"
+
+#: src/data/ui/customize.ui:157
+msgid "Alt Tab Icon Size"
+msgstr "Alt Tab-ikoongrootte"
+
+#: src/data/ui/customize.ui:164
+msgid "Looking Glass Width"
+msgstr "Kykglasbreedte"
+
+#: src/data/ui/customize.ui:171
+msgid "Looking Glass Height"
+msgstr "Kykglashoogte"
+
+#: src/data/ui/customize.ui:178
+msgid "Maximum Displayed Search Results"
+msgstr "Maksimum vertoonde soekresultate"
+
+#: src/data/ui/customize.ui:179
+msgid "The maximum displayed search result items showing up in the search page"
+msgstr ""
+"Die maksimum vertoonde soekresultaatitems wat op die soekbladsy verskyn"
+
+#: src/data/ui/customize.ui:191 src/data/ui/customize.ui:707
+#: src/data/ui/customize.ui:757 src/data/ui/customize.ui:782
+#: src/data/ui/customize.ui:797 src/data/ui/customize.ui:808
+#: src/data/ui/customize.ui:819 src/data/ui/customize.ui:830
+#: src/data/ui/customize.ui:845 src/data/ui/customize.ui:860
+#: src/data/ui/profile.ui:43
+msgid "Default"
+msgstr "Verstek"
+
+#: src/data/ui/customize.ui:347 src/data/ui/customize.ui:415
+#: src/data/ui/customize.ui:485 src/data/ui/customize.ui:551
+#: src/data/ui/customize.ui:618
+msgid "By Shell Theme"
+msgstr "Deur Shell-tema"
+
+#: src/data/ui/customize.ui:685
+msgid "Top"
+msgstr "Top"
+
+#: src/data/ui/customize.ui:686
+msgid "Bottom"
+msgstr "Onder"
+
+#: src/data/ui/customize.ui:692 src/data/ui/customize.ui:790
+msgid "Center"
+msgstr "Sentrum"
+
+#: src/data/ui/customize.ui:693
+msgid "Right"
+msgstr "Reg"
+
+#: src/data/ui/customize.ui:694
+msgid "Left"
+msgstr "Links"
+
+#: src/data/ui/customize.ui:743
+msgid "No Animation"
+msgstr "Geen animasie nie"
+
+#: src/data/ui/customize.ui:744
+msgid "Default Speed"
+msgstr "Verstekspoed"
+
+#: src/data/ui/customize.ui:745
+msgid "Almost None"
+msgstr "Byna Geen"
+
+#: src/data/ui/customize.ui:746
+msgid "Fastest"
+msgstr "Vinnigste"
+
+#: src/data/ui/customize.ui:747
+msgid "Faster"
+msgstr "Vinniger"
+
+#: src/data/ui/customize.ui:748
+msgid "Fast"
+msgstr "Vinnig"
+
+#: src/data/ui/customize.ui:749
+msgid "Slow"
+msgstr "Stadig"
+
+#: src/data/ui/customize.ui:750
+msgid "Slower"
+msgstr "Stadiger"
+
+#: src/data/ui/customize.ui:751
+msgid "Slowest"
+msgstr "Stadigste"
+
+#: src/data/ui/customize.ui:771 src/data/ui/customize.ui:783
+msgid "Top Start"
+msgstr "Top begin"
+
+#: src/data/ui/customize.ui:772 src/data/ui/customize.ui:784
+msgid "Top Center"
+msgstr "Top sentrum"
+
+#: src/data/ui/customize.ui:773 src/data/ui/customize.ui:785
+msgid "Top End"
+msgstr "Bopunt"
+
+#: src/data/ui/customize.ui:774 src/data/ui/customize.ui:786
+msgid "Bottom Start"
+msgstr "Onderste begin"
+
+#: src/data/ui/customize.ui:775 src/data/ui/customize.ui:787
+msgid "Bottom Center"
+msgstr "Onderste middel"
+
+#: src/data/ui/customize.ui:776 src/data/ui/customize.ui:788
+msgid "Bottom End"
+msgstr "Onderste einde"
+
+#: src/data/ui/customize.ui:789
+msgid "Center Start"
+msgstr "Sentrum begin"
+
+#: src/data/ui/customize.ui:791
+msgid "Center End"
+msgstr "Sentrum einde"
+
+#: src/data/ui/profile.ui:6 src/data/ui/profile.ui:11
+msgid "Profile"
+msgstr "Profiel"
+
+#: src/data/ui/profile.ui:18
+msgid ""
+"You can choose between pre-defined profiles or you can simply use your own "
+"customized settings"
+msgstr ""
+"Jy kan kies tussen vooraf gedefinieerde profiele of jy kan eenvoudig jou eie "
+"persoonlike instellings gebruik"
+
+#: src/data/ui/profile.ui:53
+msgid "Custom"
+msgstr "Pasgemaak"
+
+#: src/data/ui/profile.ui:63
+msgid "Minimal"
+msgstr "Minimaal"
+
+#: src/data/ui/profile.ui:73
+msgid "Super Minimal"
+msgstr "Super Minimaal"
+
+#: src/data/ui/profile.ui:90
+msgid "Override"
+msgstr "Ignoreer"
+
+#: src/data/ui/profile.ui:94
+msgid "Shell Theme"
+msgstr "Skulp Tema"
+
+#: src/data/ui/profile.ui:95
+msgid "Overrides the shell theme partially to create a minimal desktop"
+msgstr "Skep die dop-tema gedeeltelik om 'n minimale lessenaar te skep"
+
+#: src/data/ui/profile.ui:110
+msgid "Support"
+msgstr "Ondersteuning"
+
+#: src/data/ui/profile.ui:135
+msgid "Support Via Crypto"
+msgstr "Ondersteun via Crypto"
+
+#: src/data/ui/profile.ui:136
+msgid "Preferred Method"
+msgstr "Voorkeur metode"
+
+#: src/data/ui/profile.ui:167
+msgid "Copy"
+msgstr "Kopieer"
+
+#: src/data/ui/profile.ui:184
+msgid "Support via Buy Me a Coffee"
+msgstr "Ondersteuning via Buy Me a Coffee"
+
+#: src/data/ui/profile.ui:202
+msgid "Support Notification"
+msgstr "Ondersteuningskennisgewing"
+
+#: src/data/ui/profile.ui:203
+msgid "Manage when the support notification shows up"
+msgstr "Bestuur wanneer die ondersteuningskennisgewing verskyn"
+
+#: src/data/ui/profile.ui:213
+msgid "Links"
+msgstr "Skakels"
+
+#: src/data/ui/profile.ui:217
+msgid "Bug Report"
+msgstr "Fout verslag"
+
+#: src/data/ui/profile.ui:229
+msgid "YouTube Channel"
+msgstr "YouTube-kanaal"
+
+#: src/data/ui/profile.ui:266
+msgid "Never"
+msgstr "Nooit nie"
+
+#: src/data/ui/profile.ui:267
+msgid "On New Releases"
+msgstr "Op nuwe vrystellings"
+
+#: src/data/ui/profile.ui:272
+msgid "Address copied to the clipboard"
+msgstr "Adres na die knipbord gekopieer"
+
+#~ msgid "Monthly"
+#~ msgstr "Maandeliks"
