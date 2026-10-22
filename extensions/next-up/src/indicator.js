@@ -1,4 +1,5 @@
-// Modified 2026-10-22 by emanuel36: events now come from the date menu (see extension.js).
+// Modified 2026-10-22 by emanuel36: events now come from the date menu (see extension.js);
+// calendar icon, faded hint label, hidden when there is nothing to show.
 
 import St from "gi://St";
 import Clutter from "gi://Clutter";
@@ -7,10 +8,11 @@ import * as PanelMenu from "resource:///org/gnome/shell/ui/panelMenu.js";
 import * as PopupMenu from "resource:///org/gnome/shell/ui/popupMenu.js";
 import { gettext as _ } from "resource:///org/gnome/shell/extensions/extension.js";
 
+const HINT_OPACITY = 150;
+
 export default class Indicator extends PanelMenu.Button {
   constructor(props) {
     super();
-    this._confettiGicon = props.confettiGicon;
     this._openPrefsCallback = props.openPrefsCallback;
   }
 
@@ -32,21 +34,27 @@ export default class Indicator extends PanelMenu.Button {
       pack_start: false,
     });
 
-    this._alarmIcon = new St.Icon({
-      icon_name: "alarm-symbolic",
+    this.icon = new St.Icon({
+      icon_name: "x-office-calendar-symbolic",
+      icon_size: 12,
       style_class: "system-status-icon",
     });
 
-    this.icon = this._alarmIcon;
-
     this.text = new St.Label({
-      text: "Loading",
+      y_expand: true,
+      y_align: Clutter.ActorAlign.CENTER,
+    });
+
+    this.hint = new St.Label({
+      style_class: "next-up-hint",
+      opacity: HINT_OPACITY,
       y_expand: true,
       y_align: Clutter.ActorAlign.CENTER,
     });
 
     this._menuLayout.add_child(this.icon);
     this._menuLayout.add_child(this.text);
+    this._menuLayout.add_child(this.hint);
     this.add_child(this._menuLayout);
 
     return;
@@ -60,16 +68,13 @@ export default class Indicator extends PanelMenu.Button {
     this.menu.addMenuItem(settingsItem);
   }
 
-  setText(text) {
-    this.text.set_text(text);
-  }
+  // `status` is `{text, hint}`, or null to hide the indicator
+  setStatus(status) {
+    this.container.visible = status !== null;
+    if (status === null) return;
 
-  showAlarmIcon() {
-    this.icon.set_icon_name("alarm-symbolic");
-  }
-
-  showConfettiIcon() {
-    this.icon.set_gicon(this._confettiGicon);
+    this.text.set_text(status.text);
+    this.hint.set_text(status.hint);
   }
 
   vfunc_event(event) {
