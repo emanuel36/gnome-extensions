@@ -25,7 +25,12 @@ class TodoIndicator extends PanelMenu.Button {
         this._path = path;
         this._tasks = loadTasks(path);
 
-        const bar = new St.BoxLayout({style_class: 'panel-status-menu-box'});
+        // Centred, for when the button is stretched to the dock's width
+        const bar = new St.BoxLayout({
+            style_class: 'panel-status-menu-box',
+            x_align: Clutter.ActorAlign.CENTER,
+            x_expand: true,
+        });
         bar.add_child(new St.Icon({
             icon_name: 'checkbox-checked-symbolic',
             style_class: 'system-status-icon',
