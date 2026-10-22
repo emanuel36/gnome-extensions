@@ -12,7 +12,7 @@ import {
 import {
     cpuPercent, interfaceLabels, memPercent, netRates, sampleCpuTop, topMemory,
 } from './stats.js';
-import {localDate, updateUsage} from './usage.js';
+import {localDate, updateUsage, usageFor} from './usage.js';
 
 const REFRESH_SECONDS = 2;
 const SAVE_SECONDS = 60;
@@ -30,7 +30,10 @@ export default class SystemMonitorExtension extends Extension {
         this._prevSample = null;
         this._last = null;
 
-        this._indicator = new SystemMonitorIndicator(this.path);
+        this._indicator = new SystemMonitorIndicator(this.path, period => {
+            this._settings.set_string('net-usage-period', period);
+            this._guarded(() => this._updateNetwork());
+        });
 
         this._indicator.menu.connect('open-state-changed', (menu, open) => {
             // Process scans only run while the popup is open. Opening refreshes the popup
@@ -130,7 +133,7 @@ export default class SystemMonitorExtension extends Extension {
     _updatePopup() {
         if (!this._last)
             return;
-        const {cpu, mem, shown, rates} = this._last;
+        const {cpu, mem} = this._last;
 
         const sample = {procs: scanProcesses(), cpuTotal: readCpuTimes()?.total ?? 0};
         const cpuTop = sampleCpuTop(this._prevSample, sample);
@@ -151,6 +154,17 @@ export default class SystemMonitorExtension extends Extension {
             });
         }
 
+        this._updateNetwork();
+    }
+
+    // Kept apart from the process scan, so changing the period doesn't shorten the CPU
+    // list's sample window
+    _updateNetwork() {
+        if (!this._last)
+            return;
+        const {shown, rates} = this._last;
+        const period = this._settings.get_string('net-usage-period');
+        const today = localDate(new Date());
         const labels = interfaceLabels(shown);
         this._indicator.setNetwork(shown.map(({name, kind}) => ({
             name,
@@ -158,7 +172,7 @@ export default class SystemMonitorExtension extends Extension {
             label: labels.get(name),
             down: rates.get(name).down,
             up: rates.get(name).up,
-            usedToday: this._usage.ifaces[name]?.used ?? 0,
-        })));
+            used: usageFor(this._usage.ifaces[name], period, today),
+        })), period);
     }
 }

@@ -19,6 +19,13 @@ const TOP_ROWS = 5;
 const COLUMN_WIDTH = 200;
 // St's CSS has no opacity, so secondary text is faded on the actor
 const FADED = 150;
+// Data used periods: button label and the word after the amount in each row
+const PERIODS = [
+    {key: 'day', button: 'Today', suffix: 'today'},
+    {key: 'week', button: '7 days', suffix: 'in 7 days'},
+    {key: 'month', button: '30 days', suffix: 'in 30 days'},
+    {key: 'all', button: 'All time', suffix: 'in total'},
+];
 const NET_ICONS = {
     cable: 'network-wired-symbolic',
     wifi: 'network-wireless-signal-excellent-symbolic',
@@ -30,8 +37,9 @@ function label(props = {}) {
 
 export const SystemMonitorIndicator = GObject.registerClass(
 class SystemMonitorIndicator extends PanelMenu.Button {
-    _init(extensionPath) {
+    _init(extensionPath, onPeriodChange) {
         super._init(0.0, 'System Monitor');
+        this._onPeriodChange = onPeriodChange;
 
         this._iconPath = name => Gio.icon_new_for_string(
             GLib.build_filenamev([extensionPath, 'icons', `${name}.svg`]));
@@ -68,13 +76,27 @@ class SystemMonitorIndicator extends PanelMenu.Button {
 
         this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 
-        this._netBox = new St.BoxLayout({
+        const net = new St.BoxLayout({
             vertical: true,
             x_expand: true,
             style_class: 'system-monitor-net',
         });
+        this._periods = new St.BoxLayout({style_class: 'system-monitor-periods'});
+        this._periodButtons = new Map(PERIODS.map(({key, button}) => {
+            const periodButton = new St.Button({
+                label: button,
+                style_class: 'system-monitor-period',
+                can_focus: true,
+            });
+            periodButton.connect('clicked', () => this._onPeriodChange(key));
+            this._periods.add_child(periodButton);
+            return [key, periodButton];
+        }));
+        net.add_child(this._periods);
+        this._netBox = new St.BoxLayout({vertical: true, style_class: 'system-monitor-net'});
+        net.add_child(this._netBox);
         const netItem = new PopupMenu.PopupBaseMenuItem({reactive: false, can_focus: false});
-        netItem.add_child(this._netBox);
+        netItem.add_child(net);
         this.menu.addMenuItem(netItem);
         this._netNames = null;
         this._netRows = new Map();
@@ -152,7 +174,13 @@ class SystemMonitorIndicator extends PanelMenu.Button {
             formatMemKb);
     }
 
-    setNetwork(rows) {
+    // `period` is the key of one of PERIODS; each row's `used` covers it
+    setNetwork(rows, period) {
+        for (const [key, periodButton] of this._periodButtons)
+            periodButton.checked = key === period;
+        this._periods.visible = rows.length > 0;
+        const suffix = PERIODS.find(p => p.key === period).suffix;
+
         const names = rows.map(r => r.name).join(',');
         if (names !== this._netNames) {
             this._netNames = names;
@@ -160,7 +188,7 @@ class SystemMonitorIndicator extends PanelMenu.Button {
         }
         for (const row of rows) {
             const actors = this._netRows.get(row.name);
-            actors.today.text = `· ${formatDataSize(row.usedToday)} today`;
+            actors.used.text = `· ${formatDataSize(row.used)} ${suffix}`;
             actors.down.text = `↓ ${formatRate(row.down)}`;
             actors.up.text = `↑ ${formatRate(row.up)}`;
         }
@@ -179,8 +207,8 @@ class SystemMonitorIndicator extends PanelMenu.Button {
             const box = new St.BoxLayout({style_class: 'system-monitor-net-row'});
             box.add_child(new St.Icon({icon_name: NET_ICONS[row.kind], icon_size: 16}));
             box.add_child(label({text: row.label}));
-            const today = label({opacity: FADED, x_expand: true});
-            box.add_child(today);
+            const used = label({opacity: FADED, x_expand: true});
+            box.add_child(used);
             const rate = () => label({
                 style_class: 'system-monitor-rate',
                 x_align: Clutter.ActorAlign.END,
@@ -190,7 +218,7 @@ class SystemMonitorIndicator extends PanelMenu.Button {
             box.add_child(down);
             box.add_child(up);
             this._netBox.add_child(box);
-            this._netRows.set(row.name, {today, down, up});
+            this._netRows.set(row.name, {used, down, up});
         }
     }
 });
