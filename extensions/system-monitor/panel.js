@@ -93,7 +93,9 @@ class SystemMonitorIndicator extends PanelMenu.Button {
             return [key, periodButton];
         }));
         net.add_child(this._periods);
-        this._netBox = new St.BoxLayout({vertical: true, style_class: 'system-monitor-net'});
+        // A grid, so the columns line up across the interfaces' rows
+        this._netGrid = new Clutter.GridLayout({column_spacing: 8, row_spacing: 4});
+        this._netBox = new St.Widget({layout_manager: this._netGrid});
         net.add_child(this._netBox);
         const netItem = new PopupMenu.PopupBaseMenuItem({reactive: false, can_focus: false});
         netItem.add_child(net);
@@ -189,6 +191,8 @@ class SystemMonitorIndicator extends PanelMenu.Button {
         for (const row of rows) {
             const actors = this._netRows.get(row.name);
             actors.used.text = `· ${formatDataSize(row.used)} ${suffix}`;
+            actors.down.visible = row.connected;
+            actors.up.visible = row.connected;
             actors.down.text = `↓ ${formatRate(row.down)}`;
             actors.up.text = `↑ ${formatRate(row.up)}`;
         }
@@ -199,26 +203,27 @@ class SystemMonitorIndicator extends PanelMenu.Button {
         this._netRows.clear();
 
         if (rows.length === 0) {
-            this._netBox.add_child(label({text: 'Offline', opacity: FADED}));
+            this._netGrid.attach(label({text: 'Offline', opacity: FADED}), 0, 0, 1, 1);
             return;
         }
 
-        for (const row of rows) {
-            const box = new St.BoxLayout({style_class: 'system-monitor-net-row'});
-            box.add_child(new St.Icon({icon_name: NET_ICONS[row.kind], icon_size: 16}));
-            box.add_child(label({text: row.label}));
-            const used = label({opacity: FADED, x_expand: true});
-            box.add_child(used);
+        rows.forEach((row, i) => {
             const rate = () => label({
                 style_class: 'system-monitor-rate',
                 x_align: Clutter.ActorAlign.END,
             });
+            const used = label({opacity: FADED, x_expand: true});
             const down = rate();
             const up = rate();
-            box.add_child(down);
-            box.add_child(up);
-            this._netBox.add_child(box);
+            const cells = [
+                new St.Icon({icon_name: NET_ICONS[row.kind], icon_size: 16}),
+                label({text: row.label}),
+                used,
+                down,
+                up,
+            ];
+            cells.forEach((cell, column) => this._netGrid.attach(cell, column, i, 1, 1));
             this._netRows.set(row.name, {used, down, up});
-        }
+        });
     }
 });
