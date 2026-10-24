@@ -6,8 +6,10 @@ CPU % and memory % in the top bar. The popup lists:
 
 - the top 5 apps by CPU and by memory, counting every user's processes;
 - the CPU temperature and the highest current core frequency;
-- each connected cable / Wi-Fi interface with its speed and the data it used today, in
-  the last 7 or 30 days, or in total, picked with the buttons above the list.
+- each Wi-Fi interface and each Ethernet adapter named `eth*`, connected or not, plus the
+  built-in Ethernet port while it has a link, with the data it used today, in the last 7
+  or 30 days, or in total, picked with the buttons above the list. Connected ones also
+  show their speed.
 
 Virtual interfaces (Docker, bridges, VPN tunnels) are left out, and app usage is only
 measured while the popup is open.

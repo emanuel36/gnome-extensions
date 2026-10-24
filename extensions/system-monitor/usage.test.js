@@ -1,7 +1,7 @@
 // Run with: gjs -m extensions/system-monitor/usage.test.js
 import System from 'system';
 
-import {KEPT_DAYS, localDate, updateUsage, usageFor} from './usage.js';
+import {KEPT_DAYS, localDate, rememberedInterfaces, updateUsage, usageFor} from './usage.js';
 
 let failures = 0;
 
@@ -32,6 +32,22 @@ check('absent interface kept',
 check('new interface baselined',
     updateUsage(s2, new Map([['wlan0', {rx: 9, tx: 1}]]), '2026-10-22').ifaces.wlan0,
     {rx: 9, tx: 1, days: {'2026-10-22': 0}, older: 0});
+const withKind = updateUsage(s1, new Map([['eth0', {rx: 1500, tx: 150, kind: 'cable'}]]),
+    '2026-10-22');
+check('kind saved', withKind.ifaces.eth0.kind, 'cable');
+check('kind kept once the interface is gone',
+    updateUsage(withKind, c(1600, 150), '2026-10-22').ifaces.eth0.kind, 'cable');
+check('used interface remembered', rememberedInterfaces(withKind),
+    [{name: 'eth0', kind: 'cable'}]);
+check('never used interface not remembered',
+    rememberedInterfaces(updateUsage(null, new Map([['e', {rx: 1, tx: 1, kind: 'cable'}]]),
+        '2026-10-22')), []);
+check('kind guessed from the name when not saved', rememberedInterfaces(s2),
+    [{name: 'eth0', kind: 'cable'}]);
+check('wireless name guessed as wifi',
+    rememberedInterfaces({ifaces: {wlp3s0: {days: {'2026-10-22': 5}, older: 0}}}),
+    [{name: 'wlp3s0', kind: 'wifi'}]);
+check('no state remembers nothing', rememberedInterfaces(null), []);
 check('broken state starts fresh', updateUsage({junk: true}, c(5, 5), '2026-10-22'),
     {ifaces: {eth0: {rx: 5, tx: 5, days: {'2026-10-22': 0}, older: 0}}});
 check('null ifaces starts fresh',

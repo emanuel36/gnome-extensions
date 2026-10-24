@@ -12,7 +12,7 @@ import {
 import {
     cpuPercent, interfaceLabels, memPercent, netRates, sampleCpuTop, topMemory,
 } from './stats.js';
-import {localDate, updateUsage, usageFor} from './usage.js';
+import {localDate, rememberedInterfaces, updateUsage, usageFor} from './usage.js';
 
 const REFRESH_SECONDS = 2;
 const SAVE_SECONDS = 60;
@@ -102,16 +102,25 @@ export default class SystemMonitorExtension extends Extension {
         const cpuTimes = readCpuTimes();
         const mem = readMeminfo();
         const counters = readNetCounters();
-        const ifaces = listPhysicalInterfaces();
-        const shown = ifaces.filter(i => i.up && counters.has(i.name));
+        const present = listPhysicalInterfaces().filter(i => counters.has(i.name));
 
         const cpu = cpuTimes ? cpuPercent(this._prevCpu, cpuTimes) : null;
         const elapsedSec = this._prevUs ? (nowUs - this._prevUs) / 1e6 : 0;
-        const rates = netRates(this._prevNet, counters, elapsedSec, shown.map(i => i.name));
 
-        const physical = new Map(ifaces.filter(i => counters.has(i.name)).map(i =>
-            [i.name, {...counters.get(i.name), id: `${this._bootId}:${i.ifindex}`}]));
+        const physical = new Map(present.map(i =>
+            [i.name, {...counters.get(i.name), id: `${this._bootId}:${i.ifindex}`, kind: i.kind}]));
         this._usage = updateUsage(this._usage, physical, localDate(new Date()));
+
+        // Interfaces stay listed when down, and so do unplugged ones that used data. Of the
+        // cables, only "eth*" adapters are listed while down; the built-in port needs a link
+        const gone = rememberedInterfaces(this._usage).filter(i => !physical.has(i.name));
+        const kindOrder = {cable: 0, wifi: 1};
+        const shown = [
+            ...present.filter(i => i.kind !== 'cable' || i.up || i.name.startsWith('eth')),
+            ...gone.map(i => ({...i, up: false})),
+        ].sort((a, b) => kindOrder[a.kind] - kindOrder[b.kind] || a.name.localeCompare(b.name));
+        const rates = netRates(this._prevNet, counters, elapsedSec,
+            shown.filter(i => i.up).map(i => i.name));
 
         this._prevCpu = cpuTimes;
         this._prevNet = counters;
@@ -166,12 +175,13 @@ export default class SystemMonitorExtension extends Extension {
         const period = this._settings.get_string('net-usage-period');
         const today = localDate(new Date());
         const labels = interfaceLabels(shown);
-        this._indicator.setNetwork(shown.map(({name, kind}) => ({
+        this._indicator.setNetwork(shown.map(({name, kind, up}) => ({
             name,
             kind,
             label: labels.get(name),
-            down: rates.get(name).down,
-            up: rates.get(name).up,
+            connected: up,
+            down: rates.get(name)?.down ?? 0,
+            up: rates.get(name)?.up ?? 0,
             used: usageFor(this._usage.ifaces[name], period, today),
         })), period);
     }

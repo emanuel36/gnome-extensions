@@ -26,7 +26,11 @@ function readEntry(entry, oldDate) {
     if (typeof entry.used === 'number' && typeof oldDate === 'string')
         days[oldDate] = entry.used;
     const read = {rx: entry.rx, tx: entry.tx, days, older: entry.older ?? 0};
-    return entry.id === undefined ? read : {...read, id: entry.id};
+    if (entry.id !== undefined)
+        read.id = entry.id;
+    if (typeof entry.kind === 'string')
+        read.kind = entry.kind;
+    return read;
 }
 
 /**
@@ -35,9 +39,10 @@ function readEntry(entry, oldDate) {
  * Args:
  *     state: `{ifaces: {name: {rx, tx, id, days: {date: bytes}, older}}}` from the last
  *         call, or null.
- *     counters: Map of interface name to `{rx, tx, id}`: byte counters from /proc/net/dev
- *         and an optional identity (boot id + ifindex) that changes whenever the
- *         counters restart.
+ *     counters: Map of interface name to `{rx, tx, id, kind}`: byte counters from
+ *         /proc/net/dev, an optional identity (boot id + ifindex) that changes whenever the
+ *         counters restart, and an optional kind ("cable" or "wifi") that is remembered
+ *         for when the interface is gone.
  *     today: Local date as "YYYY-MM-DD".
  *
  * Returns:
@@ -52,7 +57,7 @@ export function updateUsage(state, counters, today) {
     for (const [name, entry] of Object.entries(valid ? state.ifaces : {}))
         ifaces[name] = readEntry(entry, state.date);
 
-    for (const [name, {rx, tx, id}] of counters) {
+    for (const [name, {rx, tx, id, kind}] of counters) {
         const prev = ifaces[name];
         let delta = 0;
         if (prev) {
@@ -63,7 +68,12 @@ export function updateUsage(state, counters, today) {
         const days = prev?.days ?? {};
         days[today] = (days[today] ?? 0) + delta;
         const entry = {rx, tx, days, older: prev?.older ?? 0};
-        ifaces[name] = id === undefined ? entry : {...entry, id};
+        if (id !== undefined)
+            entry.id = id;
+        const savedKind = kind ?? prev?.kind;
+        if (savedKind !== undefined)
+            entry.kind = savedKind;
+        ifaces[name] = entry;
     }
 
     for (const entry of Object.values(ifaces)) {
@@ -98,4 +108,23 @@ export function usageFor(entry, period, today) {
             total += bytes;
     }
     return total;
+}
+
+/**
+ * Interfaces that used data, e.g. a USB adapter that was unplugged.
+ *
+ * Args:
+ *     state: The state from updateUsage(), or null.
+ *
+ * Returns:
+ *     `[{name, kind}]`. Entries saved before the kind was kept are guessed from the name:
+ *     "wl*" is Wi-Fi, anything else a cable.
+ */
+export function rememberedInterfaces(state) {
+    return Object.entries(state?.ifaces ?? {})
+        .filter(([, entry]) => usageFor(entry, 'all') > 0)
+        .map(([name, entry]) => ({
+            name,
+            kind: entry.kind ?? (name.startsWith('wl') ? 'wifi' : 'cable'),
+        }));
 }

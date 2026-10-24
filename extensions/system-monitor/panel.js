@@ -189,6 +189,8 @@ class SystemMonitorIndicator extends PanelMenu.Button {
         for (const row of rows) {
             const actors = this._netRows.get(row.name);
             actors.used.text = `· ${formatDataSize(row.used)} ${suffix}`;
+            actors.down.visible = row.connected;
+            actors.up.visible = row.connected;
             actors.down.text = `↓ ${formatRate(row.down)}`;
             actors.up.text = `↑ ${formatRate(row.up)}`;
         }
