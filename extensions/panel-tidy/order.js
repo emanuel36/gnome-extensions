@@ -61,6 +61,24 @@ export function addNewKeys(orders, bar) {
 }
 
 /**
+ * Order of a box's children once its listed items follow the saved order: listed items take
+ * the slots that listed items hold now, and every other child keeps its slot. An app icon
+ * that has no id yet stays where its extension put it instead of being pushed to the end of
+ * the box, where addNewKeys would then save it.
+ *
+ * @param {Array<?string>} keys - key of each child of the box, in order; null if it has none
+ * @param {string[]} order - saved keys of the box
+ * @returns {number[]} indices into `keys`, in the order the children should end up
+ */
+export function arrange(keys, order) {
+    const rank = new Map(order.map((key, i) => [key, i]));
+    const listed = keys.map((_key, i) => i).filter(i => rank.has(keys[i]))
+        .sort((a, b) => rank.get(keys[a]) - rank.get(keys[b]));
+    let next = 0;
+    return keys.map((key, i) => (rank.has(key) ? listed[next++] : i));
+}
+
+/**
  * Moves a key to another place, in the same box or another one.
  *
  * @param {Object<string, string[]>} orders - saved keys per box

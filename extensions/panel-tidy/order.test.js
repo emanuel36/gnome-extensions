@@ -2,7 +2,7 @@
 import System from 'system';
 
 import {
-    addNewKeys, fallbackName, forgetKey, itemKey, mergeToggles, moveKey, toggleId,
+    addNewKeys, arrange, fallbackName, forgetKey, itemKey, mergeToggles, moveKey, toggleId,
 } from './order.js';
 
 let failures = 0;
@@ -38,6 +38,12 @@ check('several new keys keep their bar order',
     addNewKeys({left: [], center: [], right: []}, {left: [], center: [], right: ['a', 'b']})
         .orders.right,
     ['a', 'b']);
+
+check('arrange follows the saved order', arrange(['b', 'a'], ['a', 'b']), [1, 0]);
+check('arrange keeps unlisted children in their slots',
+    arrange(['c', null, 'b', 'a', null], ['a', 'b', 'c']), [3, 1, 2, 0, 4]);
+check('arrange leaves keys listed elsewhere in place', arrange(['b', 'x', 'a'], ['a', 'b']),
+    [2, 1, 0]);
 
 check('move within a box', moveKey(saved, 'todoTxt', 'center', 'dateMenu').center,
     ['todoTxt', 'dateMenu']);

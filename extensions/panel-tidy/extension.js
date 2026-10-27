@@ -5,7 +5,7 @@ import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import {QuickMenuToggle, QuickToggle} from 'resource:///org/gnome/shell/ui/quickSettings.js';
 
 import {
-    BOXES, SYSTEM_NAMES, addNewKeys, fallbackName, itemKey, mergeToggles, toggleId,
+    BOXES, SYSTEM_NAMES, addNewKeys, arrange, fallbackName, itemKey, mergeToggles, toggleId,
 } from './order.js';
 
 // Only reacts to items that already exist (signals on the panel boxes and the Quick
@@ -143,16 +143,21 @@ export default class PanelTidyExtension extends Extension {
 
         for (const box of BOXES) {
             const target = this._boxes[box];
-            orders[box].filter(key => items.has(key)).forEach((key, index) => {
+            for (const key of orders[box].filter(k => items.has(k) && items.get(k).box !== box)) {
                 this._guard(key, () => {
                     const {container} = items.get(key);
-                    if (container.get_parent() !== target) {
-                        container.get_parent().remove_child(container);
-                        target.insert_child_at_index(container, index);
-                    } else if (target.get_children().indexOf(container) !== index) {
-                        target.set_child_at_index(container, index);
-                    }
+                    container.get_parent().remove_child(container);
+                    target.add_child(container);
                 });
+            }
+        }
+        const keyOf = new Map([...items].map(([key, {container}]) => [container, key]));
+        for (const box of BOXES) {
+            const target = this._boxes[box];
+            const children = target.get_children();
+            arrange(children.map(c => keyOf.get(c) ?? null), orders[box]).forEach((from, i) => {
+                if (target.get_child_at_index(i) !== children[from])
+                    target.set_child_at_index(children[from], i);
             });
         }
 
