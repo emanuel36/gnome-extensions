@@ -22,6 +22,10 @@
       <default>[]</default>
       <summary>Ids of the Quick Settings toggles to hide</summary>
     </key>
+    <key name="merge-network" type="b">
+      <default>true</default>
+      <summary>Replace the Wired and Wi-Fi toggles with one Network toggle</summary>
+    </key>
     <key name="item-names" type="a{ss}">
       <default>{}</default>
       <summary>Readable name of each known top bar item, written by the extension</summary>

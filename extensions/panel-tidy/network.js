@@ -4,7 +4,11 @@
 // Wifi: {present, enabled (radio on), connected, ssid}
 // Remembered: {cables: [{device, profile}], wifi: ssid or null}
 
-const WIRED_ICON = 'network-wired-symbolic';
+// Class names of the shell's own Wired and Wi-Fi Quick Settings toggles (also their ids in
+// Panel Tidy, see toggleId in order.js).
+export const NATIVE_TOGGLE_CLASSES = ['NMWiredToggle', 'NMWirelessToggle'];
+
+const WIRED_ICON ='network-wired-symbolic';
 const WIFI_ICON = 'network-wireless-signal-excellent-symbolic';
 
 const connectedCables = cables => cables.filter(c => c.present && c.connected);
