@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="600" viewBox="0 0 560 600" font-family="Ubuntu, Cantarell, 'Noto Sans', 'Segoe UI', sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="660" viewBox="0 0 560 660" font-family="Ubuntu, Cantarell, 'Noto Sans', 'Segoe UI', sans-serif">
 <defs><filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.45"/></filter></defs>
-<rect x="0" y="0" width="560" height="600" rx="12" fill="#1b1b1d"/>
-<rect x="0" y="0" width="560" height="600" rx="12" fill="#1b1b1d"/>
-<rect x="20" y="20" width="520" height="560" rx="12" fill="#242424" stroke="rgba(255,255,255,0.08)"/>
+<rect x="0" y="0" width="560" height="660" rx="12" fill="#1b1b1d"/>
+<rect x="0" y="0" width="560" height="660" rx="12" fill="#1b1b1d"/>
+<rect x="20" y="20" width="520" height="620" rx="12" fill="#242424" stroke="rgba(255,255,255,0.08)"/>
 <path d="M32 20 H528 A12 12 0 0 1 540 32 V66 H20 V32 A12 12 0 0 1 32 20 Z" fill="#303030"/>
 <text x="280.0" y="49" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Panel Tidy</text>
 <circle cx="516" cy="43" r="11" fill="#444444"/><path d="M512 39 l8 8 m0 -8 l-8 8" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
@@ -27,10 +27,14 @@
 <rect x="432" y="336" width="48" height="26" rx="13" fill="#3584e4"/><circle cx="467" cy="349" r="10" fill="#ffffff"/>
 <text x="60" y="404" font-size="14" font-weight="700" fill="#ffffff" text-anchor="start">Quick Settings</text>
 <text x="60" y="424" font-size="12" font-weight="400" fill="#9a9a9a" text-anchor="start">Toggles shown in the system menu.</text>
-<rect x="60" y="436" width="440" height="100" rx="12" fill="#363636"/>
-<text x="76" y="466" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">Night Light</text>
-<rect x="432" y="448" width="48" height="26" rx="13" fill="#555555"/><circle cx="445" cy="461" r="10" fill="#ffffff"/>
-<rect x="60" y="486" width="440" height="1" rx="0" fill="rgba(255,255,255,0.07)"/>
-<text x="76" y="516" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">Dark Style</text>
-<rect x="432" y="498" width="48" height="26" rx="13" fill="#555555"/><circle cx="445" cy="511" r="10" fill="#ffffff"/>
+<rect x="60" y="436" width="440" height="50" rx="12" fill="#363636"/>
+<text x="76" y="457" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">Network tile</text>
+<text x="76" y="475" font-size="12" font-weight="400" fill="#9a9a9a" text-anchor="start">Replace Wired and Wi-Fi with one Network tile</text>
+<rect x="432" y="448" width="48" height="26" rx="13" fill="#3584e4"/><circle cx="467" cy="461" r="10" fill="#ffffff"/>
+<rect x="60" y="496" width="440" height="100" rx="12" fill="#363636"/>
+<text x="76" y="526" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">Night Light</text>
+<rect x="432" y="508" width="48" height="26" rx="13" fill="#555555"/><circle cx="445" cy="521" r="10" fill="#ffffff"/>
+<rect x="60" y="546" width="440" height="1" rx="0" fill="rgba(255,255,255,0.07)"/>
+<text x="76" y="576" font-size="14" font-weight="400" fill="#ffffff" text-anchor="start">Dark Style</text>
+<rect x="432" y="558" width="48" height="26" rx="13" fill="#555555"/><circle cx="445" cy="571" r="10" fill="#ffffff"/>
 </svg>
