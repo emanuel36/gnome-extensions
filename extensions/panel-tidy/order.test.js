@@ -2,7 +2,8 @@
 import System from 'system';
 
 import {
-    addNewKeys, fallbackName, forgetKey, itemKey, mergeToggles, moveKey, toggleId,
+    addNewKeys, appIdOf, appName, arrange, fallbackName, forgetKey, itemKey, mergeToggles, moveKey,
+    toggleId,
 } from './order.js';
 
 let failures = 0;
@@ -39,6 +40,12 @@ check('several new keys keep their bar order',
         .orders.right,
     ['a', 'b']);
 
+check('arrange follows the saved order', arrange(['b', 'a'], ['a', 'b']), [1, 0]);
+check('arrange keeps unlisted children in their slots',
+    arrange(['c', null, 'b', 'a', null], ['a', 'b', 'c']), [3, 1, 2, 0, 4]);
+check('arrange leaves keys listed elsewhere in place', arrange(['b', 'x', 'a'], ['a', 'b']),
+    [2, 1, 0]);
+
 check('move within a box', moveKey(saved, 'todoTxt', 'center', 'dateMenu').center,
     ['todoTxt', 'dateMenu']);
 check('move to the end of another box', moveKey(saved, 'todoTxt', 'right', null),
@@ -54,17 +61,21 @@ check('toggle id of a generic class', toggleId('QuickToggle', 'Headset'), 'Quick
 
 check('key of a system item', itemKey('dateMenu', null), 'dateMenu');
 check('key of an app icon', itemKey('appindicator-:1.129@/org/ayatana/NotificationItem/livepatch',
-    'livepatch'), 'appindicator-kstatusnotifieritem-livepatch');
+    'livepatch'), 'appindicator-livepatch');
 check('key of an app icon without id yet', itemKey('appindicator-:1.129@/x', undefined), null);
 check('key of a legacy tray icon', itemKey('appindicator-legacy:Slack:246928', null),
-    'appindicator-legacy-Slack');
+    'appindicator-slack');
+check('legacy tray icon and app icon of one app share a key',
+    itemKey('appindicator-:1.5@/x', 'Slack_status_icon_1'), 'appindicator-slack');
+check('key of an app id with spaces', itemKey('appindicator-:1.9@/x', 'Teams for Linux'),
+    'appindicator-teams-for-linux');
 
-check('fallback name of a legacy tray icon', fallbackName('appindicator-legacy-Discord'),
-    'Discord');
-check('fallback name of a cryptic app id', fallbackName('appindicator-legacy-ZSTray6.Deb'),
-    'Zscaler');
-check('fallback name of an appindicator',
-    fallbackName('appindicator-kstatusnotifieritem-Slack_status_icon_1'), 'Slack');
+check('app id of a legacy tray icon', appIdOf('appindicator-legacy:Slack:246928', undefined),
+    'Slack');
+check('app name from its id', appName('Slack_status_icon_1'), 'Slack');
+check('app name of a cryptic id', appName('ZSTray6.Deb'), 'Zscaler');
+check('fallback name of an app icon', fallbackName('appindicator-discord'), 'discord');
+check('fallback name of a cryptic app icon', fallbackName('appindicator-zstray6.deb'), 'Zscaler');
 check('fallback name of an extension uuid', fallbackName('foo-bar@someone.org'), 'foo-bar');
 check('fallback name of a plain role', fallbackName('todoTxt'), 'todoTxt');
 

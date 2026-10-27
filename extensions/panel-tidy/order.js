@@ -15,9 +15,9 @@ export const SYSTEM_NAMES = {
     screenSharing: 'Screen Sharing',
 };
 
-// App icons whose app id or window class doesn't say which app they are.
+// App icons whose app id or window class doesn't say which app they are, by key suffix.
 const APP_NAMES = {
-    'ZSTray6.Deb': 'Zscaler',
+    'zstray6.deb': 'Zscaler',
 };
 
 // Base classes extensions build their toggles from: their class name says nothing about the
@@ -58,6 +58,24 @@ export function addNewKeys(orders, bar) {
         result[box] = list;
     }
     return {orders: result, changed};
+}
+
+/**
+ * Order of a box's children once its listed items follow the saved order: listed items take
+ * the slots that listed items hold now, and every other child keeps its slot. An app icon
+ * that has no id yet stays where its extension put it instead of being pushed to the end of
+ * the box, where addNewKeys would then save it.
+ *
+ * @param {Array<?string>} keys - key of each child of the box, in order; null if it has none
+ * @param {string[]} order - saved keys of the box
+ * @returns {number[]} indices into `keys`, in the order the children should end up
+ */
+export function arrange(keys, order) {
+    const rank = new Map(order.map((key, i) => [key, i]));
+    const listed = keys.map((_key, i) => i).filter(i => rank.has(keys[i]))
+        .sort((a, b) => rank.get(keys[a]) - rank.get(keys[b]));
+    let next = 0;
+    return keys.map((key, i) => (rank.has(key) ? listed[next++] : i));
 }
 
 /**
@@ -107,9 +125,10 @@ export function toggleId(className, title) {
  * Key an item is saved under: its role, except for appindicators, whose roles carry a
  * process id or a D-Bus address that change every time the app starts.
  *
- * App icons get `appindicator-kstatusnotifieritem-<app id>` (the key Top Bar Organizer
- * used); legacy tray icons, whose role is `appindicator-legacy:<wm class>:<pid>`, get
- * `appindicator-legacy-<wm class>`.
+ * An app shows either an app icon (its id, e.g. `Slack_status_icon_1`) or a legacy tray
+ * icon (role `appindicator-legacy:<wm class>:<pid>`), depending on how the login race
+ * goes. Both get `appindicator-<app>`, the id or window class lowercased, with no
+ * `_status_icon_<n>` suffix and dashes for spaces, so the app is one item either way.
  *
  * @param {string} role - a `Main.panel.statusArea` key
  * @param {?string} appId - the app indicator's id, when the item is an app icon
@@ -118,10 +137,30 @@ export function toggleId(className, title) {
 export function itemKey(role, appId) {
     if (!role.startsWith('appindicator-'))
         return role;
-    const legacy = role.match(/^appindicator-legacy:(.*):\d+$/);
-    if (legacy)
-        return `appindicator-legacy-${legacy[1]}`;
-    return appId ? `appindicator-kstatusnotifieritem-${appId}` : null;
+    const id = appIdOf(role, appId);
+    return id ? `appindicator-${appSlug(id)}` : null;
+}
+
+/**
+ * Raw id of the app behind an appindicator: the window class of a legacy tray icon,
+ * otherwise the app indicator's id.
+ *
+ * @param {string} role - a `Main.panel.statusArea` key starting with `appindicator-`
+ * @param {?string} appId - the app indicator's id, when the item is an app icon
+ * @returns {?string} the id, or null while an app icon has none yet
+ */
+export function appIdOf(role, appId) {
+    return role.match(/^appindicator-legacy:(.*):\d+$/)?.[1] ?? appId ?? null;
+}
+
+/**
+ * Readable name of an app icon.
+ *
+ * @param {string} id - the app id or window class
+ * @returns {string} the name
+ */
+export function appName(id) {
+    return APP_NAMES[appSlug(id)] ?? stripIconSuffix(id);
 }
 
 /**
@@ -131,11 +170,16 @@ export function itemKey(role, appId) {
  * @returns {string} the name
  */
 export function fallbackName(key) {
-    const name = key
-        .replace(/^appindicator-(legacy-|kstatusnotifieritem-)?/, '')
-        .replace(/_status_icon_\d+$/, '')
-        .replace(/@.*$/, '');
+    const name = key.replace(/^appindicator-/, '').replace(/@.*$/, '');
     return APP_NAMES[name] ?? name;
+}
+
+function stripIconSuffix(id) {
+    return id.replace(/_status_icon_\d+$/, '');
+}
+
+function appSlug(id) {
+    return stripIconSuffix(id).toLowerCase().replace(/[\s_]+/g, '-');
 }
 
 /**
