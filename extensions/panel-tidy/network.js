@@ -1,7 +1,7 @@
 // Pure logic of the Network tile: no shell, GTK or NM imports, so it runs under plain `gjs -m`.
 //
 // Cable: {device, name, speed, present, connected, profiles: [{id, name}], active}
-// Wifi: {present, connected, ssid}
+// Wifi: {present, enabled (radio on), connected, ssid}
 // Remembered: {cables: [{device, profile}], wifi: ssid or null}
 
 const WIRED_ICON = 'network-wired-symbolic';
