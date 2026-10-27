@@ -57,10 +57,13 @@ other extensions.
 - Exception, found while building: appindicator roles carry a process id
   (`appindicator-legacy:Slack:246928`) or a D-Bus address
   (`appindicator-:1.129@/org/ayatana/...`) that change every time the app starts. App
-  icons are saved as `appindicator-kstatusnotifieritem-<app id>` (Top Bar Organizer's key,
-  so its saved order carries over) and legacy tray icons as
-  `appindicator-legacy-<wm class>`. An app icon that has no id yet is retried when its
-  indicator emits `ready`.
+  icons are saved as `appindicator-<app>`, from the app id or, for a legacy tray icon,
+  the window class: lowercased, without the `_status_icon_<n>` suffix, dashes for spaces.
+  Fix of 27/10: they were first saved as `appindicator-kstatusnotifieritem-<app id>` and
+  `appindicator-legacy-<wm class>`, but Slack, Discord and Zscaler show one kind or the
+  other depending on the login race, so an item hidden in one session came back in the
+  next; the saved keys were migrated once with `dconf`. An app icon that has no id yet is
+  retried when its indicator emits `ready`, and keeps its slot on the bar meanwhile.
 - `statusArea` can hold `null` entries (the appindicator extension leaves them when it
   replaces an icon); they are skipped.
 - Items inserted into the panel boxes directly, without `addToStatusArea`, are not seen.
