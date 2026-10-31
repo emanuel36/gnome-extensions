@@ -6,6 +6,8 @@ import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 
 import {planLayout} from './layout.js';
+import {ShareMode, workAreas} from './share-mode.js';
+import {ShareModeIndicator} from './share-toggle.js';
 
 // Wait for monitors and windows to settle before arranging: docking fires several
 // monitors-changed signals, and Mutter moves windows around right after each one.
@@ -14,10 +16,17 @@ const SETTLE_MS = 2000;
 export default class WindowLayoutExtension extends Extension {
     enable() {
         this._settings = this.getSettings();
+        this._shareMode = new ShareMode(this._settings, () => this._indicator?.sync());
+        this._indicator = new ShareModeIndicator(this._shareMode);
+        Main.panel.statusArea.quickSettings.addExternalIndicator(this._indicator);
         Main.wm.addKeybinding('apply-layout', this._settings, Meta.KeyBindingFlags.NONE,
             Shell.ActionMode.NORMAL | Shell.ActionMode.OVERVIEW, () => this._apply());
-        this._monitorsId = Main.layoutManager.connect('monitors-changed',
-            () => this._schedule());
+        this._monitorsId = Main.layoutManager.connect('monitors-changed', () => {
+            // Saved positions refer to the old monitors: leave windows to the layout below
+            this._shareMode.stop({restoreWindows: false});
+            this._indicator.sync();
+            this._schedule();
+        });
         // Enabled during shell startup (login or restart): arrange once it is done.
         if (Main.layoutManager._startingUp) {
             this._startupId = Main.layoutManager.connect('startup-complete',
@@ -33,7 +42,9 @@ export default class WindowLayoutExtension extends Extension {
         if (this._timeoutId)
             GLib.source_remove(this._timeoutId);
         this._monitorsId = this._startupId = this._timeoutId = 0;
-        this._settings = null;
+        this._shareMode.destroy();
+        this._indicator.destroy();
+        this._indicator = this._shareMode = this._settings = null;
     }
 
     _schedule() {
@@ -47,12 +58,9 @@ export default class WindowLayoutExtension extends Extension {
     }
 
     _apply() {
-        const workspace = global.workspace_manager.get_active_workspace();
-        const monitors = [];
-        for (let i = 0; i < global.display.get_n_monitors(); i++) {
-            const {x, y, width, height} = workspace.get_work_area_for_monitor(i);
-            monitors.push({index: i, x, y, width, height});
-        }
+        if (this._shareMode.active)
+            return;
+        const monitors = workAreas();
 
         const windows = new Map(global.get_window_actors()
             .map(actor => actor.meta_window)
