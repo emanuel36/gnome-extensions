@@ -10,7 +10,7 @@ images below are mockups with made-up data.
 | 2 | [Next Up](extensions/next-up) | Next meeting in the bar; today's meetings in the popup | [gnome-next-up](https://github.com/artisticat1/gnome-next-up) | GPL-3.0 |
 | 3 | [Todo](extensions/todo) | Plain task list in the bar | [Todo.txt](https://gitlab.com/todo.txt-gnome-shell-extension/todo-txt-gnome-shell-extension) | MIT |
 | 4 | [Panel Tidy](extensions/panel-tidy) | Orders and hides top bar items and Quick Settings toggles, merges Wired and Wi-Fi into one tile | [Top Bar Organizer](https://gitlab.gnome.org/june/top-bar-organizer), [Just Perfection](https://gitlab.gnome.org/jrahmatzadeh/just-perfection) | MIT |
-| 5 | [Window Layout](extensions/window-layout) | Puts windows back on the right monitor | - | MIT |
+| 5 | [Window Layout](extensions/window-layout) | Puts windows back on the right monitor; Share Mode for screen sharing | - | MIT |
 
 ## System Monitor
 
@@ -54,6 +54,12 @@ merges the Wired and Wi-Fi tiles into one Network tile.
 With a side monitor, Slack takes its top 60% and Discord / ZapZap the bottom 40%; every
 other window is maximized on the primary monitor. With one monitor, everything is
 maximized. Runs when monitors change, when the shell starts, and on Super+Shift+W.
+
+![Share Mode](docs/images/window-layout-share-mode.svg)
+
+Share Mode, in Quick Settings, leaves only the window being shared in a call on the primary
+monitor: everything else, the dock and Alt+Tab move to the side monitor and notifications
+are cleared, until it is turned off.
 [More](extensions/window-layout/README.md)
 
 ## Install
