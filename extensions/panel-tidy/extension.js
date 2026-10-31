@@ -8,6 +8,7 @@ import {
     BOXES, SYSTEM_NAMES, addNewKeys, appIdOf, appName, arrange, fallbackName, itemKey,
     mergeToggles, toggleId,
 } from './order.js';
+import {NetworkModule} from './network-module.js';
 
 // Only reacts to items that already exist (signals on the panel boxes and the Quick
 // Settings grid); never overrides shell functions, so other extensions' items are added
@@ -21,6 +22,13 @@ export default class PanelTidyExtension extends Extension {
             right: Main.panel._rightBox,
         };
         this._grid = Main.panel.statusArea.quickSettings?.menu._grid ?? null;
+        this._network = this._grid ? new NetworkModule({
+            menu: Main.panel.statusArea.quickSettings.menu,
+            grid: this._grid,
+            hide: toggle => this._hideToggle(toggle),
+            show: toggle => this._showToggle(toggle),
+        }) : null;
+        this._networkFailed = false; // NetworkManager could not be used: don't retry every pass
         this._hiddenItems = new Map(); // key -> {container, visibleId, destroyId}
         this._hiddenToggles = new Map(); // toggle actor -> {natural, id, destroyId, busy}
         this._failed = new Set();
@@ -31,10 +39,14 @@ export default class PanelTidyExtension extends Extension {
         if (this._grid)
             this._connect(this._grid, 'child-added', () => this._schedule());
         this._connect(this._settings, 'changed', () => this._schedule());
+        this._connect(this._settings, 'changed::merge-network',
+            () => (this._networkFailed = false));
         this._apply();
     }
 
     disable() {
+        this._network?.disable();
+        this._network = null;
         if (this._idleId)
             GLib.source_remove(this._idleId);
         this._idleId = 0;
@@ -68,8 +80,28 @@ export default class PanelTidyExtension extends Extension {
 
     _apply() {
         this._applyItems();
-        if (this._grid)
+        if (this._grid) {
+            this._applyNetwork();
             this._applyToggles();
+        }
+    }
+
+    // The Network tile replaces the native Wired and Wi-Fi tiles while the setting is on. The
+    // module starts once the native tiles exist, and a failure leaves them visible.
+    _applyNetwork() {
+        const wanted = this._settings.get_boolean('merge-network');
+        if (!wanted && this._network.active) {
+            this._network.disable();
+            this._schedule();
+        } else if (wanted && !this._network.active && !this._networkFailed &&
+            this._network.hasNatives()) {
+            this._network.enable().then(started => {
+                if (!this._network)
+                    return;
+                this._networkFailed = !started;
+                this._schedule();
+            });
+        }
     }
 
     // Runs `fn` for one item; a failure is logged once and does not stop the pass.
@@ -217,6 +249,7 @@ export default class PanelTidyExtension extends Extension {
     _applyToggles() {
         const toggles = this._grid.get_children()
             .filter(c => c instanceof QuickToggle || c instanceof QuickMenuToggle)
+            .filter(c => !(this._network.active && this._network.isNative(c)))
             .map(c => ({actor: c, id: toggleId(c.constructor.name, c.title ?? ''),
                 name: c.title || c.constructor.name}));
         const known = this._settings.get_value('known-toggles').deepUnpack();

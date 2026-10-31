@@ -21,10 +21,13 @@ gjs -m extensions/next-up/src/date.test.js
 gjs -m extensions/todo/tasks.test.js
 gjs -m extensions/todo/store.test.js
 gjs -m extensions/panel-tidy/order.test.js
+gjs -m extensions/panel-tidy/network.test.js
+gjs -m extensions/panel-tidy/network-source.test.js
 gjs -m extensions/window-layout/layout.test.js
 ```
 
-`extensions/system-monitor/sources.test.js` is a smoke test against the running machine.
+`extensions/system-monitor/sources.test.js` and `extensions/panel-tidy/network-source.test.js`
+are smoke tests against the running machine (the second compares with `nmcli`).
 
 Start-of-project context (findings, local patches, decisions so far):
 `docs/superpowers/2026-10-22-contexto-inicial.md`. Designs go in `docs/superpowers/specs/`.

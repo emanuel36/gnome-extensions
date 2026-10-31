@@ -13,6 +13,16 @@ it shows. Disabling Panel Tidy shows everything it hid.
 
 A few extensions place their button on the bar in an unusual way; those are not listed.
 
+Wired and Wi-Fi share one Network tile, so the Quick Settings grid keeps both columns full
+when you add another tile. The subtitle sums up what is connected: "2 Wired · Wi-Fi", "Wi-Fi"
+or "Disconnected". Clicking the tile disconnects everything, and clicking it again reconnects
+what was connected. The arrow opens a menu with a switch for each cable that is plugged in,
+named "Dock" for a USB adapter and "Ethernet" for the computer's own port, with its profile
+and link speed; clicking the row lists its other saved profiles. One Wi-Fi row lists the
+networks the same way. With no cable plugged in, the tile looks and works like the usual
+Wi-Fi tile. A switch in the preferences window brings the Wired and Wi-Fi tiles back, and they
+also stay if the network cannot be read.
+
 Replaces Top Bar Organizer and Just Perfection.
 
 ## License

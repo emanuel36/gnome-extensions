@@ -1,11 +1,13 @@
 import Adw from 'gi://Adw';
 import Gdk from 'gi://Gdk';
+import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
 import GObject from 'gi://GObject';
 import Gtk from 'gi://Gtk';
 
 import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
+import {NATIVE_TOGGLE_CLASSES} from './network.js';
 import {BOXES, fallbackName, forgetKey, moveKey} from './order.js';
 
 const BOX_TITLES = {left: 'Left', center: 'Center', right: 'Right'};
@@ -31,6 +33,12 @@ export default class PanelTidyPreferences extends ExtensionPreferences {
             title: 'Quick Settings',
             description: 'Toggles shown in the system menu.',
         });
+        const merge = new Adw.SwitchRow({
+            title: 'Network tile',
+            subtitle: 'Replace Wired and Wi-Fi with one Network tile',
+        });
+        this._settings.bind('merge-network', merge, 'active', Gio.SettingsBindFlags.DEFAULT);
+        toggleGroup.add(merge);
         this._lists.toggles = this._newList(null);
         toggleGroup.add(this._lists.toggles);
         page.add(toggleGroup);
@@ -96,7 +104,11 @@ export default class PanelTidyPreferences extends ExtensionPreferences {
         const presentToggles = new Set(this._settings.get_strv('present-toggles'));
         const hiddenToggles = new Set(this._settings.get_strv('hidden-toggles'));
         this._lists.toggles.remove_all();
+        // The native Wired and Wi-Fi toggles are replaced while the Network tile is on.
+        const replaced = this._settings.get_boolean('merge-network') ? NATIVE_TOGGLE_CLASSES : [];
         for (const [id, name] of this._settings.get_value('known-toggles').deepUnpack()) {
+            if (replaced.includes(id))
+                continue;
             this._lists.toggles.append(this._toggleRow(id, name, presentToggles.has(id),
                 hiddenToggles.has(id)));
         }

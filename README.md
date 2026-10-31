@@ -9,7 +9,7 @@ images below are mockups with made-up data.
 | 1 | [System Monitor](extensions/system-monitor) | CPU and memory in the bar; top apps and network in the popup | [Resource Monitor](https://github.com/0ry0n/Resource_Monitor), [Network Stats](https://github.com/noroadsleft000/gnome-network-stats) | GPL-3.0 |
 | 2 | [Next Up](extensions/next-up) | Next meeting in the bar; today's meetings in the popup | [gnome-next-up](https://github.com/artisticat1/gnome-next-up) | GPL-3.0 |
 | 3 | [Todo](extensions/todo) | Plain task list in the bar | [Todo.txt](https://gitlab.com/todo.txt-gnome-shell-extension/todo-txt-gnome-shell-extension) | MIT |
-| 4 | [Panel Tidy](extensions/panel-tidy) | Orders and hides top bar items and Quick Settings toggles | [Top Bar Organizer](https://gitlab.gnome.org/june/top-bar-organizer), [Just Perfection](https://gitlab.gnome.org/jrahmatzadeh/just-perfection) | MIT |
+| 4 | [Panel Tidy](extensions/panel-tidy) | Orders and hides top bar items and Quick Settings toggles, merges Wired and Wi-Fi into one tile | [Top Bar Organizer](https://gitlab.gnome.org/june/top-bar-organizer), [Just Perfection](https://gitlab.gnome.org/jrahmatzadeh/just-perfection) | MIT |
 | 5 | [Window Layout](extensions/window-layout) | Puts windows back on the right monitor | - | MIT |
 
 ## System Monitor
@@ -43,7 +43,8 @@ priority. [More](extensions/todo/README.md)
 ![Panel Tidy](docs/images/panel-tidy.svg)
 
 Orders the top bar items across the left, center and right of the bar, and hides the bar
-items and Quick Settings toggles you don't use, all from its preferences window.
+items and Quick Settings toggles you don't use, all from its preferences window. It also
+merges the Wired and Wi-Fi tiles into one Network tile.
 [More](extensions/panel-tidy/README.md)
 
 ## Window Layout
