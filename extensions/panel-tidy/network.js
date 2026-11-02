@@ -114,6 +114,9 @@ export function signalIcon(strength) {
 
 export const tileOn =(cables, wifi) => connectedCables(cables).length > 0 || wifi.connected;
 
+// Profiles Ubuntu generates from netplan ("netplan-eth0") say nothing to the user
+const profileLabel = name => /^netplan-/.test(name) ? '' : name;
+
 /**
  * Rows of the Wired section: one per cable that is plugged in. A cable lists its profiles
  * only when it has more than one.
@@ -127,7 +130,7 @@ export function cableRows(cables) {
         device: c.device,
         title: c.name,
         subtitle: [
-            c.connected ? c.profiles.find(p => p.id === c.active)?.name ?? c.active
+            c.connected ? profileLabel(c.profiles.find(p => p.id === c.active)?.name ?? c.active)
                 : 'Disconnected',
             c.speed,
         ].filter(Boolean).join(' · '),

@@ -18,6 +18,17 @@ const formatSpeed = mbps => {
     return mbps >= 1000 ? `${mbps / 1000} Gb/s` : `${mbps} Mb/s`;
 };
 
+// Some adapters (USB Ethernet) leave NetworkManager's speed at 0; the kernel still knows it.
+// The file reads -1 when the link is down.
+const kernelSpeed = iface => {
+    try {
+        const [, bytes] = GLib.file_get_contents(`/sys/class/net/${iface}/speed`);
+        return Math.max(0, parseInt(new TextDecoder().decode(bytes), 10) || 0);
+    } catch (e) {
+        return 0;
+    }
+};
+
 const ssidOf = ap => {
     const bytes = ap?.get_ssid()?.get_data();
     return bytes ? NM.utils_ssid_to_utf8(bytes) : null;
@@ -150,7 +161,7 @@ export class NetworkSource {
             return {
                 device: dev.get_iface(),
                 name: names[i],
-                speed: formatSpeed(dev.get_speed()),
+                speed: formatSpeed(dev.get_speed() || kernelSpeed(dev.get_iface())),
                 present: state > NM.DeviceState.UNAVAILABLE,
                 connected: state === NM.DeviceState.ACTIVATED,
                 profiles: profilesFor(profiles, {
