@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="330" viewBox="0 0 600 330" font-family="Ubuntu, Cantarell, 'Noto Sans', 'Segoe UI', sans-serif">
+<defs><filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.45"/></filter></defs>
+<rect x="0" y="0" width="600" height="330" rx="12" fill="#1b1b1d"/>
+<rect x="20" y="20" width="270" height="250" rx="14" fill="#2e2e32" filter="url(#shadow)"/>
+<rect x="34" y="34" width="242" height="52" rx="26" fill="#3584e4"/>
+<text x="64" y="57" font-size="14" font-weight="600" fill="#ffffff">Share Mode</text>
+<text x="64" y="75" font-size="12" font-weight="400" fill="#dce8fa">Text Editor</text>
+<rect x="34" y="100" width="242" height="156" rx="10" fill="#38383d"/>
+<text x="48" y="124" font-size="13" font-weight="600" fill="#ffffff">Share a window</text>
+<rect x="44" y="136" width="222" height="32" rx="6" fill="#47474d"/>
+<circle cx="60" cy="152" r="7" fill="#f6d32d"/>
+<text x="76" y="157" font-size="12" font-weight="400" fill="#ffffff">notes.md — Text Editor</text>
+<circle cx="60" cy="188" r="7" fill="#57e389"/>
+<text x="76" y="193" font-size="12" font-weight="400" fill="#ffffff">Terminal</text>
+<circle cx="60" cy="224" r="7" fill="#62a0ea"/>
+<text x="76" y="229" font-size="12" font-weight="400" fill="#ffffff">Release plan — Browser</text>
+<rect x="320" y="60" width="160" height="110" rx="8" fill="#2a2a2a" stroke="#555555" stroke-width="2"/>
+<rect x="340" y="80" width="120" height="70" rx="5" fill="#f6d32d"/>
+<text x="400" y="120" font-size="12" font-weight="600" fill="#1b1b1d" text-anchor="middle">Text Editor</text>
+<text x="400" y="190" font-size="12" font-weight="600" fill="#9a9a9a" text-anchor="middle">Primary (shared)</text>
+<rect x="500" y="40" width="80" height="140" rx="8" fill="#2a2a2a" stroke="#555555" stroke-width="2"/>
+<rect x="508" y="48" width="64" height="40" rx="4" fill="#57e389"/>
+<rect x="508" y="94" width="64" height="40" rx="4" fill="#62a0ea"/>
+<rect x="508" y="140" width="64" height="32" rx="4" fill="#404eed"/>
+<text x="540" y="200" font-size="12" font-weight="600" fill="#9a9a9a" text-anchor="middle">Side</text>
+<text x="450" y="250" font-size="12" font-weight="400" fill="#9a9a9a" text-anchor="middle">Everything else, the dock</text>
+<text x="450" y="266" font-size="12" font-weight="400" fill="#9a9a9a" text-anchor="middle">and Alt+Tab go to the side</text>
+<text x="300" y="312" font-size="13" font-weight="400" fill="#9a9a9a" text-anchor="middle">Click Share Mode again to put everything back</text>
+</svg>

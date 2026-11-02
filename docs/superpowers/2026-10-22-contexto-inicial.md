@@ -105,6 +105,9 @@ não tem build.
   da máquina). Lista simples: adicionar, clicar para concluir (vai para baixo, esmaecida),
   ✕ para deletar, arrastar pela alça para ordenar; a ordem é a prioridade. Tarefas em
   `~/.local/share/todo@emanuel36/tasks.json`. Design em `specs/2026-10-22-todo-design.md`.
+- Share Mode (31/10): parte do Window Layout. Botão no Quick Settings que deixa só a janela
+  escolhida no monitor principal; o resto, a dock e o Alt+Tab vão para o lateral, e as
+  notificações são limpas. Design em `specs/2026-10-31-share-mode-design.md`.
 
 ## Ideias discutidas, ainda não decididas
 

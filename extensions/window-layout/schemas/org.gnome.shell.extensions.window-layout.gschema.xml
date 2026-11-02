@@ -7,5 +7,10 @@
       <summary>Arrange windows</summary>
       <description>Shortcut that arranges all windows into the layout</description>
     </key>
+    <key name="share-saved-state" type="s">
+      <default>''</default>
+      <summary>Share Mode saved state</summary>
+      <description>Internal: dock setting to restore; empty when Share Mode is off</description>
+    </key>
   </schema>
 </schemalist>

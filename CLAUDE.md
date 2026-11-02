@@ -24,6 +24,7 @@ gjs -m extensions/panel-tidy/order.test.js
 gjs -m extensions/panel-tidy/network.test.js
 gjs -m extensions/panel-tidy/network-source.test.js
 gjs -m extensions/window-layout/layout.test.js
+gjs -m extensions/window-layout/share.test.js
 ```
 
 `extensions/system-monitor/sources.test.js` and `extensions/panel-tidy/network-source.test.js`
